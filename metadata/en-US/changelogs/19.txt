@@ -1,1 +1,0 @@
-F-Droid build compatibility: remove foojay-resolver; ML Kit barcode optional (hidden on F-Droid builds).

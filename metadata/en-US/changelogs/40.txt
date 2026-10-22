@@ -1,3 +1,0 @@
-• Full PWA onboarding localization (all steps, not only CTAs)
-• Health + accuracy disclaimers on plan-ready (Android + PWA)
-• Accuracy note in Android Safety & Medical settings

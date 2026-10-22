@@ -1,3 +1,0 @@
-• Meal constituents: editable ingredient rows with serving units; settings toggle to opt out
-• Opt-in WebDAV Sync on open (once per day); launcher shortcuts for Camera, Voice, Barcode
-• Adaptive launcher icons; clearer Gemini location-unsupported errors
