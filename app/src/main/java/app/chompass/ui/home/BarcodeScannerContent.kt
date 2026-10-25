@@ -240,7 +240,7 @@ internal fun BarcodeScannerContent(
                 Text(
                     stringResource(R.string.barcode_hint),
                     color = Color.White,
-                    fontSize = 17.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(

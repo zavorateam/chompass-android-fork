@@ -239,7 +239,7 @@ private fun UpdateRow(
             trailing = {
                 Text(
                     state.current,
-                    fontSize = 15.sp,
+                    fontSize = 14.sp,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Muted)
                 )
             },
@@ -292,7 +292,7 @@ private fun AboutRow(
         }
         Spacer(Modifier.width(16.dp))
         Column(Modifier.weight(1f)) {
-            Text(label, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
+            Text(label, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
             if (!subtitle.isNullOrBlank()) {
                 Text(
                     subtitle,

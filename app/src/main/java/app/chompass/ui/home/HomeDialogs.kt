@@ -129,7 +129,7 @@ internal fun EntryAnalysisOverlay(
             val phaseLabel = entryAnalysisPhaseLabel(phase, fillingFields = partial?.hasAnyField == true)
             Text(
                 text = phaseLabel,
-                fontSize = 17.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = AppColors.Calorie,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -375,14 +375,14 @@ private fun ProgressiveNutritionRow(
     ) {
         Text(
             text = label,
-            fontSize = 15.sp,
+            fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             color = accentColor,
             modifier = Modifier.weight(1f),
         )
         Text(
             text = displayValue ?: "···",
-            fontSize = 15.sp,
+            fontSize = 14.sp,
             fontWeight = FontWeight.SemiBold,
             color = if (filled) accentColor else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.55f),
         )
@@ -449,7 +449,7 @@ internal fun AnalyzingOverlay(imageBytes: ByteArray? = null) {
             // .analyzingText). pendingImageBytes is the discriminator.
             Text(
                 if (bitmap != null) stringResource(R.string.home_analyzing_food) else stringResource(R.string.home_looking_up_nutrition),
-                fontSize = 17.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = AppColors.Calorie
             )
@@ -632,7 +632,7 @@ internal fun ManualEntryDialog(
     val canSave = name.isNotBlank() && calories > 0 && !isSaving
 
     ChompassDialog(onDismissRequest = onDismiss, scrollable = true) {
-                Text(stringResource(R.string.manual_title), fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+                Text(stringResource(R.string.manual_title), fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
 
                 ChompassTextField(
                     value = name,
@@ -649,7 +649,7 @@ internal fun ManualEntryDialog(
                 // calorie pink, anchored to the right cluster).
                 SheetSectionHeader(stringResource(R.string.sheet_meal))
                 SheetPillRow(onClick = { mealMenuExpanded = true }) {
-                    Text(stringResource(R.string.sheet_meal_type), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.sheet_meal_type), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     // Wrap only the right cluster in a Box so the DropdownMenu
                     // anchors on the right side of the row (under the value),
                     // not at the row's left edge.
@@ -664,7 +664,7 @@ internal fun ManualEntryDialog(
                             Spacer(Modifier.width(6.dp))
                             Text(
                                 mealLabel(mealType),
-                                fontSize = 17.sp,
+                                fontSize = 16.sp,
                                 color = AppColors.Calorie,
                                 fontWeight = FontWeight.Medium
                             )
@@ -699,10 +699,10 @@ internal fun ManualEntryDialog(
                 // Time — clock-time chooser for this entry. The target date
                 // stays the selected Home day; only the clock moves.
                 SheetPillRow(onClick = { showTimePicker = true }) {
-                    Text(stringResource(R.string.label_time), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.label_time), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     Text(
                         logTime.format(timeFormatter),
-                        fontSize = 17.sp,
+                        fontSize = 16.sp,
                         color = AppColors.Calorie,
                         fontWeight = FontWeight.Medium
                     )
@@ -778,7 +778,7 @@ internal fun ManualEntryDialog(
                 // sheet uses, kept inside its own scroll so the dialog stays
                 // compact on small screens (Codeberg #17 lesson).
                 SheetPillRow(onClick = { moreNutritionExpanded = !moreNutritionExpanded }) {
-                    Text(stringResource(R.string.sheet_more_nutrition), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.sheet_more_nutrition), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     Icon(
                         if (moreNutritionExpanded) Icons.Filled.KeyboardArrowDown else Icons.AutoMirrored.Filled.KeyboardArrowRight,
                         contentDescription = null,

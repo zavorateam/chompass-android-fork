@@ -623,7 +623,7 @@ fun EditFoodEntrySheet(
             item { SheetSectionHeader(stringResource(R.string.sheet_food_details)) }
             item {
                 SheetPillRow {
-                    Text(stringResource(R.string.sheet_name), fontSize = 17.sp, modifier = Modifier.padding(end = 8.dp))
+                    Text(stringResource(R.string.sheet_name), fontSize = 16.sp, modifier = Modifier.padding(end = 8.dp))
                     Spacer(Modifier.weight(1f))
                     androidx.compose.foundation.text.BasicTextField(
                         value = name,
@@ -631,7 +631,7 @@ fun EditFoodEntrySheet(
                         singleLine = true,
                         textStyle = androidx.compose.ui.text.TextStyle(
                             color = MaterialTheme.colorScheme.onSurface,
-                            fontSize = 17.sp,
+                            fontSize = 16.sp,
                             textAlign = androidx.compose.ui.text.style.TextAlign.End
                         ),
                         cursorBrush = androidx.compose.ui.graphics.SolidColor(AppColors.Calorie),
@@ -643,7 +643,7 @@ fun EditFoodEntrySheet(
             item { SheetSectionHeader(stringResource(R.string.sheet_meal)) }
             item {
                 SheetPillRow(onClick = { mealMenuExpanded = true }) {
-                    Text(stringResource(R.string.sheet_meal_type), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.sheet_meal_type), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     // Wrap only the right cluster in a Box so the DropdownMenu
                     // anchors on the right side of the row (under the value),
                     // not at the row's left edge.
@@ -660,7 +660,7 @@ fun EditFoodEntrySheet(
                             Spacer(Modifier.width(6.dp))
                             Text(
                                 mealLabel(mealType),
-                                fontSize = 17.sp,
+                                fontSize = 16.sp,
                                 color = AppColors.Calorie,
                                 fontWeight = FontWeight.Medium
                             )
@@ -705,10 +705,10 @@ fun EditFoodEntrySheet(
                             .padding(horizontal = 18.dp, vertical = 12.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(stringResource(R.string.label_date), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                        Text(stringResource(R.string.label_date), fontSize = 16.sp, modifier = Modifier.weight(1f))
                         Text(
                             loggedDate.format(dateFormatter),
-                            fontSize = 17.sp,
+                            fontSize = 16.sp,
                             color = AppColors.Calorie,
                             fontWeight = FontWeight.Medium
                         )
@@ -724,10 +724,10 @@ fun EditFoodEntrySheet(
                             .padding(horizontal = 18.dp, vertical = 12.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(stringResource(R.string.label_time), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                        Text(stringResource(R.string.label_time), fontSize = 16.sp, modifier = Modifier.weight(1f))
                         Text(
                             loggedTime.format(timeFormatter),
-                            fontSize = 17.sp,
+                            fontSize = 16.sp,
                             color = AppColors.Calorie,
                             fontWeight = FontWeight.Medium
                         )
@@ -747,7 +747,7 @@ fun EditFoodEntrySheet(
                             )
                             Text(
                                 stringResource(R.string.edit_food_apply_time, mealLabel(entry.mealType)),
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Strong),
                                 modifier = Modifier.padding(end = 8.dp),
                             )
@@ -927,7 +927,7 @@ fun EditFoodEntrySheet(
             if (MicronutrientField.MoreNutrition.any { editableMicros[it] != null }) {
                 item {
                     SheetPillRow(onClick = { moreNutritionExpanded = !moreNutritionExpanded }) {
-                        Text(stringResource(R.string.sheet_more_nutrition), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                        Text(stringResource(R.string.sheet_more_nutrition), fontSize = 16.sp, modifier = Modifier.weight(1f))
                         Icon(
                             if (moreNutritionExpanded) Icons.Filled.KeyboardArrowDown
                             else Icons.AutoMirrored.Filled.KeyboardArrowRight,
@@ -1253,7 +1253,7 @@ fun EditFoodEntrySheet(
                             modifier = Modifier.size(20.dp)
                         )
                         Spacer(Modifier.width(12.dp))
-                        Text(stringResource(R.string.share_meal), fontSize = 17.sp, fontWeight = FontWeight.Medium)
+                        Text(stringResource(R.string.share_meal), fontSize = 16.sp, fontWeight = FontWeight.Medium)
                     }
                 }
             }
@@ -1355,7 +1355,7 @@ fun EditFoodEntrySheet(
 
             var pickedDate by remember(loggedDate) { mutableStateOf(loggedDate) }
             ChompassDialog(onDismissRequest = { showDatePicker = false }) {
-                Text(stringResource(R.string.label_date), fontSize = 21.sp, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.label_date), fontSize = 20.sp, fontWeight = FontWeight.Bold)
                 DateWheelPicker(
                     selected = pickedDate,
                     onSelect = { pickedDate = it },
@@ -1480,7 +1480,7 @@ private fun EditFoodTimeDialog(
     var picked by remember(initialTime) { mutableStateOf(initialTime) }
     var typedDigits by remember { mutableStateOf<String?>(null) }
     ChompassDialog(onDismissRequest = onDismiss) {
-        Text(stringResource(R.string.label_time), fontSize = 21.sp, fontWeight = FontWeight.Bold)
+        Text(stringResource(R.string.label_time), fontSize = 20.sp, fontWeight = FontWeight.Bold)
         ClockTimeWheelPicker(
             time = picked,
             onChange = { picked = it },
@@ -1617,7 +1617,7 @@ internal fun EditFoodIconDialog(
     onDismiss: () -> Unit,
 ) {
     ChompassDialog(onDismissRequest = onDismiss) {
-        Text(stringResource(R.string.edit_icon_picker_title), fontSize = 21.sp, fontWeight = FontWeight.Bold)
+        Text(stringResource(R.string.edit_icon_picker_title), fontSize = 20.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(2.dp))
         Column(
             Modifier

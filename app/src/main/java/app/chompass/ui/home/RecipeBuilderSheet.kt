@@ -188,7 +188,7 @@ fun RecipeBuilderSheet(
             item {
                 Box(Modifier.padding(horizontal = 20.dp)) {
                     SheetPillRow(onClick = { mealMenuExpanded = true }) {
-                        Text(stringResource(R.string.sheet_meal_type), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                        Text(stringResource(R.string.sheet_meal_type), fontSize = 16.sp, modifier = Modifier.weight(1f))
                         Box {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
@@ -200,7 +200,7 @@ fun RecipeBuilderSheet(
                                 Spacer(Modifier.width(6.dp))
                                 Text(
                                     mealLabel(mealType),
-                                    fontSize = 17.sp,
+                                    fontSize = 16.sp,
                                     color = AppColors.Calorie,
                                     fontWeight = FontWeight.Medium
                                 )
@@ -396,7 +396,7 @@ private fun IngredientRow(
         }
 
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-            Text(ingredient.name, fontSize = 15.sp, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(ingredient.name, fontSize = 14.sp, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
             val amountUnit = listOfNotNull(ingredient.amountText, ingredient.unitText)
                 .joinToString(" ")
                 .takeIf { it.isNotEmpty() }
@@ -457,7 +457,7 @@ private fun FavoritesIngredientPickerSheet(
     ) {
         Text(
             stringResource(R.string.saved_meals_tab_favorites),
-            fontSize = 17.sp,
+            fontSize = 16.sp,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 12.dp, start = 20.dp, end = 20.dp)
         )
@@ -482,7 +482,7 @@ private fun FavoritesIngredientPickerSheet(
                             .padding(horizontal = 12.dp, vertical = 10.dp),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(entry.name, fontSize = 15.sp, modifier = Modifier.weight(1f))
+                        Text(entry.name, fontSize = 14.sp, modifier = Modifier.weight(1f))
                         Text(energyText(entry.calories), fontSize = 14.sp, color = AppColors.Calorie)
                     }
                 }

@@ -184,7 +184,7 @@ private fun PhaseRow(
     ) {
         Column(Modifier.weight(1f)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(phase.name, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+                Text(phase.name, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
                 Spacer(Modifier.width(8.dp))
                 IntentChip(phase.intent)
             }
@@ -478,7 +478,7 @@ internal fun GoalPhaseEditSheet(
         ChompassDialog(onDismissRequest = { confirmDelete = false }) {
             Text(
                 stringResource(R.string.settings_goal_phases_delete_title, editing.name),
-                fontSize = 21.sp,
+                fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
             )
             Text(

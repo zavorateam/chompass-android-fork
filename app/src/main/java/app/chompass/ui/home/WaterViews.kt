@@ -552,7 +552,7 @@ private fun WaterHistoryRow(
         Text(
             waterHistoryAmountLabel(entry.milliliters, useMetric),
             fontWeight = FontWeight.SemiBold,
-            fontSize = 15.sp,
+            fontSize = 14.sp,
             color = MaterialTheme.colorScheme.water,
         )
         IconButton(onClick = onDelete) {

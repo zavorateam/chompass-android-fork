@@ -621,7 +621,7 @@ fun FoodResultSheet(
                                     phase,
                                     fillingFields = partial?.hasAnyField == true,
                                 ),
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = AppColors.Calorie,
                                 textAlign = TextAlign.Center,
@@ -630,7 +630,7 @@ fun FoodResultSheet(
                             if (inferringUnits) {
                                 Text(
                                     stringResource(R.string.entry_analysis_inferring_units),
-                                    fontSize = 15.sp,
+                                    fontSize = 14.sp,
                                     fontWeight = FontWeight.SemiBold,
                                     color = AppColors.Calorie,
                                     textAlign = TextAlign.Center,
@@ -802,7 +802,7 @@ fun FoodResultSheet(
             }
             item {
                 SheetPillRow {
-                    Text(stringResource(R.string.sheet_name), fontSize = 17.sp, modifier = Modifier.padding(end = 8.dp))
+                    Text(stringResource(R.string.sheet_name), fontSize = 16.sp, modifier = Modifier.padding(end = 8.dp))
                     Spacer(Modifier.weight(1f))
                     androidx.compose.foundation.text.BasicTextField(
                         value = name.ifEmpty { if (!analysisReady) placeholderName else "" },
@@ -814,7 +814,7 @@ fun FoodResultSheet(
                             color = MaterialTheme.colorScheme.onSurface.copy(
                                 alpha = if (analysisReady) 1f else 0.55f,
                             ),
-                            fontSize = 17.sp,
+                            fontSize = 16.sp,
                             textAlign = androidx.compose.ui.text.style.TextAlign.End
                         ),
                         cursorBrush = androidx.compose.ui.graphics.SolidColor(AppColors.Calorie),
@@ -826,7 +826,7 @@ fun FoodResultSheet(
             item { SheetSectionHeader(stringResource(R.string.sheet_meal)) }
             item {
                 SheetPillRow(onClick = { if (analysisReady) mealMenuExpanded = true }) {
-                    Text(stringResource(R.string.sheet_meal_type), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.sheet_meal_type), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     // Anchor the DropdownMenu inside the right-side cluster so
                     // it pops open under the value, not the row's left edge.
                     Box {
@@ -842,7 +842,7 @@ fun FoodResultSheet(
                             Spacer(Modifier.width(6.dp))
                             Text(
                                 mealLabel(mealType),
-                                fontSize = 17.sp,
+                                fontSize = 16.sp,
                                 color = AppColors.Calorie,
                                 fontWeight = FontWeight.Medium
                             )
@@ -876,10 +876,10 @@ fun FoodResultSheet(
             }
             item {
                 SheetPillRow(onClick = { if (analysisReady) showLogTimePicker = true }) {
-                    Text(stringResource(R.string.label_time), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.label_time), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     Text(
                         logTime.format(logTimeFormatter),
-                        fontSize = 17.sp,
+                        fontSize = 16.sp,
                         color = AppColors.Calorie,
                         fontWeight = FontWeight.Medium,
                     )
@@ -1077,7 +1077,7 @@ fun FoodResultSheet(
 
             item {
                 SheetPillRow(onClick = { if (analysisReady) moreNutritionExpanded = !moreNutritionExpanded }) {
-                    Text(stringResource(R.string.sheet_more_nutrition), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Text(stringResource(R.string.sheet_more_nutrition), fontSize = 16.sp, modifier = Modifier.weight(1f))
                     Icon(
                         if (moreNutritionExpanded) Icons.Filled.KeyboardArrowDown
                         else Icons.AutoMirrored.Filled.KeyboardArrowRight,
@@ -1153,7 +1153,7 @@ fun FoodResultSheet(
             if (onWhatIfSuggestion != null && analysisReady) {
                 item {
                     SheetPillRow(onClick = { whatIfEntry = previewEntry() }) {
-                        Text(stringResource(R.string.action_what_if), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                        Text(stringResource(R.string.action_what_if), fontSize = 16.sp, modifier = Modifier.weight(1f))
                         Icon(
                             Icons.AutoMirrored.Filled.KeyboardArrowRight,
                             contentDescription = null,
@@ -1697,7 +1697,7 @@ private fun WhatIfImpactRow(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(Modifier.weight(1f)) {
-            Text(label, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = accentColor)
+            Text(label, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = accentColor)
             Text(
                 added,
                 fontSize = 13.sp,

@@ -10,6 +10,7 @@ import app.chompass.models.FoodLogMacroChip
 import app.chompass.models.HomeCalorieDisplayMode
 import app.chompass.models.HomeCalorieHeroLayout
 import app.chompass.models.HomeDisplayPreferences
+import app.chompass.models.HomeMacroCardLayout
 import app.chompass.models.HomeTopNutrient
 import org.junit.Rule
 import org.junit.Test
@@ -47,8 +48,8 @@ class HomeLookPreviewTest {
     fun defaultSampleShowsFixedGoalAndDefaultCards() {
         setPreview()
         assertDisplayed("Sample day")
-        assertDisplayed("Protein")
-        assertDisplayed("Fiber")
+        assertDisplayed("P")
+        assertDisplayed("Fi")
         assertDisplayed("of 2,000 kcal")
         assertAbsent("Steps")
         assertAbsent("380 active")
@@ -65,6 +66,33 @@ class HomeLookPreviewTest {
         )
         assertDisplayed("Sodium")
         assertAbsent("Protein")
+    }
+
+    @Test
+    fun slimLineFullNamesShowCompleteLabels() {
+        setPreview(
+            HomeDisplayPreferences(
+                homeTopNutrients = listOf(HomeTopNutrient.PROTEIN),
+                nutrientCardCount = 1,
+                macroCardLayout = HomeMacroCardLayout.SLIM_LINE,
+                fullNutrientNames = true,
+            ),
+        )
+        assertDisplayed("Protein")
+        assertAbsent("P")
+    }
+
+    @Test
+    fun bandFullNamesShowCompleteLabels() {
+        setPreview(
+            HomeDisplayPreferences(
+                homeTopNutrients = listOf(HomeTopNutrient.PROTEIN),
+                nutrientCardCount = 1,
+                fullNutrientNames = true,
+            ),
+        )
+        assertDisplayed("Protein")
+        assertAbsent("P")
     }
 
     @Test

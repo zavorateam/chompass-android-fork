@@ -743,6 +743,9 @@ fun HomeScreen(
                             val (current, planned, goal) = macroCardValues.getValue(nutrient)
                             MacroCard(
                                 label = stringResource(nutrient.displayNameRes),
+                                shortLabel = stringResource(
+                                    ui.homeDisplay.cardLabelRes(nutrient)
+                                ),
                                 current = current,
                                 goal = goal,
                                 fatFloor = nutrient == HomeTopNutrient.FAT,
@@ -1100,7 +1103,7 @@ fun HomeScreen(
                                 modifier = Modifier.weight(1f, fill = false),
                                 color = MaterialTheme.colorScheme.onSurface,
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
@@ -1141,7 +1144,7 @@ fun HomeScreen(
                                 modifier = Modifier.weight(1f, fill = false),
                                 color = MaterialTheme.colorScheme.onSurface,
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
@@ -1183,7 +1186,7 @@ fun HomeScreen(
                                 modifier = Modifier.weight(1f, fill = false),
                                 color = MaterialTheme.colorScheme.onSurface,
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
@@ -1759,7 +1762,7 @@ fun HomeScreen(
         ) {
             Text(
                 stringResource(R.string.add_food_photo_source_title),
-                fontSize = 21.sp,
+                fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
             )
             ChompassDialogActions(
@@ -2041,7 +2044,7 @@ fun HomeScreen(
         val autoSavedToQueue = ui.pendingQueueEntryId != null
         val uriHandler = LocalUriHandler.current
         ChompassDialog(onDismissRequest = { vm.clearError() }) {
-            Text(stringResource(R.string.error_title), fontSize = 21.sp, fontWeight = FontWeight.Bold)
+            Text(stringResource(R.string.error_title), fontSize = 20.sp, fontWeight = FontWeight.Bold)
             Text(err, color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Secondary))
             ui.errorDetail?.let { detail ->
                 SelectionContainer {
@@ -2383,6 +2386,9 @@ internal fun HomeScreenPreviewContent(
                             ui.homeTopNutrients.forEach { nutrient ->
                                 MacroCard(
                                     label = stringResource(nutrient.displayNameRes),
+                                    shortLabel = stringResource(
+                                        ui.homeDisplay.cardLabelRes(nutrient)
+                                    ),
                                     current = when (nutrient) {
                                         HomeTopNutrient.CALORIES -> ui.loggedCaloriesToday.toDouble()
                                         HomeTopNutrient.CAFFEINE -> ui.caffeineTodayMg

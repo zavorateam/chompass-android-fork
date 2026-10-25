@@ -235,7 +235,7 @@ fun AnalysisQueueSheet(
         ChompassDialog(onDismissRequest = { confirmDelete = null }) {
             Text(
                 stringResource(R.string.analysis_queue_delete_confirm),
-                fontSize = 17.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
             )
             ChompassDialogActions(
@@ -255,7 +255,7 @@ fun AnalysisQueueSheet(
         ChompassDialog(onDismissRequest = { confirmClearHistory = false }) {
             Text(
                 stringResource(R.string.analysis_queue_clear_history_confirm),
-                fontSize = 17.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
             )
             ChompassDialogActions(
@@ -278,7 +278,7 @@ fun AnalysisQueueSheet(
         ChompassDialog(onDismissRequest = { runWithTarget = null }) {
             Text(
                 stringResource(R.string.queue_run_with),
-                fontSize = 21.sp,
+                fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
             )
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -297,7 +297,7 @@ fun AnalysisQueueSheet(
                         Column(Modifier.weight(1f)) {
                             Text(
                                 profile.name,
-                                fontSize = 15.sp,
+                                fontSize = 14.sp,
                                 fontWeight = FontWeight.Medium,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,

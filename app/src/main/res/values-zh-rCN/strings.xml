@@ -1089,6 +1089,8 @@
     <string name="home_display_show_active_calories">显示主动热量</string>
     <string name="home_display_show_active_calories_desc">在热量表盘中显示今日主动消耗。</string>
     <string name="home_display_show_steps">主页显示步数计数</string>
+    <string name="home_display_slim_full_names">完整营养素名称</string>
+    <string name="home_display_slim_full_names_desc">营养素卡片显示完整名称而非短标签。选择四张卡片时较长名称可能会被截断。</string>
     <string name="home_display_show_steps_desc">表盘下方的可选卡片。需要 Health Connect。</string>
     <string name="home_display_step_goal">每日步数目标</string>
     <string name="home_display_step_goal_hint">以 500 为步长调整。范围 1,000–50,000。</string>
@@ -1151,10 +1153,8 @@
     <string name="macro_protein_format">蛋白质：%1$s</string>
     <string name="macro_status_goal_reached">已达目标</string>
     <string name="macro_status_left">%1$s%2$s剩余</string>
-    <string name="macro_status_left_compact">%1$s剩余</string>
     <string name="macro_status_no_goal">无目标</string>
     <string name="macro_status_over">%1$s%2$s超标</string>
-    <string name="macro_status_over_compact">%1$s超标</string>
     <string name="macro_status_floor_met">已达到最低值</string>
     <string name="meal_photo_cd">照片 %1$d</string>
     <string name="meal_photos_add_from_library">添加照片</string>
@@ -1199,6 +1199,17 @@
     <string name="nutrient_sat_fat_format">饱和脂肪：%1$sg</string>
     <string name="nutrient_short_caffeine">咖啡因</string>
     <string name="nutrient_short_omega">欧米伽-3</string>
+    <string name="nutrient_short_calories">卡</string>
+    <string name="nutrient_short_added_sugar">添加糖</string>
+    <string name="nutrient_short_cholesterol">胆固醇</string>
+    <string name="nutrient_short_sodium">钠</string>
+    <string name="nutrient_short_potassium">钾</string>
+    <string name="nutrient_short_trans_fat">反式脂肪</string>
+    <string name="nutrient_short_calcium">钙</string>
+    <string name="nutrient_short_iron">铁</string>
+    <string name="nutrient_short_magnesium">镁</string>
+    <string name="nutrient_short_zinc">锌</string>
+    <string name="nutrient_short_folate">叶酸</string>
     <string name="nutrient_short_sat_fat">饱和脂肪</string>
     <string name="nutrient_short_vit_a">维A</string>
     <string name="nutrient_short_vit_c">维C</string>

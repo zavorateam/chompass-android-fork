@@ -49,7 +49,7 @@ internal fun MacroAveragesSection(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.progressCollapseHeader(expanded) { expanded = !expanded },
         ) {
-            Text(stringResource(R.string.progress_macro_averages), fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+            Text(stringResource(R.string.progress_macro_averages), fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.weight(1f))
             CollapseChevron(expanded)
         }
@@ -77,7 +77,7 @@ internal fun NutrientAveragesSection(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.progressCollapseHeader(expanded) { expanded = !expanded },
         ) {
-            Text(stringResource(R.string.progress_nutrient_averages), fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+            Text(stringResource(R.string.progress_nutrient_averages), fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.weight(1f))
             CollapseChevron(expanded)
         }
@@ -130,11 +130,11 @@ internal fun MacroProgressRow(
     }
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(label, fontSize = 15.sp, fontWeight = FontWeight.Medium, color = accentColor)
+            Text(label, fontSize = 14.sp, fontWeight = FontWeight.Medium, color = accentColor)
             Spacer(Modifier.weight(1f))
             Text(
                 "$currentLabel / $goalLabel",
-                fontSize = 15.sp,
+                fontSize = 14.sp,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Muted)
             )
         }

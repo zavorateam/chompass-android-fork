@@ -1,28 +1,87 @@
+# Build outputs
+build/
+.gradle/
+.cxx/
+*.iml
+.idea/
+.DS_Store
+
+# Local SDK config and signing material (never commit)
+local.properties
+android/keystore.properties
+android/secrets.properties
+android/secrets.properties.*
+*.jks
+.env.local
+
+# devenv
+.devenv/
+.devenv.flake.nix
+.android/
+
+# Local maintainer notes (not published)
+docs/local/
+docs/archive/
+
+# Local Codeberg workflow tooling (issue/PR templates ARE published from .forgejo/)
+.forgejo/*
+!.forgejo/issue_template/
+!.forgejo/pull_request_template.md
+
+# Personal health-data exports (dated names rotate)
+Fud-Food-Diary-*.json
+FudAI-Weight-Import.*
+
+# Release artifacts (published on Codeberg Releases)
+/*.apk
+SHA256SUMS
+releases/
+release-screenshots/
+
+# Local dev screenshots (adb captures, not published)
+/screenshots/
+
+# On-device LLM debug fixtures (personal photos; regenerate via scripts/prepare_ondevice_llm_fixtures.py)
+android/app/src/debug/assets/ondevice_llm/
+
+# Benchmark data caches and raw dataset downloads (code and manifests stay tracked)
+docs/benchmarks/*/data/
+docs/benchmarks/*/results/
+docs/benchmarks/food_accuracy/manifest/fndds_generated*.jsonl
+build/usda-fdc/
+build/swiss-sfdc/
+
+# Python
+__pycache__/
+*.pyc
+
+# Hugo project site (Codeberg Pages)
+website/public/
+website/resources/
+website/.hugo_build.lock
+
+# Chrome/Lighthouse under WSL may create Windows-style user-data paths as
+# literal cwd-relative directories (e.g. C:\Users\...\lighthouse.*)
+/C\:\\*/
+scripts/_tmp_finish_3_6_0_publish.sh
+
+# Crash reports dropped from the Windows host (main file + Zone.Identifier ADS)
+/Error in *
+/error.txt
+
+.env
+
+# Fork-specific rules retained during upstream sync
 # Xcode
 *.xcodeproj/project.xcworkspace/xcuserdata/
 *.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
 DerivedData/
-build/
-
 # Android Studio / Gradle
-.gradle/
-local.properties
-android/keystore.properties
-android/secrets.properties
-android/secrets.properties.*
 android/app/build/
 android/build/
-*.iml
-.idea/
-*.jks
-.cxx/
-
 # Local configuration
 ios/Local.xcconfig
-.DS_Store
-
-
 # Local IDE tooling
 .claude/
 .cursor/
@@ -32,26 +91,11 @@ ios/Local.xcconfig
 opencode.json
 ios/build-sim/
 .vercel
-
-# Xcode per-user state (scheme order, workspace UI) ‚Äî meaningless off this machine
+# Xcode per-user state (scheme order, workspace UI) Ú¿‘ meaningless off this machine
 ios/**/xcuserdata/
-
-# devenv
-.devenv/
-.devenv.flake.nix
-.android/
-
-# Local maintainer notes (not published)
-docs/local/
 AGENTS.md
 CLAUDE.md
-
-# Local Codeberg workflow tooling (issue/PR templates ARE published from .forgejo/)
-.forgejo/*
-!.forgejo/issue_template/
-!.forgejo/pull_request_template.md
 scripts/setup_codeberg_labels.sh
-
 # Local agent/triage workflow scripts (stay unversioned; docs/local + .cursor reference them)
 scripts/apply_codeberg_labels.sh
 scripts/fetch_codeberg_delta.sh
@@ -60,7 +104,6 @@ scripts/post_issue_reply.sh
 scripts/setup_gh_fitguyfitguy.sh
 scripts/sync_agent_configs.sh
 scripts/upstream_lookup.sh
-
 # Maintainer device/perf/on-device scripts (not needed to clone or build)
 scripts/capture_android_perf_baseline.sh
 scripts/capture_entry_perf.sh
@@ -78,9 +121,7 @@ scripts/generate_blog_accuracy_charts.py
 scripts/generate_barcode_fixture.py
 scripts/hero_states.sh
 scripts/_hero_states_check.sh
-
 # Maintainer lab notebooks, executed plans, outreach (CHANGELOG is the shipped record)
-docs/archive/
 docs/PERFORMANCE.md
 docs/WEB_PRESENCE.md
 docs/DEMO_HERO_FIREFOX.md
@@ -95,56 +136,19 @@ docs/SETTINGS_FINDABILITY_PLAN.md
 docs/SETTINGS_OVERHAUL_PLAN.md
 docs/WEATHER_INTEGRATION_DESIGN.md
 docs/LOCAL_ENDPOINT_TRUST_DESIGN.md
-
-# Release artifacts (published on Codeberg Releases)
 NoFUD-*.apk
 Chompass-*.apk
-/*.apk
-SHA256SUMS
-releases/
-release-screenshots/
-
-# Local dev screenshots (adb captures, not published)
-/screenshots/
-.env.local
 # Health data exports: diary backups and weight imports (dated names rotate)
-Fud-Food-Diary-*.json
-FudAI-Weight-Import.*
 android/app/src/debug/assets/ondevice_llm/fast_food_combo.jpg
 android/app/src/debug/assets/ondevice_llm/food_plate.jpg
 android/app/src/debug/assets/ondevice_llm/nutrition_label.jpg
 android/app/src/debug/assets/ondevice_llm/pizza_slices.jpg
-
 # Food accuracy benchmark caches and results
 docs/benchmarks/food_accuracy/data/
 docs/benchmarks/goal_recalc/results/
 docs/benchmarks/food_accuracy/results/
-docs/benchmarks/food_accuracy/manifest/fndds_generated*.jsonl
 docs/benchmarks/body_fat/data/
 docs/benchmarks/body_fat/results/
-
 # USDA FoodData Central raw downloads (built assets live under src/main/assets/usda/)
-build/usda-fdc/
 # Swiss Food Composition Database raw downloads (built assets live under src/main/assets/swiss/)
-build/swiss-sfdc/
-
-# Python
-__pycache__/
-*.pyc
 diary-surrogate-exclude-dates.txt
-
-# Hugo project site (Codeberg Pages)
-website/public/
-website/resources/
-website/.hugo_build.lock
-
-# Chrome/Lighthouse under WSL may create Windows-style user-data paths as
-# literal cwd-relative directories (e.g. C:\Users\...\lighthouse.*)
-/C\:\\*/
-scripts/_tmp_finish_3_6_0_publish.sh
-
-# Crash reports dropped from the Windows host (main file + Zone.Identifier ADS)
-/Error in *
-/error.txt
-
-.env

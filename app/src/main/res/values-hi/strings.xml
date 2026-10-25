@@ -1088,6 +1088,8 @@
     <string name="home_display_show_active_calories">सक्रिय कैलोरी दिखाएं</string>
     <string name="home_display_show_active_calories_desc">कैलोरी गेज में आज का सक्रिय खर्च दिखाएं।</string>
     <string name="home_display_show_steps">होम पर स्टेप काउंटर दिखाएं</string>
+    <string name="home_display_slim_full_names">पूर्ण पोषक नाम</string>
+    <string name="home_display_slim_full_names_desc">पोषक कार्ड छोटे लेबल के बजाय पूरा नाम दिखाते हैं। चार कार्ड चुनने पर लंबे नाम कट सकते हैं।</string>
     <string name="home_display_show_steps_desc">गेज के नीचे वैकल्पिक कार्ड। Health Connect आवश्यक है।</string>
     <string name="home_display_step_goal">दैनिक कदम लक्ष्य</string>
     <string name="home_display_step_goal_hint">500 का बदलाव। 1,000–50,000।</string>
@@ -1150,10 +1152,8 @@
     <string name="macro_protein_format">प्रोटीन: %1$s</string>
     <string name="macro_status_goal_reached">लक्ष्य प्राप्त</string>
     <string name="macro_status_left">%1$s%2$s बाकी</string>
-    <string name="macro_status_left_compact">%1$s बाकी</string>
     <string name="macro_status_no_goal">कोई लक्ष्य नहीं</string>
     <string name="macro_status_over">%1$s%2$s अधिक</string>
-    <string name="macro_status_over_compact">%1$s अधिक</string>
     <string name="macro_status_floor_met">न्यूनतम पूरा हुआ</string>
     <string name="meal_photo_cd">फोटो %1$d</string>
     <string name="meal_photos_add_from_library">फोटो जोड़ें</string>
@@ -1198,6 +1198,17 @@
     <string name="nutrient_sat_fat_format">संतृप्त वसा: %1$sg</string>
     <string name="nutrient_short_caffeine">कैफीन</string>
     <string name="nutrient_short_omega">ओमेगा-3</string>
+    <string name="nutrient_short_calories">कैल</string>
+    <string name="nutrient_short_added_sugar">अत. चीनी</string>
+    <string name="nutrient_short_cholesterol">कोलेस.</string>
+    <string name="nutrient_short_sodium">सोडियम</string>
+    <string name="nutrient_short_potassium">पोटैश.</string>
+    <string name="nutrient_short_trans_fat">ट्रांस वसा</string>
+    <string name="nutrient_short_calcium">कैल्श.</string>
+    <string name="nutrient_short_iron">आयरन</string>
+    <string name="nutrient_short_magnesium">मैग्नी.</string>
+    <string name="nutrient_short_zinc">जिंक</string>
+    <string name="nutrient_short_folate">फोलेट</string>
     <string name="nutrient_short_sat_fat">सं. वसा</string>
     <string name="nutrient_short_vit_a">विट. A</string>
     <string name="nutrient_short_vit_c">विट. C</string>

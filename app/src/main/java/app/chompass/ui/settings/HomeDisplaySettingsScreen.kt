@@ -179,6 +179,13 @@ fun HomeDisplaySettingsScreen(
                         value = nutrientCardLayoutLabel(display.macroCardLayout),
                         onClick = { showNutrientCardLayoutPicker = true },
                     )
+                    HorizontalDivider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f))
+                    ToggleRow(
+                        label = stringResource(R.string.home_display_slim_full_names),
+                        checked = display.fullNutrientNames,
+                        onChange = vm::setHomeFullNutrientNames,
+                    )
+                    SettingNote(stringResource(R.string.home_display_slim_full_names_desc))
                 }
             }
 
@@ -414,6 +421,7 @@ internal fun NutrientCardLayoutPickerDialog(
                         Box(Modifier.width(108.dp)) {
                             MacroCard(
                                 label = stringResource(R.string.macro_glyph_protein),
+                                shortLabel = stringResource(R.string.macro_glyph_protein),
                                 current = 92.0,
                                 goal = 140,
                                 unit = "g",
@@ -645,9 +653,9 @@ private fun StepGoalRow(goal: Int, onDecrement: () -> Unit, onIncrement: () -> U
             .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(stringResource(R.string.home_display_step_goal), fontSize = 17.sp, modifier = Modifier.weight(1f))
+        Text(stringResource(R.string.home_display_step_goal), fontSize = 16.sp, modifier = Modifier.weight(1f))
         IconButton(onClick = onDecrement) { Icon(Icons.Filled.Remove, contentDescription = stringResource(R.string.cd_decrease)) }
-        Text(goal.toString(), fontWeight = FontWeight.SemiBold, fontSize = 17.sp)
+        Text(goal.toString(), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
         IconButton(onClick = onIncrement) { Icon(Icons.Filled.Add, contentDescription = stringResource(R.string.cd_increase)) }
     }
 }
