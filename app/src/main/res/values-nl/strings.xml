@@ -188,17 +188,17 @@
     <string name="onboarding_health_connect">Verbinden</string>
 
     <string name="onboarding_provider_title">Breng je eigen AI mee</string>
-    <string name="onboarding_provider_subtitle">Optionele API-sleutel voor maaltijdfoto\'s en coach.\nGoogle AI Studio is gratis en aanbevolen.</string>
-    <string name="onboarding_provider_recommended_title">Aanbevolen: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">Optionele API-sleutel voor maaltijdfoto\'s en coach.\nGemini API is gratis en aanbevolen.</string>
+    <string name="onboarding_provider_recommended_title">Aanbevolen: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">Gratis en hoge kwaliteit. Het best voor maaltijdfoto\'s.</string>
-    <string name="onboarding_provider_howto_title">Zo krijg je een gratis Google AI Studio-sleutel</string>
+    <string name="onboarding_provider_howto_title">Zo krijg je een gratis Gemini API-sleutel</string>
     <string name="onboarding_provider_step_1">Open aistudio.google.com/apikey (tik om te openen)</string>
     <string name="onboarding_provider_step_2">Log in met Google en maak een API-sleutel</string>
     <string name="onboarding_provider_step_3">Plak hieronder en tik op Sleutel testen</string>
     <string name="onboarding_provider_footer">Alle providers ondersteund. Je sleutel blijft\nop dit apparaat, versleuteld. Later te wijzigen in Instellingen.</string>
     <string name="onboarding_skip_ai">Voorlopig overslaan</string>
     <string name="onboarding_skip_ai_title">Doorgaan zonder cloudsleutel?</string>
-    <string name="onboarding_skip_ai_body">On-device AI draait privé op je telefoon, maar is veel minder nauwkeurig dan Google AI Studio of andere cloudmodellen. Verwacht verkeerde calorieën, gemiste items of zwakke fotolezingen. Je kunt altijd een gratis AI Studio-sleutel toevoegen in Instellingen.</string>
+    <string name="onboarding_skip_ai_body">On-device AI draait privé op je telefoon, maar is veel minder nauwkeurig dan Gemini API of andere cloudmodellen. Verwacht verkeerde calorieën, gemiste items of zwakke fotolezingen. Je kunt altijd een gratis Gemini API-sleutel toevoegen in Instellingen.</string>
     <string name="onboarding_skip_ai_later_body">Foto-AI en coach hebben een API-sleutel of een on-device model nodig. Je kunt beide later in Instellingen instellen.</string>
     <string name="onboarding_skip_ai_confirm">Toch doorgaan</string>
 
@@ -815,8 +815,8 @@
     <string name="ai_error_invalid_url">Ongeldige API-URL. Controleer je providerinstellingen.</string>
     <string name="ai_error_insecure_http_blocked">Onveilige HTTP is geblokkeerd. Zet «Onveilige HTTP toestaan» aan in Instellingen → AI en spraak, of gebruik een https://-URL.</string>
     <string name="ai_error_key_rejected">Je API-sleutel is afgewezen. Open Instellingen → AI-provider en plak opnieuw een geldige sleutel.</string>
-    <string name="ai_error_location_unsupported">Gemini is niet beschikbaar vanaf deze netwerklocatie (land/IP). Gebruik je een VPN, zet die dan uit of kies een residentiële exit. Datacenter-/niet-residentiële VPN-IP\'s worden vaak geblokkeerd. Of schakel facturering in op het Google AI Studio-project, probeer een ander netwerk of wissel van provider in Instellingen → AI-provider.</string>
-    <string name="ai_error_model_unavailable">Je provider kon dit model niet vinden. Het kan betaald zijn op de gratis laag, beperkt in jouw regio, of de endpoint kan onjuist zijn. Schakel naar het standaard Flash-model in Instellingen → AI-provider of schakel facturering in op je AI Studio-project.</string>
+    <string name="ai_error_location_unsupported">Gemini is niet beschikbaar vanaf deze netwerklocatie (land/IP). Gebruik je een VPN, zet die dan uit of kies een residentiële exit. Datacenter-/niet-residentiële VPN-IP\'s worden vaak geblokkeerd. Of schakel facturering in op het Gemini API-project, probeer een ander netwerk of wissel van provider in Instellingen → AI-provider.</string>
+    <string name="ai_error_model_unavailable">Je provider kon dit model niet vinden. Het kan betaald zijn op de gratis laag, beperkt in jouw regio, of de endpoint kan onjuist zijn. Schakel naar het standaard Flash-model in Instellingen → AI-provider of schakel facturering in op je Gemini API-project.</string>
     <string name="ai_error_network_format">Netwerkfout: %1$s</string>
     <string name="ai_error_no_api_key">Geen API-sleutel geconfigureerd. Voeg je sleutel toe in Instellingen → AI-provider.</string>
     <string name="ai_error_on_device_low_memory">Nu niet genoeg vrij geheugen voor AI op het apparaat. Probeer het kleinere E2B-model, sluit andere apps of wissel van provider in Instellingen → AI-provider.</string>
@@ -1218,10 +1218,10 @@
     <string name="on_device_model_wifi_only">Alleen via wifi downloaden</string>
     <string name="onboarding_accuracy_body">Fotoschattingen en vage hoeveelheden (handvol, kopje, portie) zijn vaak onnauwkeurig. Appsuggesties en zeker AI/LLM-output zijn alleen schattingen, geen medische feiten. Controleer belangrijke cijfers zelf.</string>
     <string name="onboarding_accuracy_title">Nauwkeurigheidsverklaring</string>
-    <string name="onboarding_ai_free_tier_note">De gratis laag dekt de Flash-modellen; Pro-modellen vereisen facturering op je AI Studio-project.</string>
+    <string name="onboarding_ai_free_tier_note">De gratis laag dekt de Flash-modellen; Pro-modellen vereisen facturering op je Gemini API-project.</string>
     <string name="onboarding_api_key_empty">Plak eerst een API-sleutel</string>
     <string name="onboarding_api_key_network">Netwerkfout. Controleer je verbinding en probeer het opnieuw.</string>
-    <string name="onboarding_api_key_rejected">Die API-sleutel is afgewezen. Maak een nieuwe sleutel aan in AI Studio en plak deze opnieuw.</string>
+    <string name="onboarding_api_key_rejected">Die API-sleutel is afgewezen. Maak een nieuwe sleutel aan in Gemini API en plak deze opnieuw.</string>
     <string name="onboarding_api_key_test">Sleutel testen</string>
     <string name="onboarding_api_key_testing">Testen…</string>
     <string name="onboarding_api_key_works">Sleutel werkt</string>

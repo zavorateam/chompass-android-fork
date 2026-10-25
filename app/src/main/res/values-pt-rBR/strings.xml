@@ -194,17 +194,17 @@
     <string name="onboarding_health_connect">Conectar</string>
 
     <string name="onboarding_provider_title">Use sua própria IA</string>
-    <string name="onboarding_provider_subtitle">Chave de API opcional para fotos de comida e o coach.\nO Google AI Studio é gratuito e recomendado.</string>
-    <string name="onboarding_provider_recommended_title">Recomendado: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">Chave de API opcional para fotos de comida e o coach.\nO Gemini API é gratuito e recomendado.</string>
+    <string name="onboarding_provider_recommended_title">Recomendado: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">Grátis e de alta qualidade. Ideal para fotos de comida.</string>
-    <string name="onboarding_provider_howto_title">Como obter uma chave gratuita do Google AI Studio</string>
+    <string name="onboarding_provider_howto_title">Como obter uma chave gratuita do Gemini API</string>
     <string name="onboarding_provider_step_1">Abra aistudio.google.com/apikey (toque para abrir)</string>
     <string name="onboarding_provider_step_2">Entre com o Google e crie uma chave de API</string>
     <string name="onboarding_provider_step_3">Cole abaixo e toque em Testar chave</string>
     <string name="onboarding_provider_footer">Todos os provedores suportados. Sua chave fica\nneste dispositivo, criptografada. Você pode mudar em Ajustes.</string>
     <string name="onboarding_skip_ai">Pular por enquanto</string>
     <string name="onboarding_skip_ai_title">Continuar sem chave na nuvem?</string>
-    <string name="onboarding_skip_ai_body">A IA no dispositivo roda em privado no seu telefone, mas é bem menos precisa que o Google AI Studio ou outros modelos na nuvem. Espere calorias erradas, itens perdidos ou leituras fracas de fotos. Você pode adicionar uma chave gratuita do AI Studio a qualquer momento em Ajustes.</string>
+    <string name="onboarding_skip_ai_body">A IA no dispositivo roda em privado no seu telefone, mas é bem menos precisa que o Gemini API ou outros modelos na nuvem. Espere calorias erradas, itens perdidos ou leituras fracas de fotos. Você pode adicionar uma chave gratuita do Gemini API a qualquer momento em Ajustes.</string>
     <string name="onboarding_skip_ai_later_body">A IA de fotos de comida e o coach precisam de uma chave de API ou de um modelo no dispositivo. Você pode configurar qualquer um a qualquer momento em Ajustes.</string>
     <string name="onboarding_skip_ai_confirm">Continuar mesmo assim</string>
 
@@ -835,8 +835,8 @@
     <string name="ai_error_invalid_url">URL de API inválida. Verifique as configurações do provedor.</string>
     <string name="ai_error_insecure_http_blocked">HTTP inseguro bloqueado. Ative «Permitir HTTP inseguro» em Configurações → IA e fala, ou use uma URL https://.</string>
     <string name="ai_error_key_rejected">Sua chave de API foi rejeitada. Abra Configurações → Provedor de IA e cole novamente uma chave válida.</string>
-    <string name="ai_error_location_unsupported">O Gemini não está disponível nesta localização de rede (país/IP). Se usar VPN, desligue-a ou mude para uma saída residencial. IPs de datacenter/não residenciais de VPN costumam ser bloqueados. Ou ative o faturamento no projeto do Google AI Studio, tente outra rede ou troque de provedor em Configurações → Provedor de IA.</string>
-    <string name="ai_error_model_unavailable">Seu provedor não encontrou este modelo. Ele pode ser pago no plano gratuito, restrito na sua região ou o endpoint pode estar errado. Troque para o modelo Flash padrão em Configurações → Provedor de IA ou ative o faturamento no seu projeto do AI Studio.</string>
+    <string name="ai_error_location_unsupported">O Gemini não está disponível nesta localização de rede (país/IP). Se usar VPN, desligue-a ou mude para uma saída residencial. IPs de datacenter/não residenciais de VPN costumam ser bloqueados. Ou ative o faturamento no projeto do Gemini API, tente outra rede ou troque de provedor em Configurações → Provedor de IA.</string>
+    <string name="ai_error_model_unavailable">Seu provedor não encontrou este modelo. Ele pode ser pago no plano gratuito, restrito na sua região ou o endpoint pode estar errado. Troque para o modelo Flash padrão em Configurações → Provedor de IA ou ative o faturamento no seu projeto do Gemini API.</string>
     <string name="ai_error_network_format">Erro de rede: %1$s</string>
     <string name="ai_error_no_api_key">Nenhuma chave de API configurada. Adicione sua chave em Configurações → Provedor de IA.</string>
     <string name="ai_error_on_device_low_memory">Não há memória livre suficiente para IA no dispositivo agora. Tente o modelo E2B menor, feche outros apps ou troque de provedor em Configurações → Provedor de IA.</string>
@@ -1236,10 +1236,10 @@
     <string name="on_device_model_wifi_only">Baixar apenas via Wi-Fi</string>
     <string name="onboarding_accuracy_body">Estimativas por foto e quantidades vagas (punhado, xícara, porção) costumam ser imprecisas. Sugestões do app e principalmente a saída de IA/LLM são apenas estimativas, não fatos médicos. Verifique você mesmo os números importantes.</string>
     <string name="onboarding_accuracy_title">Aviso de precisão</string>
-    <string name="onboarding_ai_free_tier_note">O plano gratuito cobre os modelos Flash; modelos Pro exigem faturamento no seu projeto do AI Studio.</string>
+    <string name="onboarding_ai_free_tier_note">O plano gratuito cobre os modelos Flash; modelos Pro exigem faturamento no seu projeto do Gemini API.</string>
     <string name="onboarding_api_key_empty">Cole primeiro uma chave de API</string>
     <string name="onboarding_api_key_network">Erro de rede. Verifique sua conexão e tente novamente.</string>
-    <string name="onboarding_api_key_rejected">Essa chave de API foi rejeitada. Crie uma nova chave no AI Studio e cole novamente.</string>
+    <string name="onboarding_api_key_rejected">Essa chave de API foi rejeitada. Crie uma nova chave no Gemini API e cole novamente.</string>
     <string name="onboarding_api_key_test">Testar chave</string>
     <string name="onboarding_api_key_testing">Testando…</string>
     <string name="onboarding_api_key_works">A chave funciona</string>

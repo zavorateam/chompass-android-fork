@@ -357,6 +357,26 @@ private fun microGoal(field: MicronutrientField, goals: OptionalNutrientGoals?):
         MicronutrientField.FOLATE -> OptionalNutrient.FOLATE
         MicronutrientField.OMEGA3 -> OptionalNutrient.OMEGA3
         MicronutrientField.CAFFEINE -> OptionalNutrient.CAFFEINE
+        MicronutrientField.HISTIDINE -> OptionalNutrient.HISTIDINE
+        MicronutrientField.ISOLEUCINE -> OptionalNutrient.ISOLEUCINE
+        MicronutrientField.LEUCINE -> OptionalNutrient.LEUCINE
+        MicronutrientField.LYSINE -> OptionalNutrient.LYSINE
+        MicronutrientField.METHIONINE -> OptionalNutrient.METHIONINE
+        MicronutrientField.PHENYLALANINE -> OptionalNutrient.PHENYLALANINE
+        MicronutrientField.THREONINE -> OptionalNutrient.THREONINE
+        MicronutrientField.TRYPTOPHAN -> OptionalNutrient.TRYPTOPHAN
+        MicronutrientField.VALINE -> OptionalNutrient.VALINE
+        MicronutrientField.VITAMIN_B1 -> OptionalNutrient.VITAMIN_B1
+        MicronutrientField.VITAMIN_B2 -> OptionalNutrient.VITAMIN_B2
+        MicronutrientField.VITAMIN_B3 -> OptionalNutrient.VITAMIN_B3
+        MicronutrientField.VITAMIN_B5 -> OptionalNutrient.VITAMIN_B5
+        MicronutrientField.VITAMIN_B6 -> OptionalNutrient.VITAMIN_B6
+        MicronutrientField.BIOTIN -> OptionalNutrient.BIOTIN
+        MicronutrientField.CHOLINE -> OptionalNutrient.CHOLINE
+        MicronutrientField.PHOSPHORUS -> OptionalNutrient.PHOSPHORUS
+        MicronutrientField.SELENIUM -> OptionalNutrient.SELENIUM
+        MicronutrientField.COPPER -> OptionalNutrient.COPPER
+        MicronutrientField.MANGANESE -> OptionalNutrient.MANGANESE
     }
     return goals?.valueFor(nutrient)
 }

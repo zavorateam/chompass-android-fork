@@ -194,17 +194,17 @@
     <string name="onboarding_health_connect">Conectează</string>
 
     <string name="onboarding_provider_title">Adu propriul tău AI</string>
-    <string name="onboarding_provider_subtitle">Cheie API opțională pentru foto de mâncare și coach.\nGoogle AI Studio este gratuit și recomandat.</string>
-    <string name="onboarding_provider_recommended_title">Recomandat: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">Cheie API opțională pentru foto de mâncare și coach.\nGemini API este gratuit și recomandat.</string>
+    <string name="onboarding_provider_recommended_title">Recomandat: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">Gratuit și de calitate. Ideal pentru fotografii de mâncare.</string>
-    <string name="onboarding_provider_howto_title">Cum obții o cheie gratuită Google AI Studio</string>
+    <string name="onboarding_provider_howto_title">Cum obții o cheie gratuită Gemini API</string>
     <string name="onboarding_provider_step_1">Deschide aistudio.google.com/apikey (atinge pentru a deschide)</string>
     <string name="onboarding_provider_step_2">Autentifică-te cu Google și creează o cheie API</string>
     <string name="onboarding_provider_step_3">Lipește-o mai jos și apasă Testează cheia</string>
     <string name="onboarding_provider_footer">Toți furnizorii sunt acceptați. Cheia rămâne pe\nacest dispozitiv, criptată. Poți schimba în Setări.</string>
     <string name="onboarding_skip_ai">Omite deocamdată</string>
     <string name="onboarding_skip_ai_title">Continui fără cheie cloud?</string>
-    <string name="onboarding_skip_ai_body">AI pe dispozitiv rulează privat pe telefon, dar e mult mai puțin precis decât Google AI Studio sau alte modele cloud. Așteaptă calorii greșite, elemente ratate sau citiri slabe de foto. Poți adăuga oricând o cheie AI Studio gratuită în Setări.</string>
+    <string name="onboarding_skip_ai_body">AI pe dispozitiv rulează privat pe telefon, dar e mult mai puțin precis decât Gemini API sau alte modele cloud. Așteaptă calorii greșite, elemente ratate sau citiri slabe de foto. Poți adăuga oricând o cheie Gemini API gratuită în Setări.</string>
     <string name="onboarding_skip_ai_later_body">AI pentru foto de mâncare și coach au nevoie de o cheie API sau un model pe dispozitiv. Poți configura oricare în Setări oricând.</string>
     <string name="onboarding_skip_ai_confirm">Continuă oricum</string>
 
@@ -838,8 +838,8 @@
     <string name="ai_error_invalid_url">URL API nevalid. Verifică setările furnizorului.</string>
     <string name="ai_error_insecure_http_blocked">HTTP nesigur este blocat. Activează «Permite HTTP nesigur» în Setări → IA și voce sau folosește un URL https://.</string>
     <string name="ai_error_key_rejected">Cheia ta API a fost respinsă. Deschide Setări → Furnizor IA și lipește din nou o cheie validă.</string>
-    <string name="ai_error_location_unsupported">Gemini nu este disponibil din această locație de rețea (țară/IP). Dacă folosești VPN, dezactivează-l sau comută la o ieșire rezidențială. IP-urile de datacenter/nerezidențiale VPN sunt adesea blocate. Sau activează facturarea în proiectul Google AI Studio, încearcă altă rețea sau schimbă furnizorul în Setări → Furnizor IA.</string>
-    <string name="ai_error_model_unavailable">Furnizorul tău nu a găsit acest model. Poate fi plătit pe planul gratuit, restricționat în regiunea ta sau endpoint-ul poate fi greșit. Comută la modelul Flash implicit în Setări → Furnizor IA sau activează facturarea în proiectul tău AI Studio.</string>
+    <string name="ai_error_location_unsupported">Gemini nu este disponibil din această locație de rețea (țară/IP). Dacă folosești VPN, dezactivează-l sau comută la o ieșire rezidențială. IP-urile de datacenter/nerezidențiale VPN sunt adesea blocate. Sau activează facturarea în proiectul Gemini API, încearcă altă rețea sau schimbă furnizorul în Setări → Furnizor IA.</string>
+    <string name="ai_error_model_unavailable">Furnizorul tău nu a găsit acest model. Poate fi plătit pe planul gratuit, restricționat în regiunea ta sau endpoint-ul poate fi greșit. Comută la modelul Flash implicit în Setări → Furnizor IA sau activează facturarea în proiectul tău Gemini API.</string>
     <string name="ai_error_network_format">Eroare de rețea: %1$s</string>
     <string name="ai_error_no_api_key">Nicio cheie API configurată. Adaugă cheia ta în Setări → Furnizor IA.</string>
     <string name="ai_error_on_device_low_memory">Nu este suficientă memorie liberă pentru AI pe dispozitiv chiar acum. Încearcă modelul E2B mai mic, închide alte aplicații sau schimbă furnizorul în Setări → Furnizor IA.</string>
@@ -1239,10 +1239,10 @@
     <string name="on_device_model_wifi_only">Descarcă doar prin Wi-Fi</string>
     <string name="onboarding_accuracy_body">Estimările din fotografii și cantitățile vagi (pumn, cană, porție) sunt adesea imprecise. Sugestiile aplicației și mai ales rezultatul IA/LLM sunt doar estimări, nu fapte medicale. Verifică tu însuți numerele importante.</string>
     <string name="onboarding_accuracy_title">Mențiune privind acuratețea</string>
-    <string name="onboarding_ai_free_tier_note">Planul gratuit acoperă modelele Flash; modelele Pro necesită facturare în proiectul tău AI Studio.</string>
+    <string name="onboarding_ai_free_tier_note">Planul gratuit acoperă modelele Flash; modelele Pro necesită facturare în proiectul tău Gemini API.</string>
     <string name="onboarding_api_key_empty">Lipește mai întâi o cheie API</string>
     <string name="onboarding_api_key_network">Eroare de rețea. Verifică conexiunea și încearcă din nou.</string>
-    <string name="onboarding_api_key_rejected">Acea cheie API a fost respinsă. Creează o cheie nouă în AI Studio și lipește-o din nou.</string>
+    <string name="onboarding_api_key_rejected">Acea cheie API a fost respinsă. Creează o cheie nouă în Gemini API și lipește-o din nou.</string>
     <string name="onboarding_api_key_test">Testează cheia</string>
     <string name="onboarding_api_key_testing">Se testează…</string>
     <string name="onboarding_api_key_works">Cheia funcționează</string>

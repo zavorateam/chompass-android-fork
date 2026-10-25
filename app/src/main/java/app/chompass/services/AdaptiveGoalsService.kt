@@ -91,8 +91,8 @@ class AdaptiveGoalsService(
             prefs.saveAdaptiveGoalPreviousTargetsIfNeeded(profile)
             profileRepository.save(result.profile)
             val unit = EnergyUnit.fromStorage(prefs.energyUnit.first())
-            val unitLabel = strings(if (unit == EnergyUnit.KJ) R.string.unit_kj else R.string.unit_kcal, arrayOf())
-            val message = strings(R.string.vm_adaptive_updated, arrayOf(EnergyFormat.quantity(result.updatedCalories, unit), unitLabel)) +
+            val unitLabel = strings(if (unit == EnergyUnit.KJ) R.string.unit_kj else R.string.unit_kcal, arrayOf<Any>())
+            val message = strings(R.string.vm_adaptive_updated, arrayOf<Any>(EnergyFormat.quantity(result.updatedCalories, unit), unitLabel)) +
                 " ${result.message}"
             // Record the change for the Goals transparency sheet (reopenable on demand):
             // deterministic, so tier/provider stay null and the sheet renders the

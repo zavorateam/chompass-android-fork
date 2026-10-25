@@ -121,6 +121,26 @@ fun NutritionDetailSheet(
     val folate = entries.sumOf { it.folate ?: 0.0 }
     val omega3 = entries.sumOf { it.omega3 ?: 0.0 }
     val caffeine = entries.sumOf { it.caffeine ?: 0.0 } + trackerCaffeineMg
+    val histidine = entries.sumOf { it.histidine ?: 0.0 }
+    val isoleucine = entries.sumOf { it.isoleucine ?: 0.0 }
+    val leucine = entries.sumOf { it.leucine ?: 0.0 }
+    val lysine = entries.sumOf { it.lysine ?: 0.0 }
+    val methionine = entries.sumOf { it.methionine ?: 0.0 }
+    val phenylalanine = entries.sumOf { it.phenylalanine ?: 0.0 }
+    val threonine = entries.sumOf { it.threonine ?: 0.0 }
+    val tryptophan = entries.sumOf { it.tryptophan ?: 0.0 }
+    val valine = entries.sumOf { it.valine ?: 0.0 }
+    val vitaminB1 = entries.sumOf { it.vitaminB1 ?: 0.0 }
+    val vitaminB2 = entries.sumOf { it.vitaminB2 ?: 0.0 }
+    val vitaminB3 = entries.sumOf { it.vitaminB3 ?: 0.0 }
+    val vitaminB5 = entries.sumOf { it.vitaminB5 ?: 0.0 }
+    val vitaminB6 = entries.sumOf { it.vitaminB6 ?: 0.0 }
+    val biotin = entries.sumOf { it.biotin ?: 0.0 }
+    val choline = entries.sumOf { it.choline ?: 0.0 }
+    val phosphorus = entries.sumOf { it.phosphorus ?: 0.0 }
+    val selenium = entries.sumOf { it.selenium ?: 0.0 }
+    val copper = entries.sumOf { it.copper ?: 0.0 }
+    val manganese = entries.sumOf { it.manganese ?: 0.0 }
     val isDark = isDarkTheme()
     val sheetSurface = MaterialTheme.colorScheme.surfaceContainerLow
 
@@ -233,6 +253,51 @@ fun NutritionDetailSheet(
                     DetailRow(Icons.Filled.WaterDrop, stringResource(R.string.nutrition_label_omega3), fmt(omega3), stringResource(R.string.unit_g), goal = "${optionalGoals.omega3}", percent = nutritionGoalPercent(omega3, optionalGoals.omega3.toDouble()))
                     Hairline()
                     DetailRow(Icons.Filled.Coffee, stringResource(R.string.nutrition_label_caffeine), fmt(caffeine), stringResource(R.string.unit_mg), goal = "${optionalGoals.caffeine}", percent = nutritionGoalPercent(caffeine, optionalGoals.caffeine.toDouble()))
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_vitamin_b1), fmt(vitaminB1), stringResource(R.string.unit_mg), goal = "${optionalGoals.vitaminB1}", percent = nutritionGoalPercent(vitaminB1, optionalGoals.vitaminB1.toDouble()), labelGlyph = "B1")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_vitamin_b2), fmt(vitaminB2), stringResource(R.string.unit_mg), goal = "${optionalGoals.vitaminB2}", percent = nutritionGoalPercent(vitaminB2, optionalGoals.vitaminB2.toDouble()), labelGlyph = "B2")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_vitamin_b3), fmt(vitaminB3), stringResource(R.string.unit_mg), goal = "${optionalGoals.vitaminB3}", percent = nutritionGoalPercent(vitaminB3, optionalGoals.vitaminB3.toDouble()), labelGlyph = "B3")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_vitamin_b5), fmt(vitaminB5), stringResource(R.string.unit_mg), goal = "${optionalGoals.vitaminB5}", percent = nutritionGoalPercent(vitaminB5, optionalGoals.vitaminB5.toDouble()), labelGlyph = "B5")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_vitamin_b6), fmt(vitaminB6), stringResource(R.string.unit_mg), goal = "${optionalGoals.vitaminB6}", percent = nutritionGoalPercent(vitaminB6, optionalGoals.vitaminB6.toDouble()), labelGlyph = "B6")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_biotin), fmt(biotin), stringResource(R.string.unit_mcg), goal = "${optionalGoals.biotin}", percent = nutritionGoalPercent(biotin, optionalGoals.biotin.toDouble()), labelGlyph = "B7")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_choline), fmt(choline), stringResource(R.string.unit_mg), goal = "${optionalGoals.choline}", percent = nutritionGoalPercent(choline, optionalGoals.choline.toDouble()), labelGlyph = "Ch")
+                    Hairline()
+                    DetailRow(Icons.Filled.Bolt, stringResource(R.string.nutrition_label_phosphorus), fmt(phosphorus), stringResource(R.string.unit_mg), goal = "${optionalGoals.phosphorus}", percent = nutritionGoalPercent(phosphorus, optionalGoals.phosphorus.toDouble()))
+                    Hairline()
+                    DetailRow(Icons.Filled.Bolt, stringResource(R.string.nutrition_label_selenium), fmt(selenium), stringResource(R.string.unit_mcg), goal = "${optionalGoals.selenium}", percent = nutritionGoalPercent(selenium, optionalGoals.selenium.toDouble()))
+                    Hairline()
+                    DetailRow(Icons.Filled.Bolt, stringResource(R.string.nutrition_label_copper), fmt(copper), stringResource(R.string.unit_mg), goal = "${optionalGoals.copper}", percent = nutritionGoalPercent(copper, optionalGoals.copper.toDouble()))
+                    Hairline()
+                    DetailRow(Icons.Filled.Bolt, stringResource(R.string.nutrition_label_manganese), fmt(manganese), stringResource(R.string.unit_mg), goal = "${optionalGoals.manganese}", percent = nutritionGoalPercent(manganese, optionalGoals.manganese.toDouble()))
+                }
+            }
+
+            item { NutritionSheetSectionHeader(stringResource(R.string.nutrition_section_amino_acids)) }
+            item {
+                Card {
+                    DetailRow(null, stringResource(R.string.nutrition_label_histidine), fmt(histidine), stringResource(R.string.unit_g), goal = "${optionalGoals.histidine}", percent = nutritionGoalPercent(histidine, optionalGoals.histidine.toDouble()), labelGlyph = "H")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_isoleucine), fmt(isoleucine), stringResource(R.string.unit_g), goal = "${optionalGoals.isoleucine}", percent = nutritionGoalPercent(isoleucine, optionalGoals.isoleucine.toDouble()), labelGlyph = "I")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_leucine), fmt(leucine), stringResource(R.string.unit_g), goal = "${optionalGoals.leucine}", percent = nutritionGoalPercent(leucine, optionalGoals.leucine.toDouble()), labelGlyph = "L", accentColor = AppColors.Protein)
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_lysine), fmt(lysine), stringResource(R.string.unit_g), goal = "${optionalGoals.lysine}", percent = nutritionGoalPercent(lysine, optionalGoals.lysine.toDouble()), labelGlyph = "K")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_methionine), fmt(methionine), stringResource(R.string.unit_g), goal = "${optionalGoals.methionine}", percent = nutritionGoalPercent(methionine, optionalGoals.methionine.toDouble()), labelGlyph = "M")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_phenylalanine), fmt(phenylalanine), stringResource(R.string.unit_g), goal = "${optionalGoals.phenylalanine}", percent = nutritionGoalPercent(phenylalanine, optionalGoals.phenylalanine.toDouble()), labelGlyph = "F")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_threonine), fmt(threonine), stringResource(R.string.unit_g), goal = "${optionalGoals.threonine}", percent = nutritionGoalPercent(threonine, optionalGoals.threonine.toDouble()), labelGlyph = "T")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_tryptophan), fmt(tryptophan), stringResource(R.string.unit_g), goal = "${optionalGoals.tryptophan}", percent = nutritionGoalPercent(tryptophan, optionalGoals.tryptophan.toDouble()), labelGlyph = "W")
+                    Hairline()
+                    DetailRow(null, stringResource(R.string.nutrition_label_valine), fmt(valine), stringResource(R.string.unit_g), goal = "${optionalGoals.valine}", percent = nutritionGoalPercent(valine, optionalGoals.valine.toDouble()), labelGlyph = "V")
                 }
             }
             // #86: per-ingredient breakdown with the same micros +% block as

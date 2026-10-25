@@ -114,6 +114,7 @@ class UsdaFoodIndex(
             vitaminK = d("vitamin_k"),
             folate = d("folate"),
             omega3 = d("omega_3"),
+            water = d("water") ?: d("water_g"),
         )
     }
 
@@ -274,6 +275,7 @@ data class UsdaFoodRecord(
     val vitaminK: Double?,
     val folate: Double?,
     val omega3: Double?,
+    val water: Double? = null,
 ) {
     fun toCandidate(score: Double, datasetVersion: String): GroundingCandidate =
         GroundingCandidate(
@@ -336,6 +338,7 @@ data class UsdaFoodRecord(
             vitaminK = vitaminK,
             folate = folate,
             omega3 = omega3,
+            waterPer100g = water,
             grounding = app.chompass.models.FoodGroundingProvenance(
                 sourceKind = NutrientSourceKind.USDA,
                 sourceId = fdcId.toString(),

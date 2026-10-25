@@ -801,6 +801,8 @@ fun HomeScreen(
                             onAutoClick = onOpenSettings,
                             nextDrinkLabel = nextDrinkLabel,
                             onClick = { showWaterHistory = true },
+                            foodMl = ui.waterTodayFoodMl,
+                            manualMl = ui.waterTodayManualMl,
                             modifier = Modifier.padding(horizontal = 16.dp),
                         )
                     }
@@ -1432,6 +1434,9 @@ fun HomeScreen(
             onDismiss = { showWaterHistory = false },
             onEdit = { editingWaterEntry = it },
             onDelete = { vm.deleteWater(it.id) },
+            manualMl = ui.waterTodayManualMl,
+            foodMl = ui.waterTodayFoodMl,
+            foodSummary = ui.waterFoodSummary,
         )
     }
 

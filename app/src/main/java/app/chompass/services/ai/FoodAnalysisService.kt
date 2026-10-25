@@ -74,13 +74,13 @@ import app.chompass.models.UnitFormat
 // docs/benchmarks/food_accuracy — lean_units2 variant). Keep in sync with the
 // production_* builders in docs/benchmarks/food_accuracy/prompts.py.
 private const val ENTRY_JSON_SCHEMA_MEAL =
-    """{"name":"...","calories":0,"protein":0.0,"carbs":0.0,"fat":0.0,"serving_size_grams":0.0,"emoji":"<single specific food emoji>","sugar":0.0,"added_sugar":0.0,"fiber":0.0,"saturated_fat":0.0,"monounsaturated_fat":0.0,"polyunsaturated_fat":0.0,"cholesterol":0.0,"sodium":0.0,"potassium":0.0,"trans_fat":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"zinc":0.0,"vitamin_a":0.0,"vitamin_c":0.0,"vitamin_d":0.0,"vitamin_b12":0.0,"vitamin_e":0.0,"vitamin_k":0.0,"folate":0.0,"omega_3":0.0,"caffeine":0.0,"unit_options":[]"""
+    """{"name":"...","calories":0,"protein":0.0,"carbs":0.0,"fat":0.0,"serving_size_grams":0.0,"emoji":"<single specific food emoji>","sugar":0.0,"added_sugar":0.0,"fiber":0.0,"saturated_fat":0.0,"monounsaturated_fat":0.0,"polyunsaturated_fat":0.0,"cholesterol":0.0,"sodium":0.0,"potassium":0.0,"trans_fat":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"zinc":0.0,"vitamin_a":0.0,"vitamin_c":0.0,"vitamin_d":0.0,"vitamin_b12":0.0,"vitamin_e":0.0,"vitamin_k":0.0,"folate":0.0,"omega_3":0.0,"caffeine":0.0,"histidine":0.0,"isoleucine":0.0,"leucine":0.0,"lysine":0.0,"methionine":0.0,"phenylalanine":0.0,"threonine":0.0,"tryptophan":0.0,"valine":0.0,"vitamin_b1":0.0,"vitamin_b2":0.0,"vitamin_b3":0.0,"vitamin_b5":0.0,"vitamin_b6":0.0,"biotin":0.0,"choline":0.0,"phosphorus":0.0,"selenium":0.0,"copper":0.0,"manganese":0.0,"unit_options":[]"""
 
 private const val CONSTITUENT_ROW_MACROS =
     """{"name":"...","calories":0,"protein":0.0,"carbs":0.0,"fat":0.0,"serving_size_grams":0.0,"emoji":"...","unit_options":[]}"""
 
 private const val CONSTITUENT_ROW_MICROS =
-    """{"name":"...","calories":0,"protein":0.0,"carbs":0.0,"fat":0.0,"serving_size_grams":0.0,"emoji":"...","sugar":0.0,"added_sugar":0.0,"fiber":0.0,"saturated_fat":0.0,"monounsaturated_fat":0.0,"polyunsaturated_fat":0.0,"cholesterol":0.0,"sodium":0.0,"potassium":0.0,"trans_fat":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"zinc":0.0,"vitamin_a":0.0,"vitamin_c":0.0,"vitamin_d":0.0,"vitamin_b12":0.0,"vitamin_e":0.0,"vitamin_k":0.0,"folate":0.0,"omega_3":0.0,"unit_options":[]}"""
+    """{"name":"...","calories":0,"protein":0.0,"carbs":0.0,"fat":0.0,"serving_size_grams":0.0,"emoji":"...","sugar":0.0,"added_sugar":0.0,"fiber":0.0,"saturated_fat":0.0,"monounsaturated_fat":0.0,"polyunsaturated_fat":0.0,"cholesterol":0.0,"sodium":0.0,"potassium":0.0,"trans_fat":0.0,"calcium":0.0,"iron":0.0,"magnesium":0.0,"zinc":0.0,"vitamin_a":0.0,"vitamin_c":0.0,"vitamin_d":0.0,"vitamin_b12":0.0,"vitamin_e":0.0,"vitamin_k":0.0,"folate":0.0,"omega_3":0.0,"histidine":0.0,"isoleucine":0.0,"leucine":0.0,"lysine":0.0,"methionine":0.0,"phenylalanine":0.0,"threonine":0.0,"tryptophan":0.0,"valine":0.0,"vitamin_b1":0.0,"vitamin_b2":0.0,"vitamin_b3":0.0,"vitamin_b5":0.0,"vitamin_b6":0.0,"biotin":0.0,"choline":0.0,"phosphorus":0.0,"selenium":0.0,"copper":0.0,"manganese":0.0,"unit_options":[]}"""
 
 private const val ENTRY_JSON_SCHEMA = "$ENTRY_JSON_SCHEMA_MEAL}"
 
@@ -100,9 +100,9 @@ private const val ENTRY_JSON_SCHEMA_WITH_CONSTITUENTS =
     """$ENTRY_JSON_SCHEMA_MEAL,"constituents":[$CONSTITUENT_ROW_MICROS]}"""
 
 private const val ENTRY_NUTRIENT_UNITS =
-    "Calories are integers; other nutrients are numbers (grams for protein/carbs/fat/sugars/fiber/fats/omega-3; " +
-        "mg for cholesterol, sodium, potassium, calcium, iron, magnesium, zinc, vitamin C, vitamin E; " +
-        "mcg for vitamins A, D, B12, K and folate). serving_size_grams is the estimated total weight in grams."
+    "Calories are integers; other nutrients are numbers (grams for protein/carbs/fat/sugars/fiber/fats/omega-3/amino acids (histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, valine); " +
+        "mg for cholesterol, sodium, potassium, calcium, iron, magnesium, zinc, copper, manganese, phosphorus, choline, vitamins B1, B2, B3, B5, B6, C, E; " +
+        "mcg for vitamins A, D, B12, K, biotin, selenium, and folate). serving_size_grams is the estimated total weight in grams."
 
 private const val ENTRY_NUTRIENT_UNITS_LEAN =
     "Calories are integers; protein/carbs/fat are grams. " +
@@ -367,20 +367,20 @@ class FoodAnalysisService(
             $profileContext
 
             Return ONLY JSON in this exact shape:
-            {"sugar":50,"added_sugar":25,"fiber":30,"saturated_fat":20,"cholesterol":300,"sodium":2300,"potassium":3500,"trans_fat":0,"calcium":1000,"iron":18,"magnesium":400,"zinc":11,"vitamin_a":900,"vitamin_c":90,"vitamin_d":20,"vitamin_b12":3,"vitamin_e":15,"vitamin_k":120,"folate":400,"omega_3":2,"caffeine":400}
+            {"sugar":50,"added_sugar":25,"fiber":30,"saturated_fat":20,"cholesterol":300,"sodium":2300,"potassium":3500,"trans_fat":0,"calcium":1000,"iron":18,"magnesium":400,"zinc":11,"vitamin_a":900,"vitamin_c":90,"vitamin_d":20,"vitamin_b12":3,"vitamin_e":15,"vitamin_k":120,"folate":400,"omega_3":2,"caffeine":400,"histidine":1,"isoleucine":2,"leucine":3,"lysine":3,"methionine":1,"phenylalanine":2,"threonine":2,"tryptophan":1,"valine":2,"vitamin_b1":1,"vitamin_b2":1,"vitamin_b3":16,"vitamin_b5":5,"vitamin_b6":2,"biotin":30,"choline":550,"phosphorus":700,"selenium":55,"copper":1,"manganese":2}
 
             Rules:
             - Do not return calories, protein, carbs, or fat.
             - Keep this independent from macro calculation; only estimate the listed optional nutrient goals.
-            - sugar, added_sugar, fiber, saturated_fat, trans_fat, and omega_3 are grams per day.
-            - cholesterol, sodium, potassium, calcium, iron, magnesium, zinc, vitamin_c, and vitamin_e are milligrams per day.
+            - sugar, added_sugar, fiber, saturated_fat, trans_fat, omega_3, and amino acids (histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, valine) are grams per day.
+            - cholesterol, sodium, potassium, calcium, iron, magnesium, zinc, copper, manganese, phosphorus, choline, vitamins b1, b2, b3, b5, b6, vitamin_c, and vitamin_e are milligrams per day.
             - caffeine is milligrams per day; keep it near 400 mg for most adults.
-            - vitamin_a, vitamin_d, vitamin_b12, vitamin_k, and folate are micrograms per day.
+            - vitamin_a, vitamin_d, vitamin_b12, vitamin_k, folate, biotin, and selenium are micrograms per day.
+            - Amino acids should scale with the user's daily protein target (leucine ~ 3-5g, isoleucine/valine ~ 2-4g, lysine ~ 3-4g, etc.).
             - Use realistic non-medical nutrition targets for an average adult adjusted by profile and calorie target.
             - Keep added_sugar and saturated_fat near or below 10% of calories when possible.
             - Fiber should generally scale around 14g per 1000 kcal, with a practical adult range.
             - Sodium should usually stay near general adult guidance unless the profile strongly suggests otherwise.
-            - Potassium, calcium, iron, magnesium, zinc, vitamins, folate, and omega-3 should use practical daily targets, not food-log intake.
             - Use integers only.
         """.trimIndent()
         return FoodJsonParser.parseOptionalNutrientGoals(
@@ -1827,7 +1827,7 @@ class FoodAnalysisService(
         val prompt = """
             Read this nutrition facts label and extract per-100g values. If the label only shows per-serving, normalize using the serving size listed on the label.
             Respond ONLY with JSON:
-            {"name":"...","calories_per_100g":0.0,"protein_per_100g":0.0,"carbs_per_100g":0.0,"fat_per_100g":0.0,"serving_size_grams":0.0,"sugar_per_100g":0.0,"added_sugar_per_100g":0.0,"fiber_per_100g":0.0,"saturated_fat_per_100g":0.0,"monounsaturated_fat_per_100g":0.0,"polyunsaturated_fat_per_100g":0.0,"cholesterol_per_100g":0.0,"sodium_per_100g":0.0,"potassium_per_100g":0.0,"trans_fat_per_100g":0.0,"calcium_per_100g":0.0,"iron_per_100g":0.0,"magnesium_per_100g":0.0,"zinc_per_100g":0.0,"vitamin_a_per_100g":0.0,"vitamin_c_per_100g":0.0,"vitamin_d_per_100g":0.0,"vitamin_b12_per_100g":0.0,"vitamin_e_per_100g":0.0,"vitamin_k_per_100g":0.0,"folate_per_100g":0.0,"omega_3_per_100g":0.0,"caffeine_per_100g":0.0,"unit_options":[]}
+            {"name":"...","calories_per_100g":0.0,"protein_per_100g":0.0,"carbs_per_100g":0.0,"fat_per_100g":0.0,"serving_size_grams":0.0,"sugar_per_100g":0.0,"added_sugar_per_100g":0.0,"fiber_per_100g":0.0,"saturated_fat_per_100g":0.0,"monounsaturated_fat_per_100g":0.0,"polyunsaturated_fat_per_100g":0.0,"cholesterol_per_100g":0.0,"sodium_per_100g":0.0,"potassium_per_100g":0.0,"trans_fat_per_100g":0.0,"calcium_per_100g":0.0,"iron_per_100g":0.0,"magnesium_per_100g":0.0,"zinc_per_100g":0.0,"vitamin_a_per_100g":0.0,"vitamin_c_per_100g":0.0,"vitamin_d_per_100g":0.0,"vitamin_b12_per_100g":0.0,"vitamin_e_per_100g":0.0,"vitamin_k_per_100g":0.0,"folate_per_100g":0.0,"omega_3_per_100g":0.0,"caffeine_per_100g":0.0,"histidine_per_100g":0.0,"isoleucine_per_100g":0.0,"leucine_per_100g":0.0,"lysine_per_100g":0.0,"methionine_per_100g":0.0,"phenylalanine_per_100g":0.0,"threonine_per_100g":0.0,"tryptophan_per_100g":0.0,"valine_per_100g":0.0,"vitamin_b1_per_100g":0.0,"vitamin_b2_per_100g":0.0,"vitamin_b3_per_100g":0.0,"vitamin_b5_per_100g":0.0,"vitamin_b6_per_100g":0.0,"biotin_per_100g":0.0,"choline_per_100g":0.0,"phosphorus_per_100g":0.0,"selenium_per_100g":0.0,"copper_per_100g":0.0,"manganese_per_100g":0.0,"unit_options":[]}
             The [] in unit_options above is only a JSON shape placeholder; replace it with options when a non-gram unit is visible.
             All values should be numbers. If serving size or any nutrient is not available, use null. unit_options is required when a non-gram label serving unit is visible, such as slice, piece, tbsp, cup, ml, fl oz, can, or packet. Do not copy any sample number; use the quantity shown on the label. Use [] only when no non-gram unit is visible. Do not include g/grams in unit_options.
         """.trimIndent()
@@ -2410,6 +2410,8 @@ class FoodAnalysisService(
 
         internal val defaultClient: OkHttpClient by lazy {
             OkHttpClient.Builder()
+                .proxySelector(app.chompass.network.ProxyManager.proxySelector)
+                .proxyAuthenticator(app.chompass.network.ProxyManager.proxyAuthenticator)
                 // Debug-only: capture per-call network latency phases (DNS/connect/
                 // TLS/TTFB/total + byte counts) for every AI/STT/OpenFoodFacts call.
                 .apply { if (BuildConfig.DEBUG) eventListenerFactory(PerfEventListener.Factory) }

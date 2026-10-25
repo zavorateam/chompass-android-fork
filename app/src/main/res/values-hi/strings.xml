@@ -199,17 +199,17 @@
     <string name="onboarding_health_connect">कनेक्ट करें</string>
 
     <string name="onboarding_provider_title">अपनी खुद की AI लाएँ</string>
-    <string name="onboarding_provider_subtitle">फ़ूड फ़ोटो और कोच के लिए वैकल्पिक API कुंजी।\nGoogle AI Studio मुफ़्त और अनुशंसित है।</string>
-    <string name="onboarding_provider_recommended_title">अनुशंसित: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">फ़ूड फ़ोटो और कोच के लिए वैकल्पिक API कुंजी।\nGemini API मुफ़्त और अनुशंसित है।</string>
+    <string name="onboarding_provider_recommended_title">अनुशंसित: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">मुफ़्त और उच्च गुणवत्ता। फ़ूड फ़ोटो के लिए सबसे अच्छा।</string>
-    <string name="onboarding_provider_howto_title">मुफ़्त Google AI Studio कुंजी कैसे पाएँ</string>
+    <string name="onboarding_provider_howto_title">मुफ़्त Gemini API कुंजी कैसे पाएँ</string>
     <string name="onboarding_provider_step_1">aistudio.google.com/apikey खोलें (खोलने के लिए टैप करें)</string>
     <string name="onboarding_provider_step_2">Google से साइन इन करें और API कुंजी बनाएँ</string>
     <string name="onboarding_provider_step_3">नीचे पेस्ट करें और कुंजी जाँचें पर टैप करें</string>
     <string name="onboarding_provider_footer">सभी प्रदाता समर्थित। आपकी कुंजी इस डिवाइस पर\nएन्क्रिप्टेड रहती है। सेटिंग्स में बाद में बदल सकते हैं।</string>
     <string name="onboarding_skip_ai">अभी के लिए छोड़ें</string>
     <string name="onboarding_skip_ai_title">क्लाउड कुंजी के बिना जारी रखें?</string>
-    <string name="onboarding_skip_ai_body">ऑन-डिवाइस AI आपके फ़ोन पर निजी रूप से चलता है, लेकिन Google AI Studio या अन्य क्लाउड मॉडल से बहुत कम सटीक है। गलत कैलोरी, छूटे आइटम या कमज़ोर फ़ोटो रीड की उम्मीद करें। मुफ़्त AI Studio कुंजी कभी भी सेटिंग्स में जोड़ सकते हैं।</string>
+    <string name="onboarding_skip_ai_body">ऑन-डिवाइस AI आपके फ़ोन पर निजी रूप से चलता है, लेकिन Gemini API या अन्य क्लाउड मॉडल से बहुत कम सटीक है। गलत कैलोरी, छूटे आइटम या कमज़ोर फ़ोटो रीड की उम्मीद करें। मुफ़्त Gemini API कुंजी कभी भी सेटिंग्स में जोड़ सकते हैं।</string>
     <string name="onboarding_skip_ai_later_body">फ़ूड फ़ोटो AI और कोच को API कुंजी या ऑन-डिवाइस मॉडल चाहिए। दोनों सेटिंग्स में कभी भी सेट कर सकते हैं।</string>
     <string name="onboarding_skip_ai_confirm">फिर भी जारी रखें</string>
 
@@ -845,8 +845,8 @@
     <string name="ai_error_invalid_url">अमान्य API URL। अपनी प्रदाता सेटिंग्स जांचें।</string>
     <string name="ai_error_insecure_http_blocked">असुरक्षित HTTP अवरुद्ध है। सेटिंग्स → AI और भाषण में “असुरक्षित HTTP की अनुमति दें” चालू करें, या https:// URL इस्तेमाल करें।</string>
     <string name="ai_error_key_rejected">आपकी API कुंजी अस्वीकार कर दी गई। सेटिंग्स → AI प्रदाता खोलें और एक मान्य कुंजी दोबारा पेस्ट करें।</string>
-    <string name="ai_error_location_unsupported">Gemini इस नेटवर्क स्थान (देश/IP) से उपलब्ध नहीं है। VPN उपयोग कर रहे हैं तो उसे बंद करें या रेज़िडेंशियल आउटपुट पर स्विच करें। डेटासेंटर/गैर-रेज़िडेंशियल VPN IP अक्सर ब्लॉक होते हैं। या Google AI Studio प्रोजेक्ट पर बिलिंग सक्षम करें, कोई और नेटवर्क आज़माएं, या सेटिंग्स → AI प्रदाता में प्रदाता बदलें।</string>
-    <string name="ai_error_model_unavailable">आपका प्रदाता यह मॉडल नहीं ढूंढ सका। यह मुफ्त टियर पर केवल-भुगतान वाला, आपके क्षेत्र में प्रतिबंधित, या endpoint गलत हो सकता है। सेटिंग्स → AI प्रदाता में डिफ़ॉल्ट Flash मॉडल पर स्विच करें, या अपने AI Studio प्रोजेक्ट पर बिलिंग सक्षम करें।</string>
+    <string name="ai_error_location_unsupported">Gemini इस नेटवर्क स्थान (देश/IP) से उपलब्ध नहीं है। VPN उपयोग कर रहे हैं तो उसे बंद करें या रेज़िडेंशियल आउटपुट पर स्विच करें। डेटासेंटर/गैर-रेज़िडेंशियल VPN IP अक्सर ब्लॉक होते हैं। या Gemini API प्रोजेक्ट पर बिलिंग सक्षम करें, कोई और नेटवर्क आज़माएं, या सेटिंग्स → AI प्रदाता में प्रदाता बदलें।</string>
+    <string name="ai_error_model_unavailable">आपका प्रदाता यह मॉडल नहीं ढूंढ सका। यह मुफ्त टियर पर केवल-भुगतान वाला, आपके क्षेत्र में प्रतिबंधित, या endpoint गलत हो सकता है। सेटिंग्स → AI प्रदाता में डिफ़ॉल्ट Flash मॉडल पर स्विच करें, या अपने Gemini API प्रोजेक्ट पर बिलिंग सक्षम करें।</string>
     <string name="ai_error_network_format">नेटवर्क त्रुटि: %1$s</string>
     <string name="ai_error_no_api_key">कोई API कुंजी कॉन्फ़िगर नहीं है। अपनी कुंजी सेटिंग्स → AI प्रदाता में जोड़ें।</string>
     <string name="ai_error_on_device_low_memory">अभी ऑन-डिवाइस AI के लिए पर्याप्त खाली मेमोरी नहीं है। छोटा E2B मॉडल आज़माएं, अन्य ऐप बंद करें, या सेटिंग्स → AI प्रदाता में प्रदाता बदलें।</string>
@@ -1244,10 +1244,10 @@
     <string name="on_device_model_wifi_only">केवल Wi-Fi से डाउनलोड करें</string>
     <string name="onboarding_accuracy_body">फोटो अनुमान और अस्पष्ट मात्रा लेबल (मुट्ठी, कप, सर्विंग) अक्सर गलत होते हैं। ऐप सुझाव और विशेष रूप से AI/LLM आउटपुट केवल अनुमान हैं, चिकित्सीय तथ्य नहीं। महत्वपूर्ण संख्याएं स्वयं सत्यापित करें।</string>
     <string name="onboarding_accuracy_title">सटीकता अस्वीकरण</string>
-    <string name="onboarding_ai_free_tier_note">मुफ्त टियर Flash मॉडल कवर करता है; Pro मॉडल के लिए आपके AI Studio प्रोजेक्ट पर बिलिंग आवश्यक है।</string>
+    <string name="onboarding_ai_free_tier_note">मुफ्त टियर Flash मॉडल कवर करता है; Pro मॉडल के लिए आपके Gemini API प्रोजेक्ट पर बिलिंग आवश्यक है।</string>
     <string name="onboarding_api_key_empty">पहले एक API कुंजी पेस्ट करें</string>
     <string name="onboarding_api_key_network">नेटवर्क त्रुटि। अपना कनेक्शन जांचें और फिर प्रयास करें।</string>
-    <string name="onboarding_api_key_rejected">वह API कुंजी अस्वीकार कर दी गई। AI Studio में नई कुंजी बनाकर दोबारा पेस्ट करें।</string>
+    <string name="onboarding_api_key_rejected">वह API कुंजी अस्वीकार कर दी गई। Gemini API में नई कुंजी बनाकर दोबारा पेस्ट करें।</string>
     <string name="onboarding_api_key_test">कुंजी जाँचें</string>
     <string name="onboarding_api_key_testing">परीक्षण…</string>
     <string name="onboarding_api_key_works">कुंजी काम करती है</string>

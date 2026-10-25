@@ -73,20 +73,23 @@ object WaterGoalCalculator {
     /** Hard cap on the food-water credit so a huge diary never zeroes the goal. */
     const val MAX_FOOD_WATER_ML = 1_000
 
-    /** Absolute floor for the net drink goal. */
+    /** Absolute floor for the daily hydration goal. */
     const val MIN_NET_GOAL_ML = 1_000
 
-    /** Estimated water contributed by today's food, 50 ml steps, capped at 1 L. */
-    fun foodWaterMl(foodGramsToday: Int): Int {
-        if (foodGramsToday <= 0) return 0
-        return minOf(round50(foodGramsToday * FOOD_WATER_RATIO), MAX_FOOD_WATER_ML)
-    }
+    /** Estimated water contributed by food (coarse formula). */
+    fun foodWaterMl(foodGramsToday: Int): Int =
+        if (foodGramsToday <= 0) 0
+        else round50((foodGramsToday * FOOD_WATER_RATIO).coerceAtMost(MAX_FOOD_WATER_ML.toDouble()))
 
-    /** Net drink goal after the food-water credit, never below 1 L. */
-    fun netGoalMl(grossGoalMl: Int, foodWaterMl: Int): Int =
-        max(grossGoalMl - foodWaterMl, MIN_NET_GOAL_ML)
+    /**
+     * In the unified hydration model, the daily goal is the overall body water requirement
+     * (gross goal), which is compared against total water consumed (manual sips + food/beverage water).
+     * Food water is counted as intake, so it is never subtracted from the goal to avoid double-counting.
+     */
+    fun netGoalMl(grossGoalMl: Int, foodWaterMl: Int = 0): Int =
+        max(grossGoalMl, MIN_NET_GOAL_ML)
 
-    /** Today's net drink goal from the stored inputs. The single entry point
+    /** Today's hydration goal from the stored inputs. The single entry point
      *  Home / widget / Settings preview / reminder chain all share. */
     fun dailyNetGoalMl(
         baseSource: String,
@@ -95,8 +98,8 @@ object WaterGoalCalculator {
         expectedHighC: Int,
         activityLevel: ActivityLevel,
         useProfileActivity: Boolean,
-        foodGramsToday: Int,
-        foodWaterEnabled: Boolean,
+        foodGramsToday: Int = 0,
+        foodWaterEnabled: Boolean = true,
     ): Int = breakdown(
         baseSource, weightKg, manualBaseMl, expectedHighC,
         activityLevel, useProfileActivity, foodGramsToday, foodWaterEnabled,
@@ -110,19 +113,19 @@ object WaterGoalCalculator {
         expectedHighC: Int,
         activityLevel: ActivityLevel,
         useProfileActivity: Boolean,
-        foodGramsToday: Int,
-        foodWaterEnabled: Boolean,
+        foodGramsToday: Int = 0,
+        foodWaterEnabled: Boolean = true,
     ): WaterGoalBreakdown {
         val base = baseGoalMl(baseSource, weightKg, manualBaseMl)
         val temp = tempFactor(expectedHighC)
         val act = if (useProfileActivity) activityFactor(activityLevel) else 1.0
         val gross = round50(base * temp * act)
-        val food = if (foodWaterEnabled) foodWaterMl(foodGramsToday) else 0
+        val target = max(gross, MIN_NET_GOAL_ML)
         return WaterGoalBreakdown(
             baseMl = base,
             grossMl = gross,
-            foodWaterMl = food,
-            netGoalMl = netGoalMl(gross, food),
+            foodWaterMl = 0,
+            netGoalMl = target,
             tempFactor = temp,
             activityFactor = act,
         )

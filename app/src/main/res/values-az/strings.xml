@@ -198,17 +198,17 @@ bilirsən?</string>
     <string name="onboarding_health_connect">Qoşul</string>
 
     <string name="onboarding_provider_title">Öz AI-nizi Gətirin</string>
-    <string name="onboarding_provider_subtitle">Yemək fotoları və kouç üçün istəyə bağlı API açarı.\nGoogle AI Studio pulsuzdur və tövsiyə olunur.</string>
-    <string name="onboarding_provider_recommended_title">Tövsiyə olunur: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">Yemək fotoları və kouç üçün istəyə bağlı API açarı.\nGemini API pulsuzdur və tövsiyə olunur.</string>
+    <string name="onboarding_provider_recommended_title">Tövsiyə olunur: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">Pulsuz və yüksək keyfiyyət. Yemək fotoları üçün ən yaxşı.</string>
-    <string name="onboarding_provider_howto_title">Pulsuz Google AI Studio açarını necə əldə etmək olar</string>
+    <string name="onboarding_provider_howto_title">Pulsuz Gemini API açarını necə əldə etmək olar</string>
     <string name="onboarding_provider_step_1">aistudio.google.com/apikey aç (açmaq üçün toxun)</string>
     <string name="onboarding_provider_step_2">Google ilə daxil ol və API açarı yarat</string>
     <string name="onboarding_provider_step_3">Aşağıya yapışdır və Açarı yoxla düyməsinə toxun</string>
     <string name="onboarding_provider_footer">Bütün təminatçılar dəstəklənir. Açarın bu cihazda\nşifrələnmiş qalır. Sonra Parametrlərdə dəyişə bilərsən.</string>
     <string name="onboarding_skip_ai">Hələlik keç</string>
     <string name="onboarding_skip_ai_title">Bulud açarı olmadan davam edilsin?</string>
-    <string name="onboarding_skip_ai_body">Cihazdakı AI telefonunda məxfi işləyir, amma Google AI Studio və digər bulud modellərindən çox daha az dəqiqdir. Yanlış kalori, buraxılmış elementlər və ya zəif foto oxunuşları gözlə. Pulsuz AI Studio açarını Parametrlərdə istənilən vaxt əlavə edə bilərsən.</string>
+    <string name="onboarding_skip_ai_body">Cihazdakı AI telefonunda məxfi işləyir, amma Gemini API və digər bulud modellərindən çox daha az dəqiqdir. Yanlış kalori, buraxılmış elementlər və ya zəif foto oxunuşları gözlə. Pulsuz Gemini API açarını Parametrlərdə istənilən vaxt əlavə edə bilərsən.</string>
     <string name="onboarding_skip_ai_later_body">Yemək foto AI və kouç üçün API açarı və ya cihaz modeli lazımdır. Hər ikisini Parametrlərdə istənilən vaxt quraşdıra bilərsən.</string>
     <string name="onboarding_skip_ai_confirm">Yenə də davam et</string>
 
@@ -836,8 +836,8 @@ bilirsən?</string>
     <string name="ai_error_invalid_url">Yanlış API URL. Provayder parametrlərini yoxla.</string>
     <string name="ai_error_insecure_http_blocked">Qorunmayan HTTP bloklanıb. Parametrlər → AI və Nitq bölməsində «Qorunmayan HTTP-yə icazə ver»i aç, və ya https:// URL istifadə et.</string>
     <string name="ai_error_key_rejected">API açarın rədd edildi. Parametrlər → AI Provayderi açıb etibarlı açarı yenidən yapışdır.</string>
-    <string name="ai_error_location_unsupported">Gemini bu şəbəkə yerindən (ölkə/IP) mövcud deyil. VPN işlədirsənsə, onu söndür və ya yaşayış çıxışına keç. Məlumat mərkəzi/qeyri-yaşayış VPN IP-ləri tez-tez bloklanır. Yaxud Google AI Studio layihəsində ödənişi aktivləşdir, başqa şəbəkə sına və ya Parametrlər → AI Provayderi bölməsində provayderi dəyiş.</string>
-    <string name="ai_error_model_unavailable">Provayderin bu modeli tapa bilmədi. O, pulsuz planda yalnız ödənişli, regionunda məhdud və ya endpoint səhv ola bilər. Parametrlər → AI Provayderi bölməsində standart Flash modelinə keç və ya AI Studio layihəndə ödənişi aktivləşdir.</string>
+    <string name="ai_error_location_unsupported">Gemini bu şəbəkə yerindən (ölkə/IP) mövcud deyil. VPN işlədirsənsə, onu söndür və ya yaşayış çıxışına keç. Məlumat mərkəzi/qeyri-yaşayış VPN IP-ləri tez-tez bloklanır. Yaxud Gemini API layihəsində ödənişi aktivləşdir, başqa şəbəkə sına və ya Parametrlər → AI Provayderi bölməsində provayderi dəyiş.</string>
+    <string name="ai_error_model_unavailable">Provayderin bu modeli tapa bilmədi. O, pulsuz planda yalnız ödənişli, regionunda məhdud və ya endpoint səhv ola bilər. Parametrlər → AI Provayderi bölməsində standart Flash modelinə keç və ya Gemini API layihəndə ödənişi aktivləşdir.</string>
     <string name="ai_error_network_format">Şəbəkə xətası: %1$s</string>
     <string name="ai_error_no_api_key">API açarı konfiqurasiya edilməyib. Açarını Parametrlər → AI Provayderi bölməsində əlavə et.</string>
     <string name="ai_error_on_device_low_memory">Hazırda cihazdaxili süni intellekt üçün kifayət qədər boş yaddaş yoxdur. Kiçik E2B modelini sına, digər tətbiqləri bağla və ya Parametrlər → AI Provayderi bölməsində provayderi dəyiş.</string>
@@ -1240,10 +1240,10 @@ bilirsən?</string>
     <string name="on_device_model_wifi_only">Yalnız Wi-Fi ilə endir</string>
     <string name="onboarding_accuracy_body">Foto təxminləri və qeyri-müəyyən miqdar etiketləri (ovuc, fincan, porsiya) çox vaxt qeyri-dəqiqdir. Tətbiq təklifləri və xüsusilə AI/LLM nəticələri yalnız təxmindir, tibbi fakt deyil. Vacib rəqəmləri özün yoxla.</string>
     <string name="onboarding_accuracy_title">Dəqiqlik bəyanatı</string>
-    <string name="onboarding_ai_free_tier_note">Pulsuz plan Flash modellərini əhatə edir; Pro modellər AI Studio layihəndə ödəniş tələb edir.</string>
+    <string name="onboarding_ai_free_tier_note">Pulsuz plan Flash modellərini əhatə edir; Pro modellər Gemini API layihəndə ödəniş tələb edir.</string>
     <string name="onboarding_api_key_empty">Əvvəlcə API açarı yapışdır</string>
     <string name="onboarding_api_key_network">Şəbəkə xətası. Bağlantını yoxlayıb yenidən cəhd et.</string>
-    <string name="onboarding_api_key_rejected">Həmin API açarı rədd edildi. AI Studio-da yeni açar yaradıb yenidən yapışdır.</string>
+    <string name="onboarding_api_key_rejected">Həmin API açarı rədd edildi. Gemini API-da yeni açar yaradıb yenidən yapışdır.</string>
     <string name="onboarding_api_key_test">Açarı yoxla</string>
     <string name="onboarding_api_key_testing">Yoxlanılır…</string>
     <string name="onboarding_api_key_works">Açar işləyir</string>

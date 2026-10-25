@@ -37,17 +37,19 @@ object ChompassRoutes {
     const val SETTINGS_NOTES = "settings/notes?from={from}"
     const val SETTINGS_NOTIFICATIONS = "settings/notifications?from={from}"
     const val SETTINGS_SYNC = "settings/sync?from={from}"
+    const val SETTINGS_PROXY = "settings/proxy?from={from}"
 
     fun customFoodDbDetailRoute(dbId: String) = "settings/custom-food-databases/$dbId"
 
     /** Cross-link route builders; `from` drives the sub-screen's back label. */
     fun waterRoute(from: String) = "settings/water?from=$from"
-        fun nicotineRoute(from: String) = "settings/nicotine?from=$from"
+    fun nicotineRoute(from: String) = "settings/nicotine?from=$from"
     fun caffeineRoute(from: String) = "settings/caffeine?from=$from"
     fun fastingRoute(from: String) = "settings/fasting?from=$from"
     fun notesRoute(from: String) = "settings/notes?from=$from"
     fun notificationsRoute(from: String) = "settings/notifications?from=$from"
     fun syncRoute(from: String) = "settings/sync?from=$from"
+    fun proxyRoute(from: String) = "settings/proxy?from=$from"
 
     val bottomTabs = listOf(HOME, PROGRESS, COACH, SETTINGS)
 

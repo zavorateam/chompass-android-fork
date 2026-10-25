@@ -247,7 +247,7 @@ class FoodDatabaseSearch(
                 }
                 if (Source.CUSTOM in active) {
                     launch("custom") {
-                        customFoodDbRepository?.searchActiveDatabases(q, limit = 6) ?: emptyList()
+                        customFoodDbRepository?.searchActiveDatabases(q, limit = limit) ?: emptyList()
                     }
                 }
                 val merged = jobs.flatMap { it.await() }
@@ -261,15 +261,15 @@ class FoodDatabaseSearch(
     }
 
     /**
-     * Offline-only leg (bundled USDA + Swiss SQLite). Split out from [search]
-     * because that one fans every selected source into one `coroutineScope`
-     * and awaits them together: with Open Food Facts in the set, local rows
-     * are gated on the network leg finishing its retry chain, so an offline
-     * device waited on a request that could never succeed. The Add Food
-     * suggestion list paints these first, then merges the online leg.
+     * Offline-only leg (bundled USDA + Swiss SQLite + local Custom Food DBs).
+     * Split out from [search] because that one fans every selected source into
+     * one `coroutineScope` and awaits them together: with Open Food Facts in
+     * the set, local rows are gated on the network leg finishing its retry chain,
+     * so an offline device waited on a request that could never succeed. The Add
+     * Food suggestion list paints these first, then merges the online leg.
      */
     suspend fun searchOffline(query: String, limit: Int = 12): List<DatabaseSearchResult> =
-        search(query, setOf(Source.USDA, Source.SWISS), limit)
+        search(query, setOf(Source.USDA, Source.SWISS, Source.CUSTOM), limit)
 
     /**
      * Network-only leg (Open Food Facts). See [searchOffline]. Returns the

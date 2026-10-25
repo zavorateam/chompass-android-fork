@@ -198,17 +198,17 @@
     <string name="onboarding_health_connect">接続</string>
 
     <string name="onboarding_provider_title">自分のAIを使う</string>
-    <string name="onboarding_provider_subtitle">食事写真とコーチ用の任意のAPIキー。\nGoogle AI Studioは無料でおすすめです。</string>
-    <string name="onboarding_provider_recommended_title">おすすめ：Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">食事写真とコーチ用の任意のAPIキー。\nGemini APIは無料でおすすめです。</string>
+    <string name="onboarding_provider_recommended_title">おすすめ：Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">無料で高品質。食事写真に最適。</string>
-    <string name="onboarding_provider_howto_title">無料の Google AI Studio キーの取得方法</string>
+    <string name="onboarding_provider_howto_title">無料の Gemini API キーの取得方法</string>
     <string name="onboarding_provider_step_1">aistudio.google.com/apikey を開く（タップで開く）</string>
     <string name="onboarding_provider_step_2">GoogleでログインしてAPIキーを作成</string>
     <string name="onboarding_provider_step_3">下に貼り付けて「キーをテスト」をタップ</string>
     <string name="onboarding_provider_footer">すべてのプロバイダに対応。キーはこの端末に\n暗号化して保存されます。設定で後から変更できます。</string>
     <string name="onboarding_skip_ai">今はスキップ</string>
     <string name="onboarding_skip_ai_title">クラウドキーなしで続行しますか？</string>
-    <string name="onboarding_skip_ai_body">オンデバイスAIは端末上でプライベートに動作しますが、Google AI Studioや他のクラウドモデルより精度がかなり低いです。カロリーの誤り、見落とし、弱い写真認識が起きやすいです。無料のAI Studioキーは設定からいつでも追加できます。</string>
+    <string name="onboarding_skip_ai_body">オンデバイスAIは端末上でプライベートに動作しますが、Gemini APIや他のクラウドモデルより精度がかなり低いです。カロリーの誤り、見落とし、弱い写真認識が起きやすいです。無料のGemini APIキーは設定からいつでも追加できます。</string>
     <string name="onboarding_skip_ai_later_body">食事写真AIとコーチにはAPIキーまたはオンデバイスモデルが必要です。どちらも設定からいつでも設定できます。</string>
     <string name="onboarding_skip_ai_confirm">それでも続行</string>
 
@@ -844,8 +844,8 @@
     <string name="ai_error_invalid_url">API URL が無効です。プロバイダー設定を確認してください。</string>
     <string name="ai_error_insecure_http_blocked">安全でない HTTP はブロックされています。設定 → AI と音声で「安全でない HTTP を許可」をオンにするか、https:// URL を使ってください。</string>
     <string name="ai_error_key_rejected">API キーが拒否されました。設定 → AI プロバイダーを開き、有効なキーを貼り直してください。</string>
-    <string name="ai_error_location_unsupported">Gemini はこのネットワーク環境（国/IP）では利用できません。VPN を使用している場合はオフにするか、住宅用出口に切り替えてください。データセンター/非住宅用 VPN IP はよくブロックされます。Google AI Studio プロジェクトで課金を有効にするか、別のネットワークを試すか、設定 → AI プロバイダーでプロバイダーを変更してください。</string>
-    <string name="ai_error_model_unavailable">プロバイダーがこのモデルを見つけられませんでした。無料プランでは有料のみ、地域で制限されている、またはエンドポイントが間違っている可能性があります。設定 → AI プロバイダーでデフォルトの Flash モデルに切り替えるか、AI Studio プロジェクトで課金を有効にしてください。</string>
+    <string name="ai_error_location_unsupported">Gemini はこのネットワーク環境（国/IP）では利用できません。VPN を使用している場合はオフにするか、住宅用出口に切り替えてください。データセンター/非住宅用 VPN IP はよくブロックされます。Gemini API プロジェクトで課金を有効にするか、別のネットワークを試すか、設定 → AI プロバイダーでプロバイダーを変更してください。</string>
+    <string name="ai_error_model_unavailable">プロバイダーがこのモデルを見つけられませんでした。無料プランでは有料のみ、地域で制限されている、またはエンドポイントが間違っている可能性があります。設定 → AI プロバイダーでデフォルトの Flash モデルに切り替えるか、Gemini API プロジェクトで課金を有効にしてください。</string>
     <string name="ai_error_network_format">ネットワークエラー：%1$s</string>
     <string name="ai_error_no_api_key">API キーが設定されていません。設定 → AI プロバイダーでキーを追加してください。</string>
     <string name="ai_error_on_device_low_memory">現在、オンデバイスでのAIに十分な空きメモリがありません。小さい E2B モデルを試すか、他のアプリを閉じるか、設定 → AI プロバイダーでプロバイダーを変更してください。</string>
@@ -1243,10 +1243,10 @@
     <string name="on_device_model_wifi_only">Wi-Fi のみでダウンロード</string>
     <string name="onboarding_accuracy_body">写真による推定やあいまいな量の表記（ひと握り、カップ、1食分）は不正確なことがよくあります。アプリの提案、特に AI/LLM の出力はあくまで推定であり、医学的事実ではありません。重要な数値はご自身で確認してください。</string>
     <string name="onboarding_accuracy_title">精度に関する注意</string>
-    <string name="onboarding_ai_free_tier_note">無料プランは Flash モデルをカバーします。Pro モデルは AI Studio プロジェクトでの課金が必要です。</string>
+    <string name="onboarding_ai_free_tier_note">無料プランは Flash モデルをカバーします。Pro モデルは Gemini API プロジェクトでの課金が必要です。</string>
     <string name="onboarding_api_key_empty">先に API キーを貼り付けてください</string>
     <string name="onboarding_api_key_network">ネットワークエラー。接続を確認してもう一度お試しください。</string>
-    <string name="onboarding_api_key_rejected">その API キーは拒否されました。AI Studio で新しいキーを作成して貼り直してください。</string>
+    <string name="onboarding_api_key_rejected">その API キーは拒否されました。Gemini API で新しいキーを作成して貼り直してください。</string>
     <string name="onboarding_api_key_test">キーをテスト</string>
     <string name="onboarding_api_key_testing">テスト中…</string>
     <string name="onboarding_api_key_works">キーは動作します</string>

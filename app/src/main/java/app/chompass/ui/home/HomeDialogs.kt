@@ -600,6 +600,7 @@ internal fun ManualEntryDialog(
     var selectedServingUnitId by rememberSaveable { mutableStateOf(ServingUnitOption.grams.id) }
     var servingMenuExpanded by remember { mutableStateOf(false) }
     var moreNutritionExpanded by remember { mutableStateOf(false) }
+    var aminoAcidsExpanded by remember { mutableStateOf(false) }
     var servingCustomized by rememberSaveable { mutableStateOf(false) }
     val suggestServingUnit: (String) -> Unit = { foodName ->
         // A pencil-customized serving (name/weight) wins over heuristics: name
@@ -787,6 +788,33 @@ internal fun ManualEntryDialog(
                 if (moreNutritionExpanded) {
                     SheetPillCard {
                         MicronutrientField.MoreNutrition.forEachIndexed { idx, field ->
+                            if (idx > 0) SheetHairline()
+                            val value = micros[field]
+                            ReviewNutritionValueRow(
+                                label = stringResource(field.labelRes),
+                                displayValue = value?.let { String.format("%.1f", it) } ?: "",
+                                editValue = value?.let { String.format("%.1f", it) }.orEmpty(),
+                                unit = stringResource(field.unitRes),
+                                unlocked = true,
+                                dim = true,
+                                onEdit = { micros = micros.with(field, parseDecimalValue(it)) }
+                            )
+                        }
+                    }
+                }
+
+                // "Amino Acids" — dedicated expandable amino acids editor
+                SheetPillRow(onClick = { aminoAcidsExpanded = !aminoAcidsExpanded }) {
+                    Text(stringResource(R.string.sheet_amino_acids), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                    Icon(
+                        if (aminoAcidsExpanded) Icons.Filled.KeyboardArrowDown else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Muted)
+                    )
+                }
+                if (aminoAcidsExpanded) {
+                    SheetPillCard {
+                        MicronutrientField.AminoAcids.forEachIndexed { idx, field ->
                             if (idx > 0) SheetHairline()
                             val value = micros[field]
                             ReviewNutritionValueRow(

@@ -1,164 +1,83 @@
-# Пользовательские базы продуктов (Custom Food Databases)
+# Amino Acids & Extended Nutrients Integration Plan
 
-Добавление полноценной системы управления пользовательскими базами продуктов в Chompass: импорт баз из файлов CSV и JSON с гибким автоопределением колонок, просмотр и полнофункциональное редактирование (добавление, изменение и удаление продуктов внутри базы), экспорт баз, а также интеграция в общий поиск еды с отдельным бейджем источника.
+Full integration of essential amino acids (Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine) and extended micronutrients (Vitamins B1, B2, B3, B5, B6, Biotin, Choline, Phosphorus, Selenium, Copper, Manganese) across the entire application data stack, AI extraction pipeline, UI logs, Home cards, Progress charts, and Settings.
 
 ## User Review & Critical Decisions
 
 > [!IMPORTANT]
-> На основе ваших ответов согласованы следующие ключевые решения:
-> - **Формат загрузки**: Поддержка файлов CSV и JSON с автоматическим распознаванием колонок (русские и английские заголовки для названия, калорий, белков, жиров, углеводов, размера порции и бренда).
-> - **Возможности редактирования**: Полный цикл CRUD — как на уровне самой базы (создание, переименование, описание, включение/выключение, экспорт, удаление базы), так и на уровне отдельных продуктов (ручное добавление новых продуктов, редактирование всех макросов и порций, удаление продуктов).
-> - **Отображение в поиске**: Пользовательские базы интегрируются в единый поиск продуктов на экране добавления еды с приоритетным ранжированием и фирменным бейджем источника (с указанием названия пользовательской базы).
+> All key design and feature scope decisions were confirmed during Phase 1 clarification:
+> - **Nutrient Scope**: Full profile including essential amino acids (EAAs/BCAAs), extended vitamins, and minerals.
+> - **UI Integration**: Breakdown sheets on food click, customizable Home/Progress cards & rings, and expandable log details.
+> - **Goals & AI Extraction**: Auto-calculation of daily target recommendations based on user body metrics with AI food photo/text extraction.
 
 ---
 
 ## 1. Overview & Core Concept
 
-- **Что делает функция**: Позволяет пользователям создавать собственные базы данных продуктов, загружать готовые справочники и таблицы (например, базы спортивного питания, специфических брендов, диетических продуктов или ресторанных меню) из файлов CSV/JSON, вручную пополнять и корректировать их, а также мгновенно находить эти продукты в общем поиске приложения для быстрого логирования в дневник питания.
-- **Целевая аудитория**: Пользователи, ведущие учет питания и желающие иметь собственные автономные списки продуктов с точными макронутриентами без привязки к внешним сервисам, а также те, кто импортирует свои списки из других приложений или электронных таблиц.
-- **Ключевая ценность**: Полная свобода в управлении пищевыми базами данных, локальная приватность и мгновенный доступ к своим продуктам при поиске.
+This update turns Chompass into a comprehensive protein quality and micronutrient tracker:
+- **Essential Amino Acid Profile**: Tracks all 9 EAAs (Leucine, Isoleucine, Valine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Histidine) in grams/milligrams to measure complete protein intake.
+- **Extended Micronutrient Suite**: Tracks B-complex vitamins (B1, B2, B3, B5, B6, Biotin), Choline, and trace minerals (Phosphorus, Selenium, Copper, Manganese).
+- **Automated Target Derivation**: Calculates RDA/DRI targets for amino acids and micronutrients derived from user gender, weight, and activity level.
+- **AI Extraction**: Prompt engineers AI vision & text models to automatically estimate amino acid and micronutrient quantities from meals.
 
 ---
 
 ## 2. User Experience & Visual Design
 
-### Ключевые пользовательские сценарии
-
-1. **Экран управления базами данных (Настройки → Продукты и ввод → Пользовательские базы данных)**:
-   - Список существующих пользовательских баз с отображением названия, количества продуктов в базе, даты обновления и переключателя активности (включена/отключена в поиске).
-   - Кнопка добавления базы:
-     - *«Импортировать файл (CSV / JSON)»* с открытием системного выбора файлов (`ActivityResultContracts.GetContent` / `OpenDocument`).
-     - *«Создать пустую базу»* для ручного наполнения продуктами с нуля.
-     - *«Вставить текст (CSV / JSON)»* — удобная альтернатива для быстрой вставки скопированной таблицы или JSON без сохранения файла на диск.
-   - Меню действий для базы: переименовать, экспортировать в CSV/JSON, удалить.
-
-2. **Экран содержимого базы продуктов (детальный просмотр и редактирование)**:
-   - Заголовок с названием базы, описанием и быстрым поиском/фильтром по списку продуктов внутри базы.
-   - Список карточек продуктов: название, бренд (если указан), порция (например, 100 г или 1 порция) и компактная строка макронутриентов (Ккал, Б, Ж, У).
-   - Кнопка быстрого добавления продукта (+ FAB) — открывает аккуратный Material 3 диалог / лист с полями ввода (название, бренд, калории, белки, жиры, углеводы, вес порции, единица измерения).
-   - Клик по продукту открывает диалог редактирования для изменения любых параметров продукта.
-   - Свайп или иконка корзины для удаления продукта из базы.
-   - Кнопка дополнительного импорта (дозагрузка в существующую базу).
-
-3. **Интеграция в поиск продуктов (Add Food Sheet)**:
-   - При вводе поискового запроса продукты из активных пользовательских баз ищутся параллельно с локальными индексами (USDA/Swiss) и Open Food Facts.
-   - В результатах поиска отображается уникальный бейдж с иконкой и именем базы (например: `[Моя база] · 100 г`).
-   - Выбор продукта из пользовательской базы сразу заполняет форму добавления еды со всеми макросами и правильным источником данных (`NutrientSourceKind.CUSTOM`), сохраняя прозрачный учет provenance.
-
-### Визуальный стиль и компоненты
-- **Дизайн-система**: Material Design 3 в строгом соответствии с визуальной темой Chompass (`AppTheme`, закругления карточек `RoundedCornerShape(16.dp)`, контрастные акцентные цвета макросов).
-- **Цветовая палитра макросов**: Белки — фиолетовый/синий акцент, Углеводы — теплый янтарный, Жиры — кораллово-красный, Калории — чистый primary.
-- **Индикация состояний**: Понятные пустые экраны (Empty states) с иллюстративной иконкой `Icons.Outlined.Storage` и кнопкой быстрого импорта первого файла; индикаторы прогресса при разборе больших CSV файлов.
+- **Home Screen**:
+  - Customizable nutrient rings and progress mini-cards for key EAAs (e.g. Leucine, Lysine) alongside existing macros.
+  - Quick-view bottom sheet on clicking any logged food entry showing full amino acid & micronutrient composition.
+- **Progress & Analytics Screen**:
+  - Dedicated "Amino Acids & Protein Quality" tab/card showing daily complete protein breakdown.
+  - Expanded "Vitamins & Minerals" breakdown with RDA fulfillment percentage bars and trends.
+- **Food Logging & Editing**:
+  - Categorized "Amino Acids" and "Micronutrients" accordion sections in food entry editor sheets.
+  - Interactive sliders/fields for fine-tuning individual amino acid grams and mg of vitamins/minerals.
+- **Settings & Targets**:
+  - Auto-calculated RDA targets with optional manual overrides in Optional Nutrient Goals screen.
 
 ---
 
 ## 3. Key Product Decisions & Trade-Offs
 
-- **Устойчивое локальное хранилище**:
-  - *Выбранный подход*: Метаданные баз сохраняются через репозиторий в DataStore, а списки продуктов каждой базы сохраняются в формате JSON в приватном каталоге приложения (`context.filesDir/custom_food_dbs/{dbId}.json`).
-  - *Почему*: Это изолирует базы друг от друга, обеспечивает быстрое атомарное чтение/запись, исключает лимиты размера DataStore Preferences и позволяет легко архивировать или экспортировать отдельные базы.
-- **Интеллектуальный парсинг CSV**:
-  - *Выбранный подход*: Автодетект разделителей (запятая `,`, точка с запятой `;`, табуляция `\t`), нормализация названий колонок без учета регистра, поддержка синонимов (русских и английских: `name`, `название`, `наименование`, `calories`, `ккал`, `калории`, `protein`, `белки`, `carbs`, `углеводы`, `fat`, `жиры`, `serving`, `порция`).
-  - *Почему*: Пользователи загружают выгрузки из самых разных систем (Excel, MyFitnessPal, FatSecret, таблиц Google); автоматическое распознавание колонок предотвращает ошибки ручной настройки.
-- **Поиск без блокировки UI**:
-  - *Выбранный подход*: Индексация в памяти с токенизацией названий при открытии поиска через корутины (`Dispatchers.Default`).
-  - *Почему*: Обеспечивает мгновенную фильтрацию со скоростью <5 мс даже при базах на тысячи записей, сохраняя плавность анимации интерфейса.
+- **EAA Units**: Standardized on grams (`g`) for amino acids in food entry models and daily totals for readability (e.g., Leucine 2.4g), with `mg` support in input fields where appropriate.
+- **Backward Compatibility**: All new fields are nullable with default `null` values to ensure existing JSON serialization, database backups, and saved meals load smoothly without migration errors.
+- **Performance**: Derived total calculations use memoized computations in ViewModels to keep scrolling in `LazyColumn` at 60 FPS.
 
 ---
 
 ## 4. Technical Architecture & Data Strategy
 
-### System Architecture Diagram
-
 ```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        User Interface (Compose)                        │
-├─────────────────────────────────┬──────────────────────────────────────┤
-│ AddFoodSearchSection            │ CustomFoodDatabasesScreen            │
-│ (unified search with badge)     │ (manage, import, export, delete)     │
-│                                 │ CustomFoodDatabaseDetailScreen       │
-│                                 │ (browse, add, edit, delete food)     │
-└────────────────┬────────────────┴──────────────────┬───────────────────┘
-                 │                                   │
-                 ▼                                   ▼
-┌─────────────────────────────────┐ ┌────────────────────────────────────┐
-│ FoodDatabaseSearch              │ │ CustomFoodDatabaseRepository       │
-│ - queries active custom dbs     │ │ - manages DB metadata & disk JSON  │
-│ - scores & normalizes hits      │ │ - CSV/JSON parser & serializer     │
-│ - maps to DatabaseSearchResult  │ │ - CRUD operations on foods & DBs   │
-└────────────────┬────────────────┘ └────────────────┬───────────────────┘
-                 │                                   │
-                 ▼                                   ▼
-┌─────────────────────────────────┐ ┌────────────────────────────────────┐
-│ toAnalysis() Converter          │ │ App Files Directory                │
-│ - turns Custom hit into         │ │ /custom_food_dbs/{db_id}.json      │
-│   verified FoodAnalysis         │ │ + PreferencesStore (registry)      │
-└─────────────────────────────────┘ └────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                    UI Presentation                      │
+│ ┌──────────────────┐ ┌────────────────┐ ┌─────────────┐ │
+│ │ Home Nutrient    │ │ Progress EAA   │ │ Food Detail │ │
+│ │ Cards & Rings    │ │ & Micro Charts │ │ Sheet       │ │
+│ └─────────┬────────┘ └───────┬────────┘ └──────┬──────┘ │
+└───────────┼──────────────────┼─────────────────┼────────┘
+            │                  │                 │
+┌───────────▼──────────────────▼─────────────────▼────────┐
+│                   ViewModel & Domain                    │
+│ ┌─────────────────────────────────────────────────────┐ │
+│ │ HomeViewModel / ProgressViewModel / FoodEditViewModel │ │
+│ │ Auto-calculates RDA goals & aggregates daily totals   │ │
+│ └──────────────────────────┬──────────────────────────┘ │
+└────────────────────────────┼────────────────────────────┘
+                             │
+┌────────────────────────────▼────────────────────────────┐
+│                    Data & AI Engine                     │
+│ ┌──────────────────┐ ┌────────────────┐ ┌─────────────┐ │
+│ │ Micronutrient    │ │ AI Extraction  │ │ FoodEntry   │ │
+│ │ Catalog & Goals  │ │ Prompt & Parser│ │ & Database  │ │
+│ └──────────────────┘ └────────────────┘ └─────────────┘ │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### Модели данных
-
-```kotlin
-// app/chompass/models/CustomFoodDatabase.kt
-@Serializable
-data class CustomFoodDatabase(
-    val id: String = UUID.randomUUID().toString(),
-    val name: String,
-    val description: String = "",
-    val enabled: Boolean = true,
-    val itemCount: Int = 0,
-    val createdAtEpochMs: Long = System.currentTimeMillis(),
-    val updatedAtEpochMs: Long = System.currentTimeMillis(),
-)
-
-@Serializable
-data class CustomFoodItem(
-    val id: String = UUID.randomUUID().toString(),
-    val databaseId: String,
-    val name: String,
-    val brand: String? = null,
-    val servingSizeGrams: Double = 100.0,
-    val servingUnitName: String = "g",
-    val calories: Double = 0.0,
-    val protein: Double = 0.0,
-    val carbs: Double = 0.0,
-    val fat: Double = 0.0,
-    val fiber: Double? = null,
-    val sugar: Double? = null,
-    val sodiumMg: Double? = null,
-    val barcode: String? = null,
-    val notes: String? = null,
-)
-```
-
-### Основные компоненты реализации
-
-1. **`CustomFoodDatabaseRepository`**:
-   - `databases: StateFlow<List<CustomFoodDatabase>>`
-   - `getDatabaseFoods(databaseId: String): List<CustomFoodItem>`
-   - `saveDatabase(database: CustomFoodDatabase, foods: List<CustomFoodItem>)`
-   - `deleteDatabase(databaseId: String)`
-   - `addFoodItem(databaseId: String, item: CustomFoodItem)`
-   - `updateFoodItem(databaseId: String, item: CustomFoodItem)`
-   - `deleteFoodItem(databaseId: String, itemId: String)`
-   - `parseCsv(content: String, defaultDbName: String): Pair<CustomFoodDatabase, List<CustomFoodItem>>`
-   - `parseJson(content: String, defaultDbName: String): Pair<CustomFoodDatabase, List<CustomFoodItem>>`
-   - `exportToCsv(database: CustomFoodDatabase, foods: List<CustomFoodItem>): String`
-   - `exportToJson(database: CustomFoodDatabase, foods: List<CustomFoodItem>): String`
-
-2. **Расширение `NutrientSourceKind` и `FoodDatabaseSearch`**:
-   - Добавление `CUSTOM` в `NutrientSourceKind`.
-   - В `FoodDatabaseSearch`: добавление поиска по активным базам из `CustomFoodDatabaseRepository`.
-   - Обработка `NutrientSourceKind.CUSTOM` в методе `toAnalysis(result: DatabaseSearchResult)` для создания `FoodAnalysis`.
-   - Отображение бейджа с названием базы в результатах поиска.
-
-3. **UI экраны и навигация**:
-   - Маршрут `custom_food_databases` в `ChompassRoutes` / `ChompassNavHost`.
-   - Пункт в `FoodEntrySettingsScreen`: «Пользовательские базы продуктов» с бейджем количества баз.
-   - `CustomFoodDatabasesScreen`: список баз, переключатели, диалог создания/импорта, меню экспорта и удаления.
-   - `CustomFoodDatabaseDetailScreen`: список продуктов базы, поиск, диалог добавления/редактирования продукта (`AddEditFoodItemDialog`), подтверждение удаления.
-
-4. **Тесты**:
-   - Тестирование парсинга CSV с различными разделителями и русскими/английскими заголовками.
-   - Тестирование JSON парсинга.
-   - Тестирование CRUD операций и поиска в `FoodDatabaseSearchTest`.
+### Key Data Entities & Changes
+1. `MicronutrientCatalog.kt`: Add enum entries for EAAs (`HISTIDINE`, `ISOLEUCINE`, `LEUCINE`, `LYSINE`, `METHIONINE`, `PHENYLALANINE`, `THREONINE`, `TRYPTOPHAN`, `VALINE`) and extended vitamins/minerals (`VITAMIN_B1`, `VITAMIN_B2`, `VITAMIN_B3`, `VITAMIN_B5`, `VITAMIN_B6`, `BIOTIN`, `CHOLINE`, `PHOSPHORUS`, `SELENIUM`, `COPPER`, `MANGANESE`).
+2. `FoodEntry.kt` & `FoodConstituent.kt`: Expand fields for all new nutrients.
+3. `NutrientGoals.kt`: Add RDA goal calculators for amino acids based on body weight (e.g. Leucine ~42mg/kg/day) and standard DRI rules.
+4. `FoodAnalysisService.kt`: Update AI prompt instructions and JSON schema to extract amino acid breakdowns and extended micronutrients.
+5. `NutritionDetailSheet.kt`, `AddFoodSheet.kt`, `EditFoodEntrySheet.kt`: Add Amino Acid input and view sections.
+6. `HomeScreen.kt` & `ProgressScreen.kt`: Add visual UI indicators, progress rings, and charts for EAAs and new nutrients.

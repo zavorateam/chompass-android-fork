@@ -1,0 +1,3746 @@
+{
+  "name": "Вкусно — и точка",
+  "description": "Продукты из ресторана «Вкусно — и точка». Источник — информационный сайт vkusnotochkamenu.ru. Для составных продуктов с вариантами «на выбор» КБЖУ могут быть рассчитаны по вариантам компонентов по умолчанию; такие предположения выводятся в журнал.",
+  "foods": [
+    {
+      "name": "Hello Kitty Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 538.0,
+      "protein": 21.0,
+      "carbs": 53.0,
+      "fat": 27.0,
+      "serving_size": 235.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "My Melody Айс Де Люкс Клубника с мармеладками",
+      "brand": "Вкусно — и точка",
+      "calories": 311.0,
+      "protein": 5.0,
+      "carbs": 60.0,
+      "fat": 5.0,
+      "serving_size": 205.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Абрикосовый джем",
+      "brand": "Вкусно — и точка",
+      "calories": 48.0,
+      "protein": 0.0,
+      "carbs": 12.0,
+      "fat": 0.0,
+      "serving_size": 20.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Ананас",
+      "brand": "Вкусно — и точка",
+      "calories": 290.0,
+      "protein": 5.5,
+      "carbs": 54.0,
+      "fat": 5.6,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Ананас-питахайя",
+      "brand": "Вкусно — и точка",
+      "calories": 273.0,
+      "protein": 5.0,
+      "carbs": 51.0,
+      "fat": 5.4,
+      "serving_size": 192.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Карамель-маршмеллоу",
+      "brand": "Вкусно — и точка",
+      "calories": 399.0,
+      "protein": 6.8,
+      "carbs": 74.0,
+      "fat": 8.6,
+      "serving_size": 210.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Малина",
+      "brand": "Вкусно — и точка",
+      "calories": 262.0,
+      "protein": 5.0,
+      "carbs": 48.0,
+      "fat": 5.4,
+      "serving_size": 190.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Папайя-манго",
+      "brand": "Вкусно — и точка",
+      "calories": 244.0,
+      "protein": 5.0,
+      "carbs": 43.0,
+      "fat": 5.4,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Чёрная смородина",
+      "brand": "Вкусно — и точка",
+      "calories": 244.0,
+      "protein": 5.0,
+      "carbs": 43.0,
+      "fat": 5.4,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Шоколадно-апельсиновое",
+      "brand": "Вкусно — и точка",
+      "calories": 323.0,
+      "protein": 6.1,
+      "carbs": 60.0,
+      "fat": 6.7,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Шоколадно-карамельное",
+      "brand": "Вкусно — и точка",
+      "calories": 404.0,
+      "protein": 6.9,
+      "carbs": 71.0,
+      "fat": 10.0,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Шоколадно-клубничное",
+      "brand": "Вкусно — и точка",
+      "calories": 318.0,
+      "protein": 6.1,
+      "carbs": 58.0,
+      "fat": 6.8,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Шоколадное",
+      "brand": "Вкусно — и точка",
+      "calories": 371.0,
+      "protein": 7.0,
+      "carbs": 60.0,
+      "fat": 11.0,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Де Люкс Шоколадный брауни",
+      "brand": "Вкусно — и точка",
+      "calories": 410.0,
+      "protein": 7.2,
+      "carbs": 62.0,
+      "fat": 14.0,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Айс Какао",
+      "brand": "Вкусно — и точка",
+      "calories": 367.0,
+      "protein": 6.3,
+      "carbs": 46.0,
+      "fat": 18.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Айс Кофе Карамель",
+      "brand": "Вкусно — и точка",
+      "calories": 155.0,
+      "protein": 3.6,
+      "carbs": 26.0,
+      "fat": 4.1,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Айс Кофе Карамель Миндальный",
+      "brand": "Вкусно — и точка",
+      "calories": 106.0,
+      "protein": 0.6,
+      "carbs": 23.0,
+      "fat": 1.3,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Айс Матча Кокос",
+      "brand": "Вкусно — и точка",
+      "calories": 334.0,
+      "protein": 9.1,
+      "carbs": 29.0,
+      "fat": 20.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Американо",
+      "brand": "Вкусно — и точка",
+      "calories": 10.0,
+      "protein": 0.9,
+      "carbs": 0.9,
+      "fat": 0.3,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Апельсиновый Раф",
+      "brand": "Вкусно — и точка",
+      "calories": 326.0,
+      "protein": 5.9,
+      "carbs": 26.0,
+      "fat": 22.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Апельсиновый сок",
+      "brand": "Вкусно — и точка",
+      "calories": 150.0,
+      "protein": 0.0,
+      "carbs": 33.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Артезианская вода Черноголовка негазированная",
+      "brand": "Вкусно — и точка",
+      "calories": 0.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 500.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Атлантик Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 438.0,
+      "protein": 15.0,
+      "carbs": 49.0,
+      "fat": 20.0,
+      "serving_size": 170.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Атлантик Бургер Кунжутный",
+      "brand": "Вкусно — и точка",
+      "calories": 450.0,
+      "protein": 15.0,
+      "carbs": 49.0,
+      "fat": 21.0,
+      "serving_size": 168.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Бабл Айс Кофе",
+      "brand": "Вкусно — и точка",
+      "calories": 240.0,
+      "protein": 6.0,
+      "carbs": 40.0,
+      "fat": 6.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Бабл Милк Банан-карамель",
+      "brand": "Вкусно — и точка",
+      "calories": 288.0,
+      "protein": 7.8,
+      "carbs": 46.0,
+      "fat": 8.2,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Бабл милк Жасмин-виноград",
+      "brand": "Вкусно — и точка",
+      "calories": 268.0,
+      "protein": 8.2,
+      "carbs": 40.0,
+      "fat": 8.2,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Бабл Милк клубничный",
+      "brand": "Вкусно — и точка",
+      "calories": 300.0,
+      "protein": 8.1,
+      "carbs": 42.0,
+      "fat": 11.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Бабл-ти Ананас-лемонграсс",
+      "brand": "Вкусно — и точка",
+      "calories": 166.0,
+      "protein": 0.0,
+      "carbs": 41.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Бабл-ти Розовый помело",
+      "brand": "Вкусно — и точка",
+      "calories": 162.0,
+      "protein": 0.0,
+      "carbs": 40.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Бамбл кофе",
+      "brand": "Вкусно — и точка",
+      "calories": 162.0,
+      "protein": 1.9,
+      "carbs": 34.0,
+      "fat": 1.9,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Барселона Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 568.0,
+      "protein": 33.0,
+      "carbs": 43.0,
+      "fat": 29.0,
+      "serving_size": 240.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Барселона Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 554.0,
+      "protein": 29.0,
+      "carbs": 57.0,
+      "fat": 23.0,
+      "serving_size": 240.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал",
+      "brand": "Вкусно — и точка",
+      "calories": 812.0,
+      "protein": 44.0,
+      "carbs": 50.0,
+      "fat": 48.0,
+      "serving_size": 340.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Барбекю Бекон",
+      "brand": "Вкусно — и точка",
+      "calories": 829.0,
+      "protein": 46.0,
+      "carbs": 54.0,
+      "fat": 47.0,
+      "serving_size": 352.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Демиглас",
+      "brand": "Вкусно — и точка",
+      "calories": 816.0,
+      "protein": 44.0,
+      "carbs": 55.0,
+      "fat": 46.0,
+      "serving_size": 348.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Демиглас Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 583.0,
+      "protein": 27.0,
+      "carbs": 45.0,
+      "fat": 33.0,
+      "serving_size": 262.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Джуниор",
+      "brand": "Вкусно — и точка",
+      "calories": 573.0,
+      "protein": 31.0,
+      "carbs": 36.0,
+      "fat": 33.0,
+      "serving_size": 231.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Джуниор Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1113.0,
+      "protein": 34.9,
+      "carbs": 130.0,
+      "fat": 49.0,
+      "serving_size": 741.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1352.0,
+      "protein": 47.9,
+      "carbs": 144.0,
+      "fat": 64.0,
+      "serving_size": 850.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Острый Микс",
+      "brand": "Вкусно — и точка",
+      "calories": 834.0,
+      "protein": 43.0,
+      "carbs": 49.0,
+      "fat": 51.0,
+      "serving_size": 343.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Перец гриль",
+      "brand": "Вкусно — и точка",
+      "calories": 751.0,
+      "protein": 43.0,
+      "carbs": 59.0,
+      "fat": 38.0,
+      "serving_size": 376.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 521.0,
+      "protein": 26.0,
+      "carbs": 36.0,
+      "fat": 30.0,
+      "serving_size": 210.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Ролл Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1061.0,
+      "protein": 29.9,
+      "carbs": 130.0,
+      "fat": 46.0,
+      "serving_size": 720.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал ролл Перец гриль",
+      "brand": "Вкусно — и точка",
+      "calories": 556.0,
+      "protein": 27.0,
+      "carbs": 47.0,
+      "fat": 29.0,
+      "serving_size": 295.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал ролл Чураско",
+      "brand": "Вкусно — и точка",
+      "calories": 540.0,
+      "protein": 27.0,
+      "carbs": 38.0,
+      "fat": 31.0,
+      "serving_size": 252.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал ролл Чураско Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1080.0,
+      "protein": 30.9,
+      "carbs": 132.0,
+      "fat": 47.0,
+      "serving_size": 762.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Ростбиф",
+      "brand": "Вкусно — и точка",
+      "calories": 795.0,
+      "protein": 49.0,
+      "carbs": 52.0,
+      "fat": 43.0,
+      "serving_size": 366.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал с грибами",
+      "brand": "Вкусно — и точка",
+      "calories": 858.0,
+      "protein": 44.0,
+      "carbs": 56.0,
+      "fat": 51.0,
+      "serving_size": 333.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Три Сыра",
+      "brand": "Вкусно — и точка",
+      "calories": 811.0,
+      "protein": 48.0,
+      "carbs": 48.0,
+      "fat": 15.2,
+      "serving_size": 400.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Три Сыра Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1351.0,
+      "protein": 51.9,
+      "carbs": 142.0,
+      "fat": 31.2,
+      "serving_size": 910.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Чураско",
+      "brand": "Вкусно — и точка",
+      "calories": 787.0,
+      "protein": 43.0,
+      "carbs": 55.0,
+      "fat": 44.0,
+      "serving_size": 341.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Спешиал Чураско Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1327.0,
+      "protein": 46.9,
+      "carbs": 149.0,
+      "fat": 60.0,
+      "serving_size": 851.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Хит",
+      "brand": "Вкусно — и точка",
+      "calories": 503.0,
+      "protein": 25.0,
+      "carbs": 45.0,
+      "fat": 25.0,
+      "serving_size": 216.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Хит Бекон",
+      "brand": "Вкусно — и точка",
+      "calories": 552.0,
+      "protein": 29.0,
+      "carbs": 40.0,
+      "fat": 30.0,
+      "serving_size": 234.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Хит Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1043.0,
+      "protein": 28.9,
+      "carbs": 139.0,
+      "fat": 41.0,
+      "serving_size": 726.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 700.0,
+      "protein": 44.0,
+      "carbs": 51.0,
+      "fat": 25.0,
+      "serving_size": 323.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен бургер Базиликовый",
+      "brand": "Вкусно — и точка",
+      "calories": 750.0,
+      "protein": 39.0,
+      "carbs": 59.0,
+      "fat": 40.0,
+      "serving_size": 320.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен Бургер Грибной",
+      "brand": "Вкусно — и точка",
+      "calories": 756.0,
+      "protein": 43.0,
+      "carbs": 53.0,
+      "fat": 41.0,
+      "serving_size": 289.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен Бургер Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1240.0,
+      "protein": 47.9,
+      "carbs": 145.0,
+      "fat": 41.0,
+      "serving_size": 833.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен бургер Кунжутный",
+      "brand": "Вкусно — и точка",
+      "calories": 735.0,
+      "protein": 39.0,
+      "carbs": 59.0,
+      "fat": 37.0,
+      "serving_size": 334.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен бургер Перец гриль",
+      "brand": "Вкусно — и точка",
+      "calories": 703.0,
+      "protein": 39.0,
+      "carbs": 70.0,
+      "fat": 29.0,
+      "serving_size": 374.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен бургер Чатни",
+      "brand": "Вкусно — и точка",
+      "calories": 753.0,
+      "protein": 49.0,
+      "carbs": 59.0,
+      "fat": 36.0,
+      "serving_size": 309.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен Бургер Чесночно-сливочный",
+      "brand": "Вкусно — и точка",
+      "calories": 699.0,
+      "protein": 44.0,
+      "carbs": 51.0,
+      "fat": 35.0,
+      "serving_size": 323.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен Бургер Чураско",
+      "brand": "Вкусно — и точка",
+      "calories": 721.0,
+      "protein": 39.0,
+      "carbs": 62.0,
+      "fat": 34.0,
+      "serving_size": 329.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Биг Чикен Бургер Чураско Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1261.0,
+      "protein": 42.9,
+      "carbs": 156.0,
+      "fat": 50.0,
+      "serving_size": 839.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Блины",
+      "brand": "Вкусно — и точка",
+      "calories": 241.0,
+      "protein": 7.5,
+      "carbs": 45.0,
+      "fat": 3.2,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Большой Завтрак",
+      "brand": "Вкусно — и точка",
+      "calories": 550.0,
+      "protein": 28.0,
+      "carbs": 40.0,
+      "fat": 30.0,
+      "serving_size": 247.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Большой Снэк Бокс с Крыльями",
+      "brand": "Вкусно — и точка",
+      "calories": 1594.0,
+      "protein": 63.0,
+      "carbs": 136.0,
+      "fat": 87.0,
+      "serving_size": 564.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Большой Снэк Бокс со Стрипсами",
+      "brand": "Вкусно — и точка",
+      "calories": 1397.0,
+      "protein": 51.0,
+      "carbs": 142.0,
+      "fat": 67.0,
+      "serving_size": 524.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Большой Супер Бокс Genshin Impact",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Бургер Арбатский",
+      "brand": "Вкусно — и точка",
+      "calories": 599.0,
+      "protein": 32.0,
+      "carbs": 43.0,
+      "fat": 33.0,
+      "serving_size": 247.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Бургер Арбатский с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 566.0,
+      "protein": 24.0,
+      "carbs": 57.0,
+      "fat": 27.0,
+      "serving_size": 253.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Вафельный Рожок",
+      "brand": "Вкусно — и точка",
+      "calories": 164.0,
+      "protein": 3.8,
+      "carbs": 29.0,
+      "fat": 3.6,
+      "serving_size": 98.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Венецианские пончики",
+      "brand": "Вкусно — и точка",
+      "calories": 251.0,
+      "protein": 3.3,
+      "carbs": 34.0,
+      "fat": 11.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Венский Кофе",
+      "brand": "Вкусно — и точка",
+      "calories": 174.0,
+      "protein": 1.8,
+      "carbs": 3.8,
+      "fat": 17.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Вишневый Бамбл",
+      "brand": "Вкусно — и точка",
+      "calories": 151.0,
+      "protein": 0.1,
+      "carbs": 37.0,
+      "fat": 0.1,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Гамбургер",
+      "brand": "Вкусно — и точка",
+      "calories": 251.0,
+      "protein": 13.0,
+      "carbs": 29.0,
+      "fat": 8.8,
+      "serving_size": 103.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Горячий Шоколад",
+      "brand": "Вкусно — и точка",
+      "calories": 319.0,
+      "protein": 8.1,
+      "carbs": 31.0,
+      "fat": 18.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд",
+      "brand": "Вкусно — и точка",
+      "calories": 514.0,
+      "protein": 30.0,
+      "carbs": 38.0,
+      "fat": 26.0,
+      "serving_size": 202.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Барбекю",
+      "brand": "Вкусно — и точка",
+      "calories": 534.0,
+      "protein": 31.0,
+      "carbs": 44.0,
+      "fat": 26.0,
+      "serving_size": 208.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс",
+      "brand": "Вкусно — и точка",
+      "calories": 570.0,
+      "protein": 31.0,
+      "carbs": 40.0,
+      "fat": 31.0,
+      "serving_size": 251.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1110.0,
+      "protein": 34.9,
+      "carbs": 134.0,
+      "fat": 47.0,
+      "serving_size": 761.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс Пряный микс",
+      "brand": "Вкусно — и точка",
+      "calories": 572.0,
+      "protein": 31.0,
+      "carbs": 40.0,
+      "fat": 31.0,
+      "serving_size": 256.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс Томатный релиш",
+      "brand": "Вкусно — и точка",
+      "calories": 577.0,
+      "protein": 32.0,
+      "carbs": 45.0,
+      "fat": 30.0,
+      "serving_size": 251.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс Халапеньо",
+      "brand": "Вкусно — и точка",
+      "calories": 571.0,
+      "protein": 31.0,
+      "carbs": 40.0,
+      "fat": 31.0,
+      "serving_size": 256.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс Халапеньо Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1111.0,
+      "protein": 34.9,
+      "carbs": 134.0,
+      "fat": 47.0,
+      "serving_size": 766.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Де Люкс Чипотл",
+      "brand": "Вкусно — и точка",
+      "calories": 585.0,
+      "protein": 31.0,
+      "carbs": 43.0,
+      "fat": 32.0,
+      "serving_size": 255.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1054.0,
+      "protein": 33.9,
+      "carbs": 132.0,
+      "fat": 42.0,
+      "serving_size": 712.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Пикант",
+      "brand": "Вкусно — и точка",
+      "calories": 518.0,
+      "protein": 30.0,
+      "carbs": 39.0,
+      "fat": 26.0,
+      "serving_size": 207.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Пряный микс",
+      "brand": "Вкусно — и точка",
+      "calories": 542.0,
+      "protein": 32.0,
+      "carbs": 38.0,
+      "fat": 29.0,
+      "serving_size": 213.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Томатный релиш",
+      "brand": "Вкусно — и точка",
+      "calories": 509.0,
+      "protein": 31.0,
+      "carbs": 43.0,
+      "fat": 24.0,
+      "serving_size": 204.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Три Сыра",
+      "brand": "Вкусно — и точка",
+      "calories": 551.0,
+      "protein": 33.0,
+      "carbs": 38.0,
+      "fat": 29.0,
+      "serving_size": 212.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Фри",
+      "brand": "Вкусно — и точка",
+      "calories": 2.0,
+      "protein": 5.0,
+      "carbs": 54.0,
+      "fat": 20.0,
+      "serving_size": 165.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Гранд Чипотл",
+      "brand": "Вкусно — и точка",
+      "calories": 514.0,
+      "protein": 30.0,
+      "carbs": 38.0,
+      "fat": 26.0,
+      "serving_size": 212.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Биг Спешиал",
+      "brand": "Вкусно — и точка",
+      "calories": 1114.0,
+      "protein": 71.0,
+      "carbs": 50.0,
+      "fat": 69.0,
+      "serving_size": 450.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Биг Спешиал Демиглас",
+      "brand": "Вкусно — и точка",
+      "calories": 1113.0,
+      "protein": 70.0,
+      "carbs": 55.0,
+      "fat": 67.0,
+      "serving_size": 458.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Биг Спешиал Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1654.0,
+      "protein": 74.9,
+      "carbs": 144.0,
+      "fat": 85.0,
+      "serving_size": 960.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Биг Хит",
+      "brand": "Вкусно — и точка",
+      "calories": 676.0,
+      "protein": 40.0,
+      "carbs": 46.0,
+      "fat": 37.0,
+      "serving_size": 284.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Биг Хит Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1216.0,
+      "protein": 43.9,
+      "carbs": 140.0,
+      "fat": 53.0,
+      "serving_size": 794.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Гранд",
+      "brand": "Вкусно — и точка",
+      "calories": 732.0,
+      "protein": 49.0,
+      "carbs": 38.0,
+      "fat": 42.0,
+      "serving_size": 282.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Гранд Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1272.0,
+      "protein": 52.9,
+      "carbs": 132.0,
+      "fat": 58.0,
+      "serving_size": 792.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Маффин с яйцом и свиной котлетой",
+      "brand": "Вкусно — и точка",
+      "calories": 628.0,
+      "protein": 38.0,
+      "carbs": 28.0,
+      "fat": 40.0,
+      "serving_size": 220.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Фиш Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 475.0,
+      "protein": 26.0,
+      "carbs": 45.0,
+      "fat": 21.0,
+      "serving_size": 196.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Фиш Бургер Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1015.0,
+      "protein": 29.9,
+      "carbs": 139.0,
+      "fat": 37.0,
+      "serving_size": 706.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Фреш Маффин",
+      "brand": "Вкусно — и точка",
+      "calories": 513.0,
+      "protein": 28.0,
+      "carbs": 28.0,
+      "fat": 32.0,
+      "serving_size": 196.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Чизбургер",
+      "brand": "Вкусно — и точка",
+      "calories": 441.0,
+      "protein": 26.0,
+      "carbs": 31.0,
+      "fat": 23.0,
+      "serving_size": 173.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Двойной Чизбургер Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 981.0,
+      "protein": 29.9,
+      "carbs": 125.0,
+      "fat": 39.0,
+      "serving_size": 683.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Добрый Апельсин",
+      "brand": "Вкусно — и точка",
+      "calories": 80.0,
+      "protein": 0.0,
+      "carbs": 20.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Добрый Кола",
+      "brand": "Вкусно — и точка",
+      "calories": 106.0,
+      "protein": 0.0,
+      "carbs": 27.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Добрый Лимон-Лайм",
+      "brand": "Вкусно — и точка",
+      "calories": 46.0,
+      "protein": 0.0,
+      "carbs": 12.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Донат с шоколадным кремом",
+      "brand": "Вкусно — и точка",
+      "calories": 372.0,
+      "protein": 3.9,
+      "carbs": 36.0,
+      "fat": 23.0,
+      "serving_size": 75.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Звёздное Комбо Милоша Биковича",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Звёздное Комбо Юлии Пересильд",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Капучино",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Капучино Кленовый пекан",
+      "brand": "Вкусно — и точка",
+      "calories": 190.0,
+      "protein": 5.6,
+      "carbs": 28.0,
+      "fat": 5.8,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Капучино Лесной орех - шоколад",
+      "brand": "Вкусно — и точка",
+      "calories": 194.0,
+      "protein": 5.6,
+      "carbs": 29.0,
+      "fat": 6.4,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Капучино Печенье с орехами",
+      "brand": "Вкусно — и точка",
+      "calories": 192.0,
+      "protein": 6.0,
+      "carbs": 28.0,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Картофель по-деревенски",
+      "brand": "Вкусно — и точка",
+      "calories": 331.0,
+      "protein": 4.6,
+      "carbs": 42.0,
+      "fat": 15.0,
+      "serving_size": 165.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель по-деревенски Двойной",
+      "brand": "Вкусно — и точка",
+      "calories": 661.0,
+      "protein": 9.2,
+      "carbs": 85.0,
+      "fat": 29.0,
+      "serving_size": 330.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель по-деревенски с сыром и беконом",
+      "brand": "Вкусно — и точка",
+      "calories": 433.0,
+      "protein": 11.0,
+      "carbs": 43.0,
+      "fat": 23.0,
+      "serving_size": 206.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель по-деревенски Сметана и лук",
+      "brand": "Вкусно — и точка",
+      "calories": 473.0,
+      "protein": 5.3,
+      "carbs": 47.0,
+      "fat": 28.0,
+      "serving_size": 204.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель Фри",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель Фри Двойной",
+      "brand": "Вкусно — и точка",
+      "calories": 636.0,
+      "protein": 7.5,
+      "carbs": 80.0,
+      "fat": 30.0,
+      "serving_size": 220.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель фри с сыром и беконом",
+      "brand": "Вкусно — и точка",
+      "calories": 420.0,
+      "protein": 10.0,
+      "carbs": 40.0,
+      "fat": 23.0,
+      "serving_size": 151.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофель Фри Сметана и лук",
+      "brand": "Вкусно — и точка",
+      "calories": 461.0,
+      "protein": 4.4,
+      "carbs": 45.0,
+      "fat": 28.0,
+      "serving_size": 149.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Картофельный оладушек",
+      "brand": "Вкусно — и точка",
+      "calories": 121.0,
+      "protein": 1.5,
+      "carbs": 14.0,
+      "fat": 6.1,
+      "serving_size": 44.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Кетчуп",
+      "brand": "Вкусно — и точка",
+      "calories": 36.0,
+      "protein": 0.5,
+      "carbs": 8.0,
+      "fat": 0.1,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Киш с курицей и грибами",
+      "brand": "Вкусно — и точка",
+      "calories": 411.0,
+      "protein": 15.0,
+      "carbs": 25.0,
+      "fat": 28.0,
+      "serving_size": 130.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Кленовый пекан",
+      "brand": "Вкусно — и точка",
+      "calories": 336.0,
+      "protein": 3.8,
+      "carbs": 29.0,
+      "fat": 23.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Клубничный джем",
+      "brand": "Вкусно — и точка",
+      "calories": 48.0,
+      "protein": 0.0,
+      "carbs": 12.0,
+      "fat": 0.0,
+      "serving_size": 20.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Кока-Кола",
+      "brand": "Вкусно — и точка",
+      "calories": 210.0,
+      "protein": 0.0,
+      "carbs": 53.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Кокосовый Капучино",
+      "brand": "Вкусно — и точка",
+      "calories": 42.0,
+      "protein": 2.0,
+      "carbs": 4.3,
+      "fat": 1.8,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Кокосовый Латте",
+      "brand": "Вкусно — и точка",
+      "calories": 67.0,
+      "protein": 3.2,
+      "carbs": 6.8,
+      "fat": 2.9,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Кокосовый Пряный чайный Латте",
+      "brand": "Вкусно — и точка",
+      "calories": 156.0,
+      "protein": 3.8,
+      "carbs": 27.0,
+      "fat": 3.5,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Кокосовый Флэт Уайт",
+      "brand": "Вкусно — и точка",
+      "calories": 59.0,
+      "protein": 2.8,
+      "carbs": 6.0,
+      "fat": 2.5,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Комбо Дмитрия Журавлева",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо Олеси Иванченко",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Капкейком Солёная карамель",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Классическим чизкейком",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Клубничным чизкейком",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Круассаном",
+      "brand": "Вкусно — и точка",
+      "calories": 301.0,
+      "protein": 9.0,
+      "carbs": 27.5,
+      "fat": 17.0,
+      "serving_size": 350.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Круассаном с ветчиной и сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 411.0,
+      "protein": 14.5,
+      "carbs": 36.0,
+      "fat": 23.0,
+      "serving_size": 650.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Лимонным тартом",
+      "brand": "Вкусно — и точка",
+      "calories": 542.0,
+      "protein": 10.4,
+      "carbs": 48.5,
+      "fat": 34.0,
+      "serving_size": 415.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с малиновой тарталеткой",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Малиновым муссом",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Медовиком",
+      "brand": "Вкусно — и точка",
+      "calories": 406.0,
+      "protein": 9.5,
+      "carbs": 46.5,
+      "fat": 20.0,
+      "serving_size": 390.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Орешками со сгущенным молоком",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Печеньем Апельсин-миндаль",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с печеньем с грецким орехом",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Пирожным Картошка",
+      "brand": "Вкусно — и точка",
+      "calories": 451.0,
+      "protein": 8.5,
+      "carbs": 41.5,
+      "fat": 28.0,
+      "serving_size": 360.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с пирожным Шу",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Премиальным Яблочным пирогом",
+      "brand": "Вкусно — и точка",
+      "calories": 441.0,
+      "protein": 8.6,
+      "carbs": 65.5,
+      "fat": 15.0,
+      "serving_size": 500.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Творожником",
+      "brand": "Вкусно — и точка",
+      "calories": 307.0,
+      "protein": 69.5,
+      "carbs": 31.5,
+      "fat": 15.0,
+      "serving_size": 370.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с улиткой с карамелью",
+      "brand": "Вкусно — и точка",
+      "calories": 443.0,
+      "protein": 10.1,
+      "carbs": 35.5,
+      "fat": 29.0,
+      "serving_size": 376.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Чиабаттой с ветчиной и сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 542.0,
+      "protein": 28.5,
+      "carbs": 55.5,
+      "fat": 23.0,
+      "serving_size": 512.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Чиабаттой с тунцом",
+      "brand": "Вкусно — и точка",
+      "calories": 481.0,
+      "protein": 27.5,
+      "carbs": 52.5,
+      "fat": 17.0,
+      "serving_size": 468.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Чизкейком Сан-Себастьян",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Шоколадным круассаном",
+      "brand": "Вкусно — и точка",
+      "calories": 301.0,
+      "protein": 9.0,
+      "carbs": 27.5,
+      "fat": 17.0,
+      "serving_size": 350.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Шоколадным печеньем",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Шоколадным тартом с вишней",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо с Шоколадным тортом",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 5.5,
+      "carbs": 8.5,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Комбо Сергея Бурунова",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Кофе Глясе",
+      "brand": "Вкусно — и точка",
+      "calories": 123.0,
+      "protein": 3.6,
+      "carbs": 20.0,
+      "fat": 3.3,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Креветки",
+      "brand": "Вкусно — и точка",
+      "calories": 180.0,
+      "protein": 9.9,
+      "carbs": 15.0,
+      "fat": 9.0,
+      "serving_size": 72.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Креветки Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 720.0,
+      "protein": 13.8,
+      "carbs": 109.0,
+      "fat": 25.0,
+      "serving_size": 582.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Круассан",
+      "brand": "Вкусно — и точка",
+      "calories": 191.0,
+      "protein": 3.5,
+      "carbs": 19.0,
+      "fat": 11.0,
+      "serving_size": 50.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Куриная грудка",
+      "brand": "Вкусно — и точка",
+      "calories": 210.0,
+      "protein": 22.0,
+      "carbs": 7.0,
+      "fat": 10.0,
+      "serving_size": 213.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Куриные крылышки",
+      "brand": "Вкусно — и точка",
+      "calories": 417.0,
+      "protein": 26.0,
+      "carbs": 18.0,
+      "fat": 27.0,
+      "serving_size": 150.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Куриные крылышки Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 957.0,
+      "protein": 29.9,
+      "carbs": 112.0,
+      "fat": 43.0,
+      "serving_size": 660.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Латте",
+      "brand": "Вкусно — и точка",
+      "calories": 120.0,
+      "protein": 6.0,
+      "carbs": 9.5,
+      "fat": 6.5,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Латте Печенье с орехами",
+      "brand": "Вкусно — и точка",
+      "calories": 201.0,
+      "protein": 6.5,
+      "carbs": 29.0,
+      "fat": 6.5,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Лимонад Дольче манго",
+      "brand": "Вкусно — и точка",
+      "calories": 93.0,
+      "protein": 0.0,
+      "carbs": 23.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Лимонад Клубника-кактус",
+      "brand": "Вкусно — и точка",
+      "calories": 92.0,
+      "protein": 0.0,
+      "carbs": 23.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Лимонный тарт",
+      "brand": "Вкусно — и точка",
+      "calories": 432.0,
+      "protein": 4.9,
+      "carbs": 40.0,
+      "fat": 28.0,
+      "serving_size": 115.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Липтон Айс Ти – Зеленый Чай",
+      "brand": "Вкусно — и точка",
+      "calories": 67.0,
+      "protein": 0.0,
+      "carbs": 17.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Липтон Айс Ти – Лимон",
+      "brand": "Вкусно — и точка",
+      "calories": 134.0,
+      "protein": 0.0,
+      "carbs": 34.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Макарони",
+      "brand": "Вкусно — и точка",
+      "calories": 68.0,
+      "protein": 1.3,
+      "carbs": 8.0,
+      "fat": 3.2,
+      "serving_size": 20.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маршмеллоу Бабл-гам",
+      "brand": "Вкусно — и точка",
+      "calories": 25.0,
+      "protein": 0.3,
+      "carbs": 5.9,
+      "fat": 0.0,
+      "serving_size": 7.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маффин с яйцом и беконом",
+      "brand": "Вкусно — и точка",
+      "calories": 317.0,
+      "protein": 18.0,
+      "carbs": 26.0,
+      "fat": 15.0,
+      "serving_size": 121.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маффин с яйцом и ветчиной",
+      "brand": "Вкусно — и точка",
+      "calories": 312.0,
+      "protein": 20.0,
+      "carbs": 26.0,
+      "fat": 14.0,
+      "serving_size": 156.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маффин с яйцом и ростбифом",
+      "brand": "Вкусно — и точка",
+      "calories": 1390.0,
+      "protein": 14.0,
+      "carbs": 26.0,
+      "fat": 15.0,
+      "serving_size": 158.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маффин с яйцом и свиной котлетой",
+      "brand": "Вкусно — и точка",
+      "calories": 434.0,
+      "protein": 25.0,
+      "carbs": 26.0,
+      "fat": 25.0,
+      "serving_size": 161.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маффин с яйцом и сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 289.0,
+      "protein": 16.0,
+      "carbs": 26.0,
+      "fat": 13.0,
+      "serving_size": 116.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Маффин со свиной котлетой",
+      "brand": "Вкусно — и точка",
+      "calories": 344.0,
+      "protein": 18.0,
+      "carbs": 26.0,
+      "fat": 18.0,
+      "serving_size": 116.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мега Бокс",
+      "brand": "Вкусно — и точка",
+      "calories": 2065.0,
+      "protein": 128.0,
+      "carbs": 123.0,
+      "fat": 118.0,
+      "serving_size": 808.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мега Комбо с Биг Спешиал и Цезарь Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 1364.0,
+      "protein": 63.0,
+      "carbs": 96.0,
+      "fat": 80.0,
+      "serving_size": 551.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мега Комбо с Биг Хит и Чикен Премьер",
+      "brand": "Вкусно — и точка",
+      "calories": 1028.0,
+      "protein": 51.0,
+      "carbs": 96.0,
+      "fat": 49.0,
+      "serving_size": 450.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мега Комбо с Биг Хит и Чикен Хит",
+      "brand": "Вкусно — и точка",
+      "calories": 936.0,
+      "protein": 42.0,
+      "carbs": 90.0,
+      "fat": 45.0,
+      "serving_size": 366.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Медовик",
+      "brand": "Вкусно — и точка",
+      "calories": 296.0,
+      "protein": 4.0,
+      "carbs": 38.0,
+      "fat": 14.0,
+      "serving_size": 90.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мехико Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 543.0,
+      "protein": 31.0,
+      "carbs": 39.0,
+      "fat": 29.0,
+      "serving_size": 246.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мехико Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 511.0,
+      "protein": 22.0,
+      "carbs": 54.0,
+      "fat": 23.0,
+      "serving_size": 252.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Миндальный Капучино",
+      "brand": "Вкусно — и точка",
+      "calories": 31.0,
+      "protein": 0.8,
+      "carbs": 3.4,
+      "fat": 1.6,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Миндальный Латте",
+      "brand": "Вкусно — и точка",
+      "calories": 50.0,
+      "protein": 1.2,
+      "carbs": 5.4,
+      "fat": 2.5,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Миндальный Пряный чайный Латте",
+      "brand": "Вкусно — и точка",
+      "calories": 135.0,
+      "protein": 1.3,
+      "carbs": 25.0,
+      "fat": 3.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Миндальный Флэт Уайт",
+      "brand": "Вкусно — и точка",
+      "calories": 44.0,
+      "protein": 1.1,
+      "carbs": 4.8,
+      "fat": 2.2,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Минский Бургер Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1267.0,
+      "protein": 37.9,
+      "carbs": 139.0,
+      "fat": 61.0,
+      "serving_size": 510.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Минский Бургер с курицей Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1235.0,
+      "protein": 29.9,
+      "carbs": 154.0,
+      "fat": 55.0,
+      "serving_size": 510.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Моланг Желтый Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 555.0,
+      "protein": 30.0,
+      "carbs": 36.0,
+      "fat": 32.0,
+      "serving_size": 230.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Моланг Желтый Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 512.0,
+      "protein": 23.0,
+      "carbs": 48.0,
+      "fat": 25.0,
+      "serving_size": 231.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Молочный Коктейль Ванильный",
+      "brand": "Вкусно — и точка",
+      "calories": 244.0,
+      "protein": 6.1,
+      "carbs": 45.0,
+      "fat": 4.6,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Молочный Коктейль Клубничный",
+      "brand": "Вкусно — и точка",
+      "calories": 244.0,
+      "protein": 6.1,
+      "carbs": 45.0,
+      "fat": 4.6,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Молочный коктейль Папайя-манго",
+      "brand": "Вкусно — и точка",
+      "calories": 217.0,
+      "protein": 5.4,
+      "carbs": 39.0,
+      "fat": 4.5,
+      "serving_size": 208.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Молочный коктейль Черешня",
+      "brand": "Вкусно — и точка",
+      "calories": 216.0,
+      "protein": 5.3,
+      "carbs": 39.0,
+      "fat": 4.4,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Молочный Коктейль Шоколадный",
+      "brand": "Вкусно — и точка",
+      "calories": 247.0,
+      "protein": 6.7,
+      "carbs": 43.0,
+      "fat": 5.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Монблан Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 706.0,
+      "protein": 35.0,
+      "carbs": 54.0,
+      "fat": 38.0,
+      "serving_size": 252.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Монблан Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 692.0,
+      "protein": 31.0,
+      "carbs": 68.0,
+      "fat": 32.0,
+      "serving_size": 258.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Морковный торт",
+      "brand": "Вкусно — и точка",
+      "calories": 567.0,
+      "protein": 6.0,
+      "carbs": 64.0,
+      "fat": 32.0,
+      "serving_size": 115.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мороженое Карамельное",
+      "brand": "Вкусно — и точка",
+      "calories": 319.0,
+      "protein": 5.6,
+      "carbs": 59.0,
+      "fat": 6.9,
+      "serving_size": 170.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мороженое Клубничное",
+      "brand": "Вкусно — и точка",
+      "calories": 258.0,
+      "protein": 5.0,
+      "carbs": 48.0,
+      "fat": 4.9,
+      "serving_size": 167.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мороженое Маракуйя с косточкой",
+      "brand": "Вкусно — и точка",
+      "calories": 260.0,
+      "protein": 5.4,
+      "carbs": 50.0,
+      "fat": 4.8,
+      "serving_size": 173.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мороженое Пина Колада",
+      "brand": "Вкусно — и точка",
+      "calories": 247.0,
+      "protein": 4.4,
+      "carbs": 47.0,
+      "fat": 4.7,
+      "serving_size": 172.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мороженое Черничное",
+      "brand": "Вкусно — и точка",
+      "calories": 254.0,
+      "protein": 4.8,
+      "carbs": 47.0,
+      "fat": 4.9,
+      "serving_size": 172.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мороженое Шоколадное",
+      "brand": "Вкусно — и точка",
+      "calories": 310.0,
+      "protein": 6.4,
+      "carbs": 51.0,
+      "fat": 9.0,
+      "serving_size": 170.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Муромские блинчики с картофелем и грибами",
+      "brand": "Вкусно — и точка",
+      "calories": 141.0,
+      "protein": 8.0,
+      "carbs": 20.0,
+      "fat": 3.0,
+      "serving_size": 72.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Мёд",
+      "brand": "Вкусно — и точка",
+      "calories": 57.0,
+      "protein": 0.2,
+      "carbs": 14.0,
+      "fat": 0.0,
+      "serving_size": 20.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Наггетсы",
+      "brand": "Вкусно — и точка",
+      "calories": 179.0,
+      "protein": 11.0,
+      "carbs": 13.0,
+      "fat": 9.0,
+      "serving_size": 72.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Наггетсы Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 719.0,
+      "protein": 14.9,
+      "carbs": 107.0,
+      "fat": 25.0,
+      "serving_size": 582.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Овощной салат",
+      "brand": "Вкусно — и точка",
+      "calories": 31.0,
+      "protein": 0.8,
+      "carbs": 2.0,
+      "fat": 2.0,
+      "serving_size": 96.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Оладьи с шоколадной начинкой",
+      "brand": "Вкусно — и точка",
+      "calories": 390.0,
+      "protein": 6.0,
+      "carbs": 62.0,
+      "fat": 13.0,
+      "serving_size": 120.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Оливковое масло",
+      "brand": "Вкусно — и точка",
+      "calories": 82.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 9.1,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Омлет",
+      "brand": "Вкусно — и точка",
+      "calories": 305.0,
+      "protein": 18.0,
+      "carbs": 26.0,
+      "fat": 14.0,
+      "serving_size": 150.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Омлет с беконом",
+      "brand": "Вкусно — и точка",
+      "calories": 344.0,
+      "protein": 24.0,
+      "carbs": 27.0,
+      "fat": 15.0,
+      "serving_size": 177.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Омлет с ветчиной",
+      "brand": "Вкусно — и точка",
+      "calories": 344.0,
+      "protein": 24.0,
+      "carbs": 27.0,
+      "fat": 15.0,
+      "serving_size": 189.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Омлет с сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 389.0,
+      "protein": 23.0,
+      "carbs": 27.0,
+      "fat": 21.0,
+      "serving_size": 177.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Омлеттер с беконом и сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 297.0,
+      "protein": 16.0,
+      "carbs": 28.0,
+      "fat": 12.0,
+      "serving_size": 133.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Орешки со сгущёнкой",
+      "brand": "Вкусно — и точка",
+      "calories": 356.0,
+      "protein": 6.1,
+      "carbs": 59.0,
+      "fat": 8.9,
+      "serving_size": 88.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Особый Супер Бокс Genshin Impact",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Острый Мехико Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 544.0,
+      "protein": 31.0,
+      "carbs": 39.0,
+      "fat": 29.0,
+      "serving_size": 252.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Острый Мехико Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 512.0,
+      "protein": 22.0,
+      "carbs": 54.0,
+      "fat": 23.0,
+      "serving_size": 258.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Панини Тоскана",
+      "brand": "Вкусно — и точка",
+      "calories": 636.0,
+      "protein": 29.0,
+      "carbs": 58.0,
+      "fat": 32.0,
+      "serving_size": 273.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Панини Тоскана Острый",
+      "brand": "Вкусно — и точка",
+      "calories": 638.0,
+      "protein": 29.0,
+      "carbs": 59.0,
+      "fat": 32.0,
+      "serving_size": 279.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Печенье Клюква-кокос",
+      "brand": "Вкусно — и точка",
+      "calories": 324.0,
+      "protein": 3.6,
+      "carbs": 38.0,
+      "fat": 17.0,
+      "serving_size": 70.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Печенье Малина-белый шоколад",
+      "brand": "Вкусно — и точка",
+      "calories": 332.0,
+      "protein": 3.8,
+      "carbs": 49.0,
+      "fat": 13.0,
+      "serving_size": 75.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Печенье шоколадное с кусочками шоколада",
+      "brand": "Вкусно — и точка",
+      "calories": 324.0,
+      "protein": 3.6,
+      "carbs": 38.0,
+      "fat": 17.0,
+      "serving_size": 70.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожное «Ягодный космос»",
+      "brand": "Вкусно — и точка",
+      "calories": 360.0,
+      "protein": 3.3,
+      "carbs": 52.0,
+      "fat": 15.0,
+      "serving_size": 95.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожное Вупи пай",
+      "brand": "Вкусно — и точка",
+      "calories": 231.0,
+      "protein": 2.2,
+      "carbs": 36.0,
+      "fat": 8.9,
+      "serving_size": 60.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожное Картошка",
+      "brand": "Вкусно — и точка",
+      "calories": 341.0,
+      "protein": 3.0,
+      "carbs": 33.0,
+      "fat": 22.0,
+      "serving_size": 60.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожное Тропический подарок",
+      "brand": "Вкусно — и точка",
+      "calories": 225.0,
+      "protein": 5.4,
+      "carbs": 31.0,
+      "fat": 0.1,
+      "serving_size": 90.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожное Чёрный лес",
+      "brand": "Вкусно — и точка",
+      "calories": 386.0,
+      "protein": 3.8,
+      "carbs": 35.0,
+      "fat": 26.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Вишневый",
+      "brand": "Вкусно — и точка",
+      "calories": 249.0,
+      "protein": 2.8,
+      "carbs": 32.0,
+      "fat": 12.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Клубника-малина",
+      "brand": "Вкусно — и точка",
+      "calories": 267.0,
+      "protein": 3.0,
+      "carbs": 32.0,
+      "fat": 14.0,
+      "serving_size": 79.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Лесные ягоды-кремчиз",
+      "brand": "Вкусно — и точка",
+      "calories": 271.0,
+      "protein": 3.1,
+      "carbs": 33.0,
+      "fat": 14.0,
+      "serving_size": 79.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Манго-кремчиз",
+      "brand": "Вкусно — и точка",
+      "calories": 223.0,
+      "protein": 2.0,
+      "carbs": 25.0,
+      "fat": 12.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Норвежские ягоды",
+      "brand": "Вкусно — и точка",
+      "calories": 237.0,
+      "protein": 3.6,
+      "carbs": 25.0,
+      "fat": 13.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Пряное яблоко",
+      "brand": "Вкусно — и точка",
+      "calories": 212.0,
+      "protein": 3.1,
+      "carbs": 31.0,
+      "fat": 8.3,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Фондан-малина",
+      "brand": "Вкусно — и точка",
+      "calories": 272.0,
+      "protein": 3.2,
+      "carbs": 40.0,
+      "fat": 11.0,
+      "serving_size": 79.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пирожок Черная смородина",
+      "brand": "Вкусно — и точка",
+      "calories": 276.0,
+      "protein": 3.1,
+      "carbs": 33.0,
+      "fat": 15.0,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Питьевая вода Аква Минерале газированная",
+      "brand": "Вкусно — и точка",
+      "calories": 0.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 500.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Питьевая вода Аква Минерале негазированная",
+      "brand": "Вкусно — и точка",
+      "calories": 0.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 500.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Питьевая вода Черноголовка газированная",
+      "brand": "Вкусно — и точка",
+      "calories": 0.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 500.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Праздничный Комбо с игрушкой Мини-фест",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Премиальный Яблочный пирог",
+      "brand": "Вкусно — и точка",
+      "calories": 331.0,
+      "protein": 3.1,
+      "carbs": 57.0,
+      "fat": 9.0,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Приправа - и точка «пикантное барбекю»",
+      "brand": "Вкусно — и точка",
+      "calories": 7.0,
+      "protein": 0.1,
+      "carbs": 1.5,
+      "fat": 0.1,
+      "serving_size": 3.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Пряный Чайный Латте",
+      "brand": "Вкусно — и точка",
+      "calories": 235.0,
+      "protein": 7.0,
+      "carbs": 31.0,
+      "fat": 9.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Пунш Апельсин - спелые ягоды",
+      "brand": "Вкусно — и точка",
+      "calories": 99.0,
+      "protein": 0.1,
+      "carbs": 25.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Пунш Брусника-можжевельник",
+      "brand": "Вкусно — и точка",
+      "calories": 94.0,
+      "protein": 0.1,
+      "carbs": 23.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Пунш Смородина-малина",
+      "brand": "Вкусно — и точка",
+      "calories": 97.0,
+      "protein": 0.1,
+      "carbs": 24.0,
+      "fat": 0.1,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Раф",
+      "brand": "Вкусно — и точка",
+      "calories": 285.0,
+      "protein": 5.9,
+      "carbs": 17.0,
+      "fat": 21.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Римский Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 607.0,
+      "protein": 31.0,
+      "carbs": 42.0,
+      "fat": 35.0,
+      "serving_size": 235.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Римский Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 594.0,
+      "protein": 27.0,
+      "carbs": 55.0,
+      "fat": 29.0,
+      "serving_size": 241.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Розан с ванильным кремом",
+      "brand": "Вкусно — и точка",
+      "calories": 334.0,
+      "protein": 4.3,
+      "carbs": 41.0,
+      "fat": 17.0,
+      "serving_size": 200.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Рулетики с творогом",
+      "brand": "Вкусно — и точка",
+      "calories": 211.0,
+      "protein": 7.0,
+      "carbs": 24.0,
+      "fat": 9.6,
+      "serving_size": 72.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Рулетики с творогом и шоколадом",
+      "brand": "Вкусно — и точка",
+      "calories": 223.0,
+      "protein": 6.5,
+      "carbs": 27.0,
+      "fat": 10.0,
+      "serving_size": 72.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Рыбные палочки",
+      "brand": "Вкусно — и точка",
+      "calories": 225.0,
+      "protein": 11.0,
+      "carbs": 15.0,
+      "fat": 13.0,
+      "serving_size": 78.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Рыбные палочки с картофелем",
+      "brand": "Вкусно — и точка",
+      "calories": 494.0,
+      "protein": 4.6,
+      "carbs": 61.0,
+      "fat": 20.0,
+      "serving_size": 250.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Салат Цезарь",
+      "brand": "Вкусно — и точка",
+      "calories": 231.0,
+      "protein": 15.0,
+      "carbs": 17.0,
+      "fat": 11.0,
+      "serving_size": 172.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Салат Цезарь с креветками",
+      "brand": "Вкусно — и точка",
+      "calories": 186.0,
+      "protein": 11.0,
+      "carbs": 13.0,
+      "fat": 9.7,
+      "serving_size": 146.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Санрайз Дольче манго",
+      "brand": "Вкусно — и точка",
+      "calories": 187.0,
+      "protein": 0.0,
+      "carbs": 38.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Санрайз Клубника-кактус",
+      "brand": "Вкусно — и точка",
+      "calories": 186.0,
+      "protein": 0.0,
+      "carbs": 38.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Сет для Большой Компании",
+      "brand": "Вкусно — и точка",
+      "calories": 540.0,
+      "protein": 3.9,
+      "carbs": 94.0,
+      "fat": 16.0,
+      "serving_size": 510.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сет Чуррос и Айс Де Люкс",
+      "brand": "Вкусно — и точка",
+      "calories": 122.0,
+      "protein": 1.1,
+      "carbs": 23.0,
+      "fat": 2.7,
+      "serving_size": 54.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Скандинавский Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 726.0,
+      "protein": 37.0,
+      "carbs": 54.0,
+      "fat": 39.0,
+      "serving_size": 263.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Скандинавский Бургер с курицей",
+      "brand": "Вкусно — и точка",
+      "calories": 712.0,
+      "protein": 33.0,
+      "carbs": 68.0,
+      "fat": 34.0,
+      "serving_size": 296.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Снэк Бокс с крыльями",
+      "brand": "Вкусно — и точка",
+      "calories": 866.0,
+      "protein": 38.0,
+      "carbs": 73.0,
+      "fat": 46.0,
+      "serving_size": 326.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус «1000 Островов»",
+      "brand": "Вкусно — и точка",
+      "calories": 79.0,
+      "protein": 0.3,
+      "carbs": 3.0,
+      "fat": 7.4,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Барбекю",
+      "brand": "Вкусно — и точка",
+      "calories": 47.0,
+      "protein": 0.2,
+      "carbs": 11.0,
+      "fat": 0.3,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Горчичный",
+      "brand": "Вкусно — и точка",
+      "calories": 62.0,
+      "protein": 0.5,
+      "carbs": 7.6,
+      "fat": 3.3,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Йогуртовый с огурчиками",
+      "brand": "Вкусно — и точка",
+      "calories": 57.0,
+      "protein": 0.3,
+      "carbs": 1.9,
+      "fat": 5.4,
+      "serving_size": 50.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Карри",
+      "brand": "Вкусно — и точка",
+      "calories": 45.0,
+      "protein": 0.1,
+      "carbs": 10.0,
+      "fat": 0.4,
+      "serving_size": 50.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Кисло-Сладкий",
+      "brand": "Вкусно — и точка",
+      "calories": 47.0,
+      "protein": 0.2,
+      "carbs": 11.0,
+      "fat": 0.3,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Пицца",
+      "brand": "Вкусно — и точка",
+      "calories": 24.0,
+      "protein": 0.4,
+      "carbs": 4.3,
+      "fat": 0.5,
+      "serving_size": 50.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Сладкий Чили",
+      "brand": "Вкусно — и точка",
+      "calories": 46.0,
+      "protein": 0.1,
+      "carbs": 11.0,
+      "fat": 0.1,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Сырный",
+      "brand": "Вкусно — и точка",
+      "calories": 90.0,
+      "protein": 0.5,
+      "carbs": 1.5,
+      "fat": 9.3,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Терияки",
+      "brand": "Вкусно — и точка",
+      "calories": 54.0,
+      "protein": 0.5,
+      "carbs": 13.0,
+      "fat": 0.0,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Цезарь",
+      "brand": "Вкусно — и точка",
+      "calories": 60.0,
+      "protein": 0.6,
+      "carbs": 1.8,
+      "fat": 5.5,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Чесночный",
+      "brand": "Вкусно — и точка",
+      "calories": 84.0,
+      "protein": 0.3,
+      "carbs": 3.3,
+      "fat": 7.8,
+      "serving_size": 40.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Соус Чили-лайм PIKADOR",
+      "brand": "Вкусно — и точка",
+      "calories": 40.0,
+      "protein": 0.6,
+      "carbs": 9.2,
+      "fat": 0.1,
+      "serving_size": 25.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Спрайт",
+      "brand": "Вкусно — и точка",
+      "calories": 40.0,
+      "protein": 0.0,
+      "carbs": 5.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Стрипсы",
+      "brand": "Вкусно — и точка",
+      "calories": 270.0,
+      "protein": 17.0,
+      "carbs": 23.0,
+      "fat": 12.0,
+      "serving_size": 120.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Стрипсы Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 810.0,
+      "protein": 20.9,
+      "carbs": 117.0,
+      "fat": 28.0,
+      "serving_size": 630.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Супер Бокс Genshin Impact",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Супер Бокс для тебя",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 3.9,
+      "carbs": 41.0,
+      "fat": 16.0,
+      "serving_size": 110.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырники",
+      "brand": "Вкусно — и точка",
+      "calories": 272.0,
+      "protein": 17.0,
+      "carbs": 25.0,
+      "fat": 12.0,
+      "serving_size": 120.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырные колечки",
+      "brand": "Вкусно — и точка",
+      "calories": 370.0,
+      "protein": 17.0,
+      "carbs": 32.0,
+      "fat": 19.0,
+      "serving_size": 120.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырные Колечки Моцарелла",
+      "brand": "Вкусно — и точка",
+      "calories": 226.0,
+      "protein": 11.0,
+      "carbs": 25.0,
+      "fat": 8.9,
+      "serving_size": 81.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырные колечки начос",
+      "brand": "Вкусно — и точка",
+      "calories": 255.0,
+      "protein": 12.0,
+      "carbs": 24.0,
+      "fat": 12.0,
+      "serving_size": 81.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырные медальоны со вкусом малины",
+      "brand": "Вкусно — и точка",
+      "calories": 176.0,
+      "protein": 7.4,
+      "carbs": 21.0,
+      "fat": 6.8,
+      "serving_size": 57.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырные палочки",
+      "brand": "Вкусно — и точка",
+      "calories": 397.0,
+      "protein": 12.0,
+      "carbs": 24.0,
+      "fat": 28.0,
+      "serving_size": 87.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Сырные треугольники",
+      "brand": "Вкусно — и точка",
+      "calories": 222.0,
+      "protein": 10.0,
+      "carbs": 19.0,
+      "fat": 12.0,
+      "serving_size": 72.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Творожник",
+      "brand": "Вкусно — и точка",
+      "calories": 197.0,
+      "protein": 64.0,
+      "carbs": 23.0,
+      "fat": 9.0,
+      "serving_size": 70.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тирамису",
+      "brand": "Вкусно — и точка",
+      "calories": 260.0,
+      "protein": 3.4,
+      "carbs": 26.3,
+      "fat": 15.3,
+      "serving_size": 100.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Торт Миндальный",
+      "brand": "Вкусно — и точка",
+      "calories": 347.0,
+      "protein": 17.0,
+      "carbs": 42.0,
+      "fat": 6.9,
+      "serving_size": 80.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Торт Рикотта с грушей",
+      "brand": "Вкусно — и точка",
+      "calories": 335.0,
+      "protein": 6.0,
+      "carbs": 33.0,
+      "fat": 20.0,
+      "serving_size": 112.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Торт Шоколадный",
+      "brand": "Вкусно — и точка",
+      "calories": 330.0,
+      "protein": 4.8,
+      "carbs": 33.0,
+      "fat": 19.0,
+      "serving_size": 104.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тост с ветчиной",
+      "brand": "Вкусно — и точка",
+      "calories": 265.0,
+      "protein": 14.0,
+      "carbs": 28.0,
+      "fat": 11.0,
+      "serving_size": 85.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тост с ростбифом",
+      "brand": "Вкусно — и точка",
+      "calories": 1133.0,
+      "protein": 14.0,
+      "carbs": 27.0,
+      "fat": 11.0,
+      "serving_size": 98.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тост с сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 242.0,
+      "protein": 10.0,
+      "carbs": 28.0,
+      "fat": 9.6,
+      "serving_size": 78.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тройной Фреш Олеси Иванченко",
+      "brand": "Вкусно — и точка",
+      "calories": 577.0,
+      "protein": 33.0,
+      "carbs": 35.0,
+      "fat": 34.0,
+      "serving_size": 232.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тройной Чизбургер Три Сыра",
+      "brand": "Вкусно — и точка",
+      "calories": 571.0,
+      "protein": 37.0,
+      "carbs": 32.0,
+      "fat": 32.0,
+      "serving_size": 224.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Тройной Чизбургер Три Сыра Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1111.0,
+      "protein": 40.9,
+      "carbs": 126.0,
+      "fat": 48.0,
+      "serving_size": 734.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Улитка с карамелью",
+      "brand": "Вкусно — и точка",
+      "calories": 333.0,
+      "protein": 4.6,
+      "carbs": 27.0,
+      "fat": 23.0,
+      "serving_size": 76.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Фанта",
+      "brand": "Вкусно — и точка",
+      "calories": 83.0,
+      "protein": 0.0,
+      "carbs": 20.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Фанта Мангуава",
+      "brand": "Вкусно — и точка",
+      "calories": 210.0,
+      "protein": 0.0,
+      "carbs": 53.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Физз Вишня",
+      "brand": "Вкусно — и точка",
+      "calories": 110.0,
+      "protein": 0.0,
+      "carbs": 28.0,
+      "fat": 0.0,
+      "serving_size": 250.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Физз Карамель",
+      "brand": "Вкусно — и точка",
+      "calories": 147.0,
+      "protein": 0.0,
+      "carbs": 34.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Фиш Бургер",
+      "brand": "Вкусно — и точка",
+      "calories": 331.0,
+      "protein": 15.0,
+      "carbs": 36.0,
+      "fat": 14.0,
+      "serving_size": 133.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Фиш Бургер Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 871.0,
+      "protein": 18.9,
+      "carbs": 130.0,
+      "fat": 30.0,
+      "serving_size": 643.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Фиш Стикс",
+      "brand": "Вкусно — и точка",
+      "calories": 163.0,
+      "protein": 10.0,
+      "carbs": 19.0,
+      "fat": 5.0,
+      "serving_size": 84.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Флэт Уайт",
+      "brand": "Вкусно — и точка",
+      "calories": 113.0,
+      "protein": 5.8,
+      "carbs": 8.9,
+      "fat": 6.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Фраппе Вишневый",
+      "brand": "Вкусно — и точка",
+      "calories": 365.0,
+      "protein": 4.1,
+      "carbs": 53.0,
+      "fat": 15.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Фраппе Карамельный",
+      "brand": "Вкусно — и точка",
+      "calories": 278.0,
+      "protein": 4.9,
+      "carbs": 36.0,
+      "fat": 13.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Фраппе Мокко",
+      "brand": "Вкусно — и точка",
+      "calories": 352.0,
+      "protein": 8.1,
+      "carbs": 47.0,
+      "fat": 14.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Фреш Маффин",
+      "brand": "Вкусно — и точка",
+      "calories": 368.0,
+      "protein": 18.0,
+      "carbs": 28.0,
+      "fat": 20.0,
+      "serving_size": 150.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Фреш Маффин базиликовый",
+      "brand": "Вкусно — и точка",
+      "calories": 396.0,
+      "protein": 18.0,
+      "carbs": 33.0,
+      "fat": 21.0,
+      "serving_size": 159.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Фреш Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 537.0,
+      "protein": 23.0,
+      "carbs": 34.0,
+      "fat": 34.0,
+      "serving_size": 215.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Хрустящие васаби-шарики",
+      "brand": "Вкусно — и точка",
+      "calories": 41.0,
+      "protein": 0.7,
+      "carbs": 3.0,
+      "fat": 1.1,
+      "serving_size": 10.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Цезарь Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 552.0,
+      "protein": 19.0,
+      "carbs": 46.0,
+      "fat": 32.0,
+      "serving_size": 211.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Цезарь Ролл Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1092.0,
+      "protein": 22.9,
+      "carbs": 140.0,
+      "fat": 48.0,
+      "serving_size": 721.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Цезарь Ролл с беконом",
+      "brand": "Вкусно — и точка",
+      "calories": 500.0,
+      "protein": 21.0,
+      "carbs": 48.0,
+      "fat": 25.0,
+      "serving_size": 217.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Цезарь Ролл с беконом Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1040.0,
+      "protein": 24.9,
+      "carbs": 142.0,
+      "fat": 41.0,
+      "serving_size": 727.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чай Зеленый",
+      "brand": "Вкусно — и точка",
+      "calories": 8.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Чай Черный",
+      "brand": "Вкусно — и точка",
+      "calories": 8.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Чай Черный Эрл Грей",
+      "brand": "Вкусно — и точка",
+      "calories": 8.0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Черный чай с чабрецом",
+      "brand": "Вкусно — и точка",
+      "calories": 12.0,
+      "protein": 0.0,
+      "carbs": 4.0,
+      "fat": 0.0,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Чиабатта с ветчиной и сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 432.0,
+      "protein": 23.0,
+      "carbs": 47.0,
+      "fat": 17.0,
+      "serving_size": 212.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чиабатта с тунцом",
+      "brand": "Вкусно — и точка",
+      "calories": 371.0,
+      "protein": 22.0,
+      "carbs": 44.0,
+      "fat": 11.0,
+      "serving_size": 168.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чизбургер",
+      "brand": "Вкусно — и точка",
+      "calories": 302.0,
+      "protein": 16.0,
+      "carbs": 31.0,
+      "fat": 13.0,
+      "serving_size": 117.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чизкейк карамельный",
+      "brand": "Вкусно — и точка",
+      "calories": 443.0,
+      "protein": 6.0,
+      "carbs": 36.0,
+      "fat": 30.0,
+      "serving_size": 125.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чизкейк клубничный",
+      "brand": "Вкусно — и точка",
+      "calories": 291.0,
+      "protein": 4.2,
+      "carbs": 33.0,
+      "fat": 16.0,
+      "serving_size": 119.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Карри Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 426.0,
+      "protein": 18.0,
+      "carbs": 44.0,
+      "fat": 20.0,
+      "serving_size": 197.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер",
+      "brand": "Вкусно — и точка",
+      "calories": 525.0,
+      "protein": 26.0,
+      "carbs": 51.0,
+      "fat": 24.0,
+      "serving_size": 234.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Грибной",
+      "brand": "Вкусно — и точка",
+      "calories": 626.0,
+      "protein": 26.0,
+      "carbs": 53.0,
+      "fat": 34.0,
+      "serving_size": 224.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Карри",
+      "brand": "Вкусно — и точка",
+      "calories": 518.0,
+      "protein": 17.0,
+      "carbs": 45.0,
+      "fat": 20.0,
+      "serving_size": 229.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 1065.0,
+      "protein": 29.9,
+      "carbs": 145.0,
+      "fat": 40.0,
+      "serving_size": 744.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Пекинский барбекю",
+      "brand": "Вкусно — и точка",
+      "calories": 563.0,
+      "protein": 22.0,
+      "carbs": 59.0,
+      "fat": 27.0,
+      "serving_size": 243.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Перец гриль",
+      "brand": "Вкусно — и точка",
+      "calories": 516.0,
+      "protein": 21.0,
+      "carbs": 59.0,
+      "fat": 22.0,
+      "serving_size": 255.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Сычуаньский",
+      "brand": "Вкусно — и точка",
+      "calories": 565.0,
+      "protein": 22.0,
+      "carbs": 61.0,
+      "fat": 26.0,
+      "serving_size": 252.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Премьер Халапеньо",
+      "brand": "Вкусно — и точка",
+      "calories": 526.0,
+      "protein": 26.0,
+      "carbs": 51.0,
+      "fat": 24.0,
+      "serving_size": 240.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Фреш Маффин",
+      "brand": "Вкусно — и точка",
+      "calories": 325.0,
+      "protein": 13.0,
+      "carbs": 37.0,
+      "fat": 14.0,
+      "serving_size": 142.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Фреш Маффин Пряный",
+      "brand": "Вкусно — и точка",
+      "calories": 379.0,
+      "protein": 16.0,
+      "carbs": 47.0,
+      "fat": 14.0,
+      "serving_size": 178.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Фреш Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 563.0,
+      "protein": 24.0,
+      "carbs": 48.0,
+      "fat": 30.0,
+      "serving_size": 250.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит",
+      "brand": "Вкусно — и точка",
+      "calories": 433.0,
+      "protein": 17.0,
+      "carbs": 45.0,
+      "fat": 20.0,
+      "serving_size": 150.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит Грибной",
+      "brand": "Вкусно — и точка",
+      "calories": 549.0,
+      "protein": 21.0,
+      "carbs": 52.0,
+      "fat": 28.0,
+      "serving_size": 204.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит Карри",
+      "brand": "Вкусно — и точка",
+      "calories": 438.0,
+      "protein": 21.0,
+      "carbs": 49.0,
+      "fat": 17.0,
+      "serving_size": 189.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 973.0,
+      "protein": 20.9,
+      "carbs": 139.0,
+      "fat": 36.0,
+      "serving_size": 660.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит Пекинский барбекю",
+      "brand": "Вкусно — и точка",
+      "calories": 491.0,
+      "protein": 17.0,
+      "carbs": 58.0,
+      "fat": 21.0,
+      "serving_size": 205.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит Сычуаньский",
+      "brand": "Вкусно — и точка",
+      "calories": 486.0,
+      "protein": 17.0,
+      "carbs": 59.0,
+      "fat": 19.0,
+      "serving_size": 212.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикен Хит Халапеньо",
+      "brand": "Вкусно — и точка",
+      "calories": 485.0,
+      "protein": 21.0,
+      "carbs": 49.0,
+      "fat": 22.0,
+      "serving_size": 204.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чикенбургер",
+      "brand": "Вкусно — и точка",
+      "calories": 339.0,
+      "protein": 12.0,
+      "carbs": 37.0,
+      "fat": 14.0,
+      "serving_size": 129.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Чуррос",
+      "brand": "Вкусно — и точка",
+      "calories": 122.0,
+      "protein": 1.1,
+      "carbs": 23.0,
+      "fat": 2.7,
+      "serving_size": 54.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Шоколадный соус",
+      "brand": "Вкусно — и точка",
+      "calories": 92.0,
+      "protein": 1.1,
+      "carbs": 19.0,
+      "fat": 1.1,
+      "serving_size": 32.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Шримп Ролл",
+      "brand": "Вкусно — и точка",
+      "calories": 412.0,
+      "protein": 15.0,
+      "carbs": 48.0,
+      "fat": 18.0,
+      "serving_size": 171.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Шримп Ролл Комбо",
+      "brand": "Вкусно — и точка",
+      "calories": 952.0,
+      "protein": 18.9,
+      "carbs": 142.0,
+      "fat": 34.0,
+      "serving_size": 681.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Эклер ванильный",
+      "brand": "Вкусно — и точка",
+      "calories": 250.0,
+      "protein": 2.0,
+      "carbs": 15.0,
+      "fat": 20.0,
+      "serving_size": 60.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Электрический лимонад",
+      "brand": "Вкусно — и точка",
+      "calories": 94.0,
+      "protein": 0.0,
+      "carbs": 24.0,
+      "fat": 0.0,
+      "serving_size": 300.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Эспрессо-тоник",
+      "brand": "Вкусно — и точка",
+      "calories": 112.0,
+      "protein": 0.2,
+      "carbs": 28.0,
+      "fat": 0.1,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Эспрессо-тоник Гранат",
+      "brand": "Вкусно — и точка",
+      "calories": 107.0,
+      "protein": 0.4,
+      "carbs": 26.0,
+      "fat": 0.3,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Яблочное пюре «Агуша»",
+      "brand": "Вкусно — и точка",
+      "calories": 56.0,
+      "protein": 0.0,
+      "carbs": 14.0,
+      "fat": 0.0,
+      "serving_size": 90.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Яблочный сок",
+      "brand": "Вкусно — и точка",
+      "calories": 101.0,
+      "protein": 0.3,
+      "carbs": 24.0,
+      "fat": 0.2,
+      "serving_size": 400.0,
+      "serving_unit": "ml"
+    },
+    {
+      "name": "Яичница",
+      "brand": "Вкусно — и точка",
+      "calories": 292.0,
+      "protein": 17.0,
+      "carbs": 26.0,
+      "fat": 13.0,
+      "serving_size": 149.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Яичница с беконом",
+      "brand": "Вкусно — и точка",
+      "calories": 331.0,
+      "protein": 20.0,
+      "carbs": 26.0,
+      "fat": 16.0,
+      "serving_size": 176.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Яичница с ветчиной",
+      "brand": "Вкусно — и точка",
+      "calories": 344.0,
+      "protein": 24.0,
+      "carbs": 27.0,
+      "fat": 15.0,
+      "serving_size": 188.0,
+      "serving_unit": "g"
+    },
+    {
+      "name": "Яичница с сыром",
+      "brand": "Вкусно — и точка",
+      "calories": 389.0,
+      "protein": 23.0,
+      "carbs": 27.0,
+      "fat": 21.0,
+      "serving_size": 176.0,
+      "serving_unit": "g"
+    }
+  ]
+}

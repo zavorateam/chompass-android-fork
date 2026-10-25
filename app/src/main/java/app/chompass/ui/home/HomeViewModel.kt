@@ -303,6 +303,9 @@ data class HomeUiState(
     val waterDailyGoalMl: Int = 2_000,
     val waterQuickPresetsMl: List<Int> = WaterQuickPresets.DEFAULT_AMOUNTS_ML,
     val waterTodayMl: Int = 0,
+    val waterTodayManualMl: Int = 0,
+    val waterTodayFoodMl: Int = 0,
+    val waterFoodSummary: app.chompass.models.FoodHydrationCalculator.FoodWaterSummary = app.chompass.models.FoodHydrationCalculator.EmptySummary,
     /** Individual sips for the selected day, newest first (drives the history sheet). */
     val waterTodayEntries: List<WaterEntry> = emptyList(),
     /** Free-text note for the selected day (Codeberg #58a); null when the day has none. */
@@ -671,6 +674,9 @@ data class HomeUiState(
             waterDailyGoalMl == other.waterDailyGoalMl &&
             waterQuickPresetsMl == other.waterQuickPresetsMl &&
             waterTodayMl == other.waterTodayMl &&
+            waterTodayManualMl == other.waterTodayManualMl &&
+            waterTodayFoodMl == other.waterTodayFoodMl &&
+            waterFoodSummary == other.waterFoodSummary &&
             waterTodayEntries == other.waterTodayEntries &&
             dailyNote == other.dailyNote &&
             waterGoalDynamic == other.waterGoalDynamic &&
@@ -779,6 +785,9 @@ data class HomeUiState(
         result = 31 * result + waterDailyGoalMl
         result = 31 * result + waterQuickPresetsMl.hashCode()
         result = 31 * result + waterTodayMl
+        result = 31 * result + waterTodayManualMl
+        result = 31 * result + waterTodayFoodMl
+        result = 31 * result + waterFoodSummary.hashCode()
         result = 31 * result + waterTodayEntries.hashCode()
         result = 31 * result + (dailyNote?.hashCode() ?: 0)
         result = 31 * result + waterGoalDynamic.hashCode()
@@ -1025,6 +1034,14 @@ class HomeViewModel(private val container: AppContainer) : ViewModel() {
         }
         return deferred.await()
     }
+
+    private data class WaterDayData(
+        val total: Int,
+        val manualTotal: Int,
+        val foodTotal: Int,
+        val foodSummary: app.chompass.models.FoodHydrationCalculator.FoodWaterSummary,
+        val dayEntries: List<WaterEntry>,
+    )
 
     private data class AnalysisStart(
         val generation: Int,
@@ -1621,19 +1638,39 @@ class HomeViewModel(private val container: AppContainer) : ViewModel() {
             .onEach { refreshFastingTick(it) }
             .launchIn(viewModelScope)
 
-        combine(container.waterRepository.entries, _selectedDate) { entries, day ->
+        combine(
+            container.waterRepository.entries,
+            _selectedDate.flatMapLatest { day -> container.foodRepository.entriesForDate(day) },
+            container.prefs.waterFoodWaterEnabled,
+            _selectedDate,
+        ) { entries, foodEntries, foodWaterEnabled, day ->
             val zone = ZoneId.systemDefault()
             val dayEntries = entries.filter { it.date.atZone(zone).toLocalDate() == day }
-            dayEntries.sumOf { it.milliliters } to dayEntries
+            val manualTotal = dayEntries.sumOf { it.milliliters }
+            val foodSummary = if (foodWaterEnabled) {
+                app.chompass.models.FoodHydrationCalculator.calculate(foodEntries)
+            } else {
+                app.chompass.models.FoodHydrationCalculator.EmptySummary
+            }
+            val total = manualTotal + foodSummary.totalMl
+            WaterDayData(total, manualTotal, foodSummary.totalMl, foodSummary, dayEntries)
         }
-            .onEach { (total, dayEntries) ->
-                _ui.update { it.copy(waterTodayMl = total, waterTodayEntries = dayEntries) }
+            .onEach { res ->
+                _ui.update {
+                    it.copy(
+                        waterTodayMl = res.total,
+                        waterTodayManualMl = res.manualTotal,
+                        waterTodayFoodMl = res.foodTotal,
+                        waterFoodSummary = res.foodSummary,
+                        waterTodayEntries = res.dayEntries,
+                    )
+                }
                 refreshWaterPlan()
                 val sipAt = waterAckAtNs
-                if (sipAt != 0L && total > waterAckPriorMl) {
+                if (sipAt != 0L && res.total > waterAckPriorMl) {
                     waterAckAtNs = 0L
                     val ms = (System.nanoTime() - sipAt) / 1_000_000
-                    PerfLog.event("op=waterSip phase=uiAck ms=$ms ml=$total")
+                    PerfLog.event("op=waterSip phase=uiAck ms=$ms ml=${res.total}")
                     waterAckWaiter?.complete(ms)
                     waterAckWaiter = null
                 }

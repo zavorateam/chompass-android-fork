@@ -114,6 +114,7 @@ class SwissFoodIndex(
             vitaminE = d("vitamin_e"),
             vitaminK = d("vitamin_k"),
             folate = d("folate"),
+            water = d("water") ?: d("water_g"),
         )
     }
 
@@ -182,6 +183,7 @@ data class SwissFoodRecord(
     val vitaminE: Double? = null,
     val vitaminK: Double? = null,
     val folate: Double? = null,
+    val water: Double? = null,
 ) {
     /** Scale per-100g nutrients to [grams] as a reviewable [FoodAnalysis]. */
     fun toFoodAnalysis(grams: Double, datasetVersion: String): FoodAnalysis {
@@ -192,6 +194,7 @@ data class SwissFoodRecord(
             carbs = carbs ?: 0.0,
             fat = fat ?: 0.0,
             servingSizeGrams = 100.0,
+            waterPer100g = water,
             sugar = sugar,
             fiber = fiber,
             saturatedFat = saturatedFat,

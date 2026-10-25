@@ -1,6 +1,6 @@
 {
-  "summary":  "План реализации поддержки пользовательских баз данных продуктов (Custom Food Databases): импорт CSV/JSON с автоопределением колонок, просмотр, создание/редактирование/удаление продуктов и баз, экспорт, а также интеграция в общий поиск продуктов с бейджем источника.",
-  "updatedAt":  "2026-10-22T15:49:19.985919279Z",
+  "summary":  "Implementation plan for integrating essential amino acids and an expanded micronutrient profile across data models, AI extraction, target calculations, Home screen, Progress screen, food edit sheets, and settings.",
+  "updatedAt":  "2026-10-24T20:21:25.426774687Z",
   "requestFeedback":  true,
   "userFacing":  true
 }

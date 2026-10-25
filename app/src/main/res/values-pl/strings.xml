@@ -353,18 +353,18 @@
     <string name="onboarding_health_connect">Połącz</string>
 
     <string name="onboarding_provider_title">Przynieś własne AI</string>
-    <string name="onboarding_provider_subtitle">Opcjonalny klucz API do zdjęć jedzenia i trenera.\nGoogle AI Studio jest darmowe i zalecane.</string>
-    <string name="onboarding_provider_recommended_title">Zalecane: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">Opcjonalny klucz API do zdjęć jedzenia i trenera.\nGemini API jest darmowe i zalecane.</string>
+    <string name="onboarding_provider_recommended_title">Zalecane: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">Darmowe i wysokiej jakości. Najlepsze do zdjęć jedzenia.</string>
-    <string name="onboarding_provider_howto_title">Jak zdobyć darmowy klucz Google AI Studio</string>
+    <string name="onboarding_provider_howto_title">Jak zdobyć darmowy klucz Gemini API</string>
     <string name="onboarding_provider_step_1">Otwórz aistudio.google.com/apikey (stuknij, aby otworzyć)</string>
     <string name="onboarding_provider_step_2">Zaloguj się przez Google i utwórz klucz API</string>
     <string name="onboarding_provider_step_3">Wklej go poniżej i stuknij Przetestuj klucz</string>
     <string name="onboarding_provider_footer">Obsługujemy wszystkich dostawców. Twój klucz pozostaje\nna tym urządzeniu, zaszyfrowany. Możesz to zmienić w Ustawieniach.</string>
-    <string name="onboarding_ai_free_tier_note">Darmowy poziom obejmuje modele Flash; modele Pro wymagają płatności w projekcie AI Studio.</string>
+    <string name="onboarding_ai_free_tier_note">Darmowy poziom obejmuje modele Flash; modele Pro wymagają płatności w projekcie Gemini API.</string>
     <string name="onboarding_skip_ai">Pomiń na razie</string>
     <string name="onboarding_skip_ai_title">Kontynuować bez klucza chmurowego?</string>
-    <string name="onboarding_skip_ai_body">AI na urządzeniu jest prywatne, ale mniej dokładne niż modele chmurowe; spodziewaj się błędnych kalorii lub pominiętych pozycji. Darmowy klucz AI Studio dodasz w Ustawieniach w dowolnym momencie.</string>
+    <string name="onboarding_skip_ai_body">AI na urządzeniu jest prywatne, ale mniej dokładne niż modele chmurowe; spodziewaj się błędnych kalorii lub pominiętych pozycji. Darmowy klucz Gemini API dodasz w Ustawieniach w dowolnym momencie.</string>
     <string name="onboarding_skip_ai_later_body">AI do zdjęć jedzenia i trener wymagają klucza API lub modelu na urządzeniu. Możesz skonfigurować jedno z nich w Ustawieniach w dowolnym momencie.</string>
     <string name="onboarding_skip_ai_confirm">Kontynuuj mimo to</string>
     <string name="onboarding_api_key_test">Przetestuj klucz</string>
@@ -372,7 +372,7 @@
     <string name="onboarding_api_key_works">Klucz działa</string>
     <string name="onboarding_api_key_empty">Najpierw wklej klucz API</string>
     <string name="onboarding_api_key_network">Błąd sieci. Sprawdź połączenie i spróbuj ponownie.</string>
-    <string name="onboarding_api_key_rejected">Ten klucz API został odrzucony. Utwórz nowy klucz w AI Studio i wklej go ponownie.</string>
+    <string name="onboarding_api_key_rejected">Ten klucz API został odrzucony. Utwórz nowy klucz w Gemini API i wklej go ponownie.</string>
     <string name="onboarding_api_key_non_gemini_ok">Gotowe. Szybki test dotyczy tylko Gemini</string>
 
     <string name="onboarding_building_calories">Kalorie</string>
@@ -1389,10 +1389,10 @@
     <string name="ai_error_on_device_low_memory">Za mało wolnej pamięci na AI na urządzeniu w tej chwili. Spróbuj mniejszego modelu E2B, zamknij inne aplikacje lub zmień dostawcę w Ustawienia → Dostawca AI.</string>
     <string name="ai_error_on_device_engine_init">Nie udało się uruchomić silnika modelu na tym urządzeniu. Spróbuj ponownie, zwolnij model w Ustawienia → Dostawca AI → Model albo przełącz się na dostawcę chmurowego.</string>
     <string name="ai_error_key_rejected">Twój klucz API został odrzucony. Otwórz Ustawienia → Dostawca AI i wklej ponownie prawidłowy klucz.</string>
-    <string name="ai_error_location_unsupported">Gemini nie jest dostępny z tej lokalizacji sieciowej (kraj/IP). Jeśli używasz VPN, wyłącz go lub przełącz się na wyjście domowe. IP VPN z centrów danych (nie-domowe) są często blokowane. Możesz też włączyć płatności w projekcie Google AI Studio, spróbować innej sieci lub zmienić dostawcę w Ustawienia → Dostawca AI.</string>
+    <string name="ai_error_location_unsupported">Gemini nie jest dostępny z tej lokalizacji sieciowej (kraj/IP). Jeśli używasz VPN, wyłącz go lub przełącz się na wyjście domowe. IP VPN z centrów danych (nie-domowe) są często blokowane. Możesz też włączyć płatności w projekcie Gemini API, spróbować innej sieci lub zmienić dostawcę w Ustawienia → Dostawca AI.</string>
     <string name="ai_error_provider_overloaded">Dostawca AI jest teraz przeciążony. Próbowaliśmy kilka razy. Spróbuj ponownie za minutę albo zmień dostawcę/model w Ustawienia → Dostawca AI.</string>
     <string name="ai_error_rate_limit">Osiągnięto limit zapytań dla Twojego klucza API. Poczekaj minutę albo zmień dostawcę w Ustawienia → Dostawca AI. W darmowym poziomie model Flash-Lite ma najwyższy limit.</string>
-    <string name="ai_error_model_unavailable">Twój dostawca nie znalazł tego modelu. Może być płatny w darmowym poziomie, ograniczony w Twoim regionie albo punkt końcowy może być błędny. Przełącz się na domyślny model Flash w Ustawienia → Dostawca AI albo włącz płatności w projekcie AI Studio.</string>
+    <string name="ai_error_model_unavailable">Twój dostawca nie znalazł tego modelu. Może być płatny w darmowym poziomie, ograniczony w Twoim regionie albo punkt końcowy może być błędny. Przełącz się na domyślny model Flash w Ustawienia → Dostawca AI albo włącz płatności w projekcie Gemini API.</string>
     <string name="ai_error_coach_on_device">Trener nie jest jeszcze dostępny z dostawcą na urządzeniu. Przełącz się na dostawcę chmurowego w Ustawienia → Dostawca AI.</string>
     <string name="ai_error_coach_round_limit">Trener nie mógł odpowiedzieć. Spróbuj przeformułować pytanie.</string>
     <string name="ai_error_truncated_twice">Odpowiedź AI została dwa razy ucięta na limicie długości odpowiedzi. Zwiększ maksymalną długość odpowiedzi w Ustawienia → AI i mowa albo zadaj krótsze pytanie.</string>

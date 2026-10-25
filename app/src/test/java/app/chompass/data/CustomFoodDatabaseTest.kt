@@ -107,6 +107,7 @@ class CustomFoodDatabaseTest {
             fat = 14.7,
             servingSizeGrams = 100.0,
             customNote = "Organic",
+            source = app.chompass.models.FoodSource.SEARCH,
         )
 
         repo.saveDatabase(db, listOf(item1))

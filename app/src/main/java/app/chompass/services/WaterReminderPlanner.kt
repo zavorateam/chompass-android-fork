@@ -67,10 +67,16 @@ object WaterReminderPlanner {
         val now = Instant.ofEpochMilli(nowMillis).atZone(zone)
         val nowMin = now.hour * 60 + now.minute
 
+        val today = now.toLocalDate()
+        val foodWaterEnabled = prefs.waterFoodWaterEnabled.first()
+        val dayFoodEntries = foodRepository.entriesForDate(today).first()
+        val foodWaterSummary = if (foodWaterEnabled) {
+            app.chompass.models.FoodHydrationCalculator.calculate(dayFoodEntries)
+        } else {
+            app.chompass.models.FoodHydrationCalculator.EmptySummary
+        }
+
         val goalMl = if (prefs.waterDynamicEnabled.first()) {
-            val foodGrams = WaterGoalCalculator.estimateDiaryGrams(
-                foodRepository.entriesForDate(now.toLocalDate()).first(),
-            )
             val profile = profileRepository.current()
             WaterGoalCalculator.dailyNetGoalMl(
                 baseSource = prefs.waterBaseSource.first(),
@@ -79,16 +85,17 @@ object WaterReminderPlanner {
                 expectedHighC = weatherRepository.state.first().effectiveHighC,
                 activityLevel = profile?.activityLevel ?: ActivityLevel.SEDENTARY,
                 useProfileActivity = prefs.waterUseProfileActivity.first(),
-                foodGramsToday = foodGrams,
-                foodWaterEnabled = prefs.waterFoodWaterEnabled.first(),
+                foodGramsToday = 0,
+                foodWaterEnabled = foodWaterEnabled,
             )
         } else {
             prefs.waterDailyGoalMl.first()
         }
 
-        val drunkToday = waterRepository.entries.first()
-            .filter { it.date.atZone(zone).toLocalDate() == now.toLocalDate() }
+        val manualDrunkToday = waterRepository.entries.first()
+            .filter { it.date.atZone(zone).toLocalDate() == today }
             .sumOf { it.milliliters }
+        val drunkToday = manualDrunkToday + foodWaterSummary.totalMl
 
         val offset = WaterGoalCalculator.nextFireOffsetMinutes(
             netGoalMl = goalMl,

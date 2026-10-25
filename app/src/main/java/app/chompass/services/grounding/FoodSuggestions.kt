@@ -70,8 +70,9 @@ internal fun FoodSuggestion.sourceRank(): Int = when (this) {
     is FoodSuggestion.SavedFood -> 0
     is FoodSuggestion.SavedRecipe -> 1
     is FoodSuggestion.DatabaseHit -> when (result.sourceKind) {
-        NutrientSourceKind.USDA -> 2
-        NutrientSourceKind.SWISS -> 3
-        else -> 4
+        NutrientSourceKind.CUSTOM -> 2
+        NutrientSourceKind.USDA -> 3
+        NutrientSourceKind.SWISS -> 4
+        else -> 5
     }
 }

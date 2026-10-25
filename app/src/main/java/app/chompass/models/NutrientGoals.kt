@@ -36,7 +36,27 @@ enum class HomeTopNutrient(
     VITAMIN_K("vitaminK", "Vit K", "mcg", R.string.nutrient_short_vit_k, R.string.unit_mcg),
     FOLATE("folate", "Folate", "mcg", R.string.nutrition_label_folate, R.string.unit_mcg),
     OMEGA3("omega3", "Omega-3", "g", R.string.nutrient_short_omega, R.string.unit_g),
-    CAFFEINE("caffeine", "Caffeine", "mg", R.string.nutrition_label_caffeine, R.string.unit_mg);
+    CAFFEINE("caffeine", "Caffeine", "mg", R.string.nutrition_label_caffeine, R.string.unit_mg),
+    HISTIDINE("histidine", "Histidine", "g", R.string.nutrition_label_histidine, R.string.unit_g),
+    ISOLEUCINE("isoleucine", "Isoleucine", "g", R.string.nutrition_label_isoleucine, R.string.unit_g),
+    LEUCINE("leucine", "Leucine", "g", R.string.nutrition_label_leucine, R.string.unit_g),
+    LYSINE("lysine", "Lysine", "g", R.string.nutrition_label_lysine, R.string.unit_g),
+    METHIONINE("methionine", "Methionine", "g", R.string.nutrition_label_methionine, R.string.unit_g),
+    PHENYLALANINE("phenylalanine", "Phenylalanine", "g", R.string.nutrition_label_phenylalanine, R.string.unit_g),
+    THREONINE("threonine", "Threonine", "g", R.string.nutrition_label_threonine, R.string.unit_g),
+    TRYPTOPHAN("tryptophan", "Tryptophan", "g", R.string.nutrition_label_tryptophan, R.string.unit_g),
+    VALINE("valine", "Valine", "g", R.string.nutrition_label_valine, R.string.unit_g),
+    VITAMIN_B1("vitaminB1", "Vit B1", "mg", R.string.nutrient_short_b1, R.string.unit_mg),
+    VITAMIN_B2("vitaminB2", "Vit B2", "mg", R.string.nutrient_short_b2, R.string.unit_mg),
+    VITAMIN_B3("vitaminB3", "Vit B3", "mg", R.string.nutrient_short_b3, R.string.unit_mg),
+    VITAMIN_B5("vitaminB5", "Vit B5", "mg", R.string.nutrient_short_b5, R.string.unit_mg),
+    VITAMIN_B6("vitaminB6", "Vit B6", "mg", R.string.nutrient_short_b6, R.string.unit_mg),
+    BIOTIN("biotin", "Biotin", "mcg", R.string.nutrition_label_biotin, R.string.unit_mcg),
+    CHOLINE("choline", "Choline", "mg", R.string.nutrition_label_choline, R.string.unit_mg),
+    PHOSPHORUS("phosphorus", "Phosphorus", "mg", R.string.nutrition_label_phosphorus, R.string.unit_mg),
+    SELENIUM("selenium", "Selenium", "mcg", R.string.nutrition_label_selenium, R.string.unit_mcg),
+    COPPER("copper", "Copper", "mg", R.string.nutrition_label_copper, R.string.unit_mg),
+    MANGANESE("manganese", "Manganese", "mg", R.string.nutrition_label_manganese, R.string.unit_mg);
 
     fun current(entries: List<FoodEntry>): Double = when (this) {
         CALORIES -> entries.sumOf { it.calories }.toDouble()
@@ -64,6 +84,26 @@ enum class HomeTopNutrient(
         FOLATE -> entries.sumOf { it.folate ?: 0.0 }
         OMEGA3 -> entries.sumOf { it.omega3 ?: 0.0 }
         CAFFEINE -> entries.sumOf { it.caffeine ?: 0.0 }
+        HISTIDINE -> entries.sumOf { it.histidine ?: 0.0 }
+        ISOLEUCINE -> entries.sumOf { it.isoleucine ?: 0.0 }
+        LEUCINE -> entries.sumOf { it.leucine ?: 0.0 }
+        LYSINE -> entries.sumOf { it.lysine ?: 0.0 }
+        METHIONINE -> entries.sumOf { it.methionine ?: 0.0 }
+        PHENYLALANINE -> entries.sumOf { it.phenylalanine ?: 0.0 }
+        THREONINE -> entries.sumOf { it.threonine ?: 0.0 }
+        TRYPTOPHAN -> entries.sumOf { it.tryptophan ?: 0.0 }
+        VALINE -> entries.sumOf { it.valine ?: 0.0 }
+        VITAMIN_B1 -> entries.sumOf { it.vitaminB1 ?: 0.0 }
+        VITAMIN_B2 -> entries.sumOf { it.vitaminB2 ?: 0.0 }
+        VITAMIN_B3 -> entries.sumOf { it.vitaminB3 ?: 0.0 }
+        VITAMIN_B5 -> entries.sumOf { it.vitaminB5 ?: 0.0 }
+        VITAMIN_B6 -> entries.sumOf { it.vitaminB6 ?: 0.0 }
+        BIOTIN -> entries.sumOf { it.biotin ?: 0.0 }
+        CHOLINE -> entries.sumOf { it.choline ?: 0.0 }
+        PHOSPHORUS -> entries.sumOf { it.phosphorus ?: 0.0 }
+        SELENIUM -> entries.sumOf { it.selenium ?: 0.0 }
+        COPPER -> entries.sumOf { it.copper ?: 0.0 }
+        MANGANESE -> entries.sumOf { it.manganese ?: 0.0 }
     }
 
     /**
@@ -97,6 +137,26 @@ enum class HomeTopNutrient(
         FOLATE -> optionalGoals.folate
         OMEGA3 -> optionalGoals.omega3
         CAFFEINE -> optionalGoals.caffeine
+        HISTIDINE -> optionalGoals.histidine
+        ISOLEUCINE -> optionalGoals.isoleucine
+        LEUCINE -> optionalGoals.leucine
+        LYSINE -> optionalGoals.lysine
+        METHIONINE -> optionalGoals.methionine
+        PHENYLALANINE -> optionalGoals.phenylalanine
+        THREONINE -> optionalGoals.threonine
+        TRYPTOPHAN -> optionalGoals.tryptophan
+        VALINE -> optionalGoals.valine
+        VITAMIN_B1 -> optionalGoals.vitaminB1
+        VITAMIN_B2 -> optionalGoals.vitaminB2
+        VITAMIN_B3 -> optionalGoals.vitaminB3
+        VITAMIN_B5 -> optionalGoals.vitaminB5
+        VITAMIN_B6 -> optionalGoals.vitaminB6
+        BIOTIN -> optionalGoals.biotin
+        CHOLINE -> optionalGoals.choline
+        PHOSPHORUS -> optionalGoals.phosphorus
+        SELENIUM -> optionalGoals.selenium
+        COPPER -> optionalGoals.copper
+        MANGANESE -> optionalGoals.manganese
     }
 
     /**
@@ -211,7 +271,27 @@ enum class OptionalNutrient(
     VITAMIN_K("Vitamin K", "mcg", 120, R.string.nutrition_label_vitamin_k, R.string.unit_mcg, 0..1000, 10, 300),
     FOLATE("Folate", "mcg", 400, R.string.nutrition_label_folate, R.string.unit_mcg, 0..2000, 50, 1000),
     OMEGA3("Omega-3", "g", 2, R.string.nutrition_label_omega3, R.string.unit_g, 0..50, 1, 10),
-    CAFFEINE("Caffeine", "mg", 400, R.string.nutrition_label_caffeine, R.string.unit_mg, 0..2000, 25, 1000)
+    CAFFEINE("Caffeine", "mg", 400, R.string.nutrition_label_caffeine, R.string.unit_mg, 0..2000, 25, 1000),
+    HISTIDINE("Histidine", "g", 1, R.string.nutrition_label_histidine, R.string.unit_g, 0..20, 1, 10),
+    ISOLEUCINE("Isoleucine", "g", 2, R.string.nutrition_label_isoleucine, R.string.unit_g, 0..30, 1, 15),
+    LEUCINE("Leucine", "g", 3, R.string.nutrition_label_leucine, R.string.unit_g, 0..40, 1, 20),
+    LYSINE("Lysine", "g", 3, R.string.nutrition_label_lysine, R.string.unit_g, 0..30, 1, 15),
+    METHIONINE("Methionine", "g", 1, R.string.nutrition_label_methionine, R.string.unit_g, 0..20, 1, 10),
+    PHENYLALANINE("Phenylalanine", "g", 2, R.string.nutrition_label_phenylalanine, R.string.unit_g, 0..30, 1, 15),
+    THREONINE("Threonine", "g", 1, R.string.nutrition_label_threonine, R.string.unit_g, 0..20, 1, 10),
+    TRYPTOPHAN("Tryptophan", "g", 1, R.string.nutrition_label_tryptophan, R.string.unit_g, 0..10, 1, 5),
+    VALINE("Valine", "g", 2, R.string.nutrition_label_valine, R.string.unit_g, 0..30, 1, 15),
+    VITAMIN_B1("Vitamin B1", "mg", 1, R.string.nutrition_label_vitamin_b1, R.string.unit_mg, 0..100, 1, 50),
+    VITAMIN_B2("Vitamin B2", "mg", 1, R.string.nutrition_label_vitamin_b2, R.string.unit_mg, 0..100, 1, 50),
+    VITAMIN_B3("Vitamin B3", "mg", 16, R.string.nutrition_label_vitamin_b3, R.string.unit_mg, 0..200, 1, 100),
+    VITAMIN_B5("Vitamin B5", "mg", 5, R.string.nutrition_label_vitamin_b5, R.string.unit_mg, 0..100, 1, 50),
+    VITAMIN_B6("Vitamin B6", "mg", 2, R.string.nutrition_label_vitamin_b6, R.string.unit_mg, 0..100, 1, 50),
+    BIOTIN("Biotin", "mcg", 30, R.string.nutrition_label_biotin, R.string.unit_mcg, 0..500, 5, 200),
+    CHOLINE("Choline", "mg", 550, R.string.nutrition_label_choline, R.string.unit_mg, 0..3500, 25, 2000),
+    PHOSPHORUS("Phosphorus", "mg", 700, R.string.nutrition_label_phosphorus, R.string.unit_mg, 0..4000, 50, 3000),
+    SELENIUM("Selenium", "mcg", 55, R.string.nutrition_label_selenium, R.string.unit_mcg, 0..400, 5, 200),
+    COPPER("Copper", "mg", 1, R.string.nutrition_label_copper, R.string.unit_mg, 0..10, 1, 5),
+    MANGANESE("Manganese", "mg", 2, R.string.nutrition_label_manganese, R.string.unit_mg, 0..20, 1, 10)
 }
 
 @Serializable
@@ -236,7 +316,27 @@ data class OptionalNutrientGoals(
     val vitaminK: Int = OptionalNutrient.VITAMIN_K.defaultGoal,
     val folate: Int = OptionalNutrient.FOLATE.defaultGoal,
     val omega3: Int = OptionalNutrient.OMEGA3.defaultGoal,
-    val caffeine: Int = OptionalNutrient.CAFFEINE.defaultGoal
+    val caffeine: Int = OptionalNutrient.CAFFEINE.defaultGoal,
+    val histidine: Int = OptionalNutrient.HISTIDINE.defaultGoal,
+    val isoleucine: Int = OptionalNutrient.ISOLEUCINE.defaultGoal,
+    val leucine: Int = OptionalNutrient.LEUCINE.defaultGoal,
+    val lysine: Int = OptionalNutrient.LYSINE.defaultGoal,
+    val methionine: Int = OptionalNutrient.METHIONINE.defaultGoal,
+    val phenylalanine: Int = OptionalNutrient.PHENYLALANINE.defaultGoal,
+    val threonine: Int = OptionalNutrient.THREONINE.defaultGoal,
+    val tryptophan: Int = OptionalNutrient.TRYPTOPHAN.defaultGoal,
+    val valine: Int = OptionalNutrient.VALINE.defaultGoal,
+    val vitaminB1: Int = OptionalNutrient.VITAMIN_B1.defaultGoal,
+    val vitaminB2: Int = OptionalNutrient.VITAMIN_B2.defaultGoal,
+    val vitaminB3: Int = OptionalNutrient.VITAMIN_B3.defaultGoal,
+    val vitaminB5: Int = OptionalNutrient.VITAMIN_B5.defaultGoal,
+    val vitaminB6: Int = OptionalNutrient.VITAMIN_B6.defaultGoal,
+    val biotin: Int = OptionalNutrient.BIOTIN.defaultGoal,
+    val choline: Int = OptionalNutrient.CHOLINE.defaultGoal,
+    val phosphorus: Int = OptionalNutrient.PHOSPHORUS.defaultGoal,
+    val selenium: Int = OptionalNutrient.SELENIUM.defaultGoal,
+    val copper: Int = OptionalNutrient.COPPER.defaultGoal,
+    val manganese: Int = OptionalNutrient.MANGANESE.defaultGoal
 ) {
     fun valueFor(nutrient: OptionalNutrient): Int = when (nutrient) {
         OptionalNutrient.SUGAR -> sugar
@@ -260,6 +360,26 @@ data class OptionalNutrientGoals(
         OptionalNutrient.FOLATE -> folate
         OptionalNutrient.OMEGA3 -> omega3
         OptionalNutrient.CAFFEINE -> caffeine
+        OptionalNutrient.HISTIDINE -> histidine
+        OptionalNutrient.ISOLEUCINE -> isoleucine
+        OptionalNutrient.LEUCINE -> leucine
+        OptionalNutrient.LYSINE -> lysine
+        OptionalNutrient.METHIONINE -> methionine
+        OptionalNutrient.PHENYLALANINE -> phenylalanine
+        OptionalNutrient.THREONINE -> threonine
+        OptionalNutrient.TRYPTOPHAN -> tryptophan
+        OptionalNutrient.VALINE -> valine
+        OptionalNutrient.VITAMIN_B1 -> vitaminB1
+        OptionalNutrient.VITAMIN_B2 -> vitaminB2
+        OptionalNutrient.VITAMIN_B3 -> vitaminB3
+        OptionalNutrient.VITAMIN_B5 -> vitaminB5
+        OptionalNutrient.VITAMIN_B6 -> vitaminB6
+        OptionalNutrient.BIOTIN -> biotin
+        OptionalNutrient.CHOLINE -> choline
+        OptionalNutrient.PHOSPHORUS -> phosphorus
+        OptionalNutrient.SELENIUM -> selenium
+        OptionalNutrient.COPPER -> copper
+        OptionalNutrient.MANGANESE -> manganese
     }
 
     fun withValue(nutrient: OptionalNutrient, value: Int): OptionalNutrientGoals {
@@ -286,6 +406,26 @@ data class OptionalNutrientGoals(
             OptionalNutrient.FOLATE -> copy(folate = safe)
             OptionalNutrient.OMEGA3 -> copy(omega3 = safe)
             OptionalNutrient.CAFFEINE -> copy(caffeine = safe)
+            OptionalNutrient.HISTIDINE -> copy(histidine = safe)
+            OptionalNutrient.ISOLEUCINE -> copy(isoleucine = safe)
+            OptionalNutrient.LEUCINE -> copy(leucine = safe)
+            OptionalNutrient.LYSINE -> copy(lysine = safe)
+            OptionalNutrient.METHIONINE -> copy(methionine = safe)
+            OptionalNutrient.PHENYLALANINE -> copy(phenylalanine = safe)
+            OptionalNutrient.THREONINE -> copy(threonine = safe)
+            OptionalNutrient.TRYPTOPHAN -> copy(tryptophan = safe)
+            OptionalNutrient.VALINE -> copy(valine = safe)
+            OptionalNutrient.VITAMIN_B1 -> copy(vitaminB1 = safe)
+            OptionalNutrient.VITAMIN_B2 -> copy(vitaminB2 = safe)
+            OptionalNutrient.VITAMIN_B3 -> copy(vitaminB3 = safe)
+            OptionalNutrient.VITAMIN_B5 -> copy(vitaminB5 = safe)
+            OptionalNutrient.VITAMIN_B6 -> copy(vitaminB6 = safe)
+            OptionalNutrient.BIOTIN -> copy(biotin = safe)
+            OptionalNutrient.CHOLINE -> copy(choline = safe)
+            OptionalNutrient.PHOSPHORUS -> copy(phosphorus = safe)
+            OptionalNutrient.SELENIUM -> copy(selenium = safe)
+            OptionalNutrient.COPPER -> copy(copper = safe)
+            OptionalNutrient.MANGANESE -> copy(manganese = safe)
         }
     }
 

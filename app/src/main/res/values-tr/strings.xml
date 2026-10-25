@@ -353,18 +353,18 @@
     <string name="onboarding_health_connect">Bağlan</string>
 
     <string name="onboarding_provider_title">Kendi AI\'ını Getir</string>
-    <string name="onboarding_provider_subtitle">Yemek fotoğrafları ve koç için isteğe bağlı API anahtarı.\nGoogle AI Studio ücretsizdir ve önerilir.</string>
-    <string name="onboarding_provider_recommended_title">Önerilen: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">Yemek fotoğrafları ve koç için isteğe bağlı API anahtarı.\nGemini API ücretsizdir ve önerilir.</string>
+    <string name="onboarding_provider_recommended_title">Önerilen: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">Ücretsiz ve yüksek kalite. Yemek fotoğrafları için en iyisi.</string>
-    <string name="onboarding_provider_howto_title">Ücretsiz Google AI Studio anahtarı nasıl alınır</string>
+    <string name="onboarding_provider_howto_title">Ücretsiz Gemini API anahtarı nasıl alınır</string>
     <string name="onboarding_provider_step_1">aistudio.google.com/apikey adresini aç (açmak için dokun)</string>
     <string name="onboarding_provider_step_2">Google ile oturum aç ve bir API anahtarı oluştur</string>
     <string name="onboarding_provider_step_3">Aşağıya yapıştır ve Anahtarı test et\'e dokun</string>
     <string name="onboarding_provider_footer">Tüm sağlayıcılar desteklenir. Anahtarın bu cihazda\nşifreli kalır. Bunu Ayarlar\'dan değiştirebilirsin.</string>
-    <string name="onboarding_ai_free_tier_note">Ücretsiz katman Flash modellerini kapsar; Pro modeller AI Studio projende faturalandırma gerektirir.</string>
+    <string name="onboarding_ai_free_tier_note">Ücretsiz katman Flash modellerini kapsar; Pro modeller Gemini API projende faturalandırma gerektirir.</string>
     <string name="onboarding_skip_ai">Şimdilik atla</string>
     <string name="onboarding_skip_ai_title">Bulut anahtarı olmadan devam edilsin mi?</string>
-    <string name="onboarding_skip_ai_body">Cihazdaki AI gizlidir ancak bulut modellerinden daha az doğrudur; yanlış kaloriler veya kaçırılan öğeler olabilir. Ayarlar\'dan istediğin zaman ücretsiz bir AI Studio anahtarı ekleyebilirsin.</string>
+    <string name="onboarding_skip_ai_body">Cihazdaki AI gizlidir ancak bulut modellerinden daha az doğrudur; yanlış kaloriler veya kaçırılan öğeler olabilir. Ayarlar\'dan istediğin zaman ücretsiz bir Gemini API anahtarı ekleyebilirsin.</string>
     <string name="onboarding_skip_ai_later_body">Yemek fotoğrafı AI\'sı ve koç bir API anahtarı veya cihazda bir model gerektirir. İkisinden birini Ayarlar\'dan istediğin zaman kurabilirsin.</string>
     <string name="onboarding_skip_ai_confirm">Yine de devam et</string>
     <string name="onboarding_api_key_test">Anahtarı test et</string>
@@ -372,7 +372,7 @@
     <string name="onboarding_api_key_works">Anahtar çalışıyor</string>
     <string name="onboarding_api_key_empty">Önce bir API anahtarı yapıştır</string>
     <string name="onboarding_api_key_network">Ağ hatası. Bağlantını kontrol et ve tekrar dene.</string>
-    <string name="onboarding_api_key_rejected">Bu API anahtarı reddedildi. AI Studio\'da yeni bir anahtar oluşturup tekrar yapıştır.</string>
+    <string name="onboarding_api_key_rejected">Bu API anahtarı reddedildi. Gemini API\'da yeni bir anahtar oluşturup tekrar yapıştır.</string>
     <string name="onboarding_api_key_non_gemini_ok">Hazır. Hızlı test yalnızca Gemini içindir</string>
 
     <string name="onboarding_building_calories">Kalori</string>
@@ -1385,10 +1385,10 @@
     <string name="ai_error_on_device_low_memory">Şu anda cihazdaki yapay zekâ için yeterli boş bellek yok. Daha küçük E2B modelini dene, diğer uygulamaları kapat veya Ayarlar → AI Sağlayıcısı bölümünden sağlayıcı değiştir.</string>
     <string name="ai_error_on_device_engine_init">Cihazda model motoru başlatılamadı. Yeniden deneyin, Ayarlar → AI Sağlayıcısı → Model bölümünden modeli kaldırın veya bulut sağlayıcısına geçin.</string>
     <string name="ai_error_key_rejected">API anahtarın reddedildi. Ayarlar → AI Sağlayıcısı bölümünü aç ve geçerli bir anahtarı yeniden yapıştır.</string>
-    <string name="ai_error_location_unsupported">Gemini bu ağ konumundan (ülke/IP) kullanılamıyor. VPN kullanıyorsan kapat veya konut çıkışına geç. Veri merkezi/konut dışı VPN IP\'leri genellikle engellenir. Veya Google AI Studio projesinde faturalandırmayı etkinleştir, başka bir ağ dene ya da Ayarlar → AI Sağlayıcısı bölümünden sağlayıcıyı değiştir.</string>
+    <string name="ai_error_location_unsupported">Gemini bu ağ konumundan (ülke/IP) kullanılamıyor. VPN kullanıyorsan kapat veya konut çıkışına geç. Veri merkezi/konut dışı VPN IP\'leri genellikle engellenir. Veya Gemini API projesinde faturalandırmayı etkinleştir, başka bir ağ dene ya da Ayarlar → AI Sağlayıcısı bölümünden sağlayıcıyı değiştir.</string>
     <string name="ai_error_provider_overloaded">AI sağlayıcısı şu anda aşırı yüklü. Birkaç kez denedik. Bir dakika içinde tekrar dene veya Ayarlar → AI Sağlayıcısı bölümünden farklı bir sağlayıcıya/model geç.</string>
     <string name="ai_error_rate_limit">API anahtarında hız sınırına ulaşıldı. Bir dakika bekle veya Ayarlar → AI Sağlayıcısı bölümünden başka bir sağlayıcıya geç. Ücretsiz katmanda Flash-Lite modeli en yüksek kotaya sahiptir.</string>
-    <string name="ai_error_model_unavailable">Sağlayıcın bu modeli bulamadı. Ücretsiz katmanda yalnızca ücretli olabilir, bölgende kısıtlı olabilir veya uç nokta yanlış olabilir. Ayarlar → AI Sağlayıcısı bölümünden varsayılan Flash modeline geç veya AI Studio projende faturalandırmayı etkinleştir.</string>
+    <string name="ai_error_model_unavailable">Sağlayıcın bu modeli bulamadı. Ücretsiz katmanda yalnızca ücretli olabilir, bölgende kısıtlı olabilir veya uç nokta yanlış olabilir. Ayarlar → AI Sağlayıcısı bölümünden varsayılan Flash modeline geç veya Gemini API projende faturalandırmayı etkinleştir.</string>
     <string name="ai_error_coach_on_device">Koç, cihazdaki sağlayıcıyla henüz kullanılamıyor. Ayarlar → AI Sağlayıcısı bölümünden bir bulut sağlayıcısına geç.</string>
     <string name="ai_error_coach_round_limit">Koç yanıtlayamadı. Sorunu farklı şekilde ifade etmeyi dene.</string>
     <string name="ai_error_truncated_twice">AI yanıtı yanıt uzunluğu sınırında iki kez kesildi. Ayarlar → AI ve Ses bölümünden maksimum yanıt uzunluğunu artır ya da daha kısa bir soru dene.</string>

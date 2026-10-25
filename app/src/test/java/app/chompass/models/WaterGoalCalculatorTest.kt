@@ -91,18 +91,19 @@ class WaterGoalCalculatorTest {
 
     @Test
     fun netGoalNeverDropsBelowOneLiter() {
-        assertEquals(2000, WaterGoalCalculator.netGoalMl(2900, 900))
+        assertEquals(2900, WaterGoalCalculator.netGoalMl(2900, 900))
         assertEquals(2900, WaterGoalCalculator.netGoalMl(2900, 0))
-        // 1500 − 1000 = 500 → floored.
-        assertEquals(1000, WaterGoalCalculator.netGoalMl(1500, 1000))
+        // 800 floored to MIN_NET_GOAL_ML (1000).
+        assertEquals(1000, WaterGoalCalculator.netGoalMl(800, 0))
     }
 
     @Test
     fun dailyNetGoalCombinesAllInputs() {
-        // 70 kg → base 2450; 30 °C → 1.2; active → 1.3; food 1500 g → 900.
-        // gross = 2450 × 1.2 × 1.3 = 3822 → 3800; net = 3800 − 900 = 2900.
+        // 70 kg → base 2450; 30 °C → 1.2; active → 1.3.
+        // Unified model: gross goal is 2450 × 1.2 × 1.3 = 3822 → 3800.
+        // Food water is counted toward intake, not subtracted from goal.
         assertEquals(
-            2900,
+            3800,
             WaterGoalCalculator.dailyNetGoalMl(
                 baseSource = WaterGoalCalculator.BASE_SOURCE_WEIGHT,
                 weightKg = 70.0,
@@ -114,7 +115,7 @@ class WaterGoalCalculatorTest {
                 foodWaterEnabled = true,
             ),
         )
-        // Activity off → factor 1.0; food off → no credit: 2450 × 1.2 = 2940 → 2950.
+        // Activity off → factor 1.0; 2450 × 1.2 = 2940 → 2950.
         assertEquals(
             2950,
             WaterGoalCalculator.dailyNetGoalMl(
@@ -291,8 +292,7 @@ class WaterGoalCalculatorTest {
         assertEquals(1.2, b.tempFactor, 1e-9)
         assertEquals(1.3, b.activityFactor, 1e-9)
         assertEquals(3800, b.grossMl) // 2450 × 1.2 × 1.3 = 3822 → 3800
-        assertEquals(900, b.foodWaterMl)
-        assertEquals(2900, b.netGoalMl)
+        assertEquals(3800, b.netGoalMl)
         assertEquals(
             b.netGoalMl,
             WaterGoalCalculator.dailyNetGoalMl(

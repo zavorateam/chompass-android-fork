@@ -17,11 +17,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.BugReport
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.Lock
@@ -58,11 +58,12 @@ import app.chompass.ui.theme.AppColors
 import app.chompass.ui.theme.AppTextOpacity
 import kotlinx.coroutines.launch
 
-private const val CODEBERG_REPO = "https://codeberg.org/fitguy/chompass"
-private const val DONATE_URL = "https://ko-fi.com/fitguy"
+private const val MY_REPO = "https://github.com/zavorateam/chompass-android-fork"
+private const val FITGUY_REPO = "https://codeberg.org/fitguy/chompass"
+private const val TELEGRAM_URL = "https://t.me/zavorateam"
 private const val UPSTREAM_REPO = "https://github.com/apoorvdarshan/fud-ai"
-private const val PRIVACY_URL = "https://codeberg.org/fitguy/chompass/src/branch/main/docs/PRIVACY.md"
-private const val ASSET_CREDITS_URL = "https://codeberg.org/fitguy/chompass/src/branch/main/docs/ASSET_CREDITS.md"
+private const val PRIVACY_URL = "https://github.com/zavorateam/chompass-android-fork/blob/main/docs/PRIVACY.md"
+private const val ASSET_CREDITS_URL = "https://github.com/zavorateam/chompass-android-fork/blob/main/docs/ASSET_CREDITS.md"
 
 private fun open(context: Context, url: String) =
     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
@@ -128,11 +129,6 @@ fun AboutSettingsScreen(
                     color = MaterialTheme.colorScheme.onBackground.copy(alpha = AppTextOpacity.Muted)
                 )
                 Text(
-                    stringResource(R.string.about_fork_notice),
-                    fontSize = 11.sp,
-                    color = AppColors.Calorie
-                )
-                Text(
                     stringResource(R.string.about_with_care),
                     fontSize = 11.sp,
                     color = MaterialTheme.colorScheme.onBackground.copy(alpha = AppTextOpacity.Disabled)
@@ -142,7 +138,7 @@ fun AboutSettingsScreen(
     }
 }
 
-/** Report issue, request feature, open source, upstream, donate. */
+/** Report issue, request feature, open source, telegram, fork of chompass, upstream. */
 @Composable
 fun SupportSettingsScreen(
     container: AppContainer,
@@ -155,29 +151,25 @@ fun SupportSettingsScreen(
         onBack = onBack,
     ) {
         Column(Modifier.fillMaxWidth()) {
-            Column(
-                Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp)
-            ) {
-                Text(
-                    stringResource(R.string.support_fork_notice),
-                    fontSize = 13.sp,
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = AppTextOpacity.Muted)
-                )
-            }
-            Hairline()
             AboutRow(Icons.Filled.BugReport, stringResource(R.string.about_report_issue)) {
-                open(ctx, "$CODEBERG_REPO/issues/new")
+                open(ctx, "$MY_REPO/issues/new")
             }
             Hairline()
             AboutRow(Icons.Filled.Lightbulb, stringResource(R.string.about_request_feature)) {
-                open(ctx, "$CODEBERG_REPO/issues/new")
+                open(ctx, "$MY_REPO/issues/new")
             }
             Hairline()
-            AboutRow(Icons.Filled.Code, stringResource(R.string.about_open_source)) { open(ctx, CODEBERG_REPO) }
+            AboutRow(Icons.Filled.Code, stringResource(R.string.about_open_source)) { open(ctx, MY_REPO) }
+            Hairline()
+            AboutRow(Icons.AutoMirrored.Filled.Send, stringResource(R.string.about_telegram)) {
+                open(ctx, TELEGRAM_URL)
+            }
+            Hairline()
+            AboutRow(Icons.Filled.History, stringResource(R.string.about_fork_of_chompass)) {
+                open(ctx, FITGUY_REPO)
+            }
             Hairline()
             AboutRow(Icons.Filled.History, stringResource(R.string.about_upstream)) { open(ctx, UPSTREAM_REPO) }
-            Hairline()
-            AboutRow(Icons.Filled.Favorite, stringResource(R.string.about_donate)) { open(ctx, DONATE_URL) }
         }
     }
 }

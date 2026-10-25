@@ -517,6 +517,16 @@
     <string name="cd_delete_water">Delete water entry</string>
     <string name="water_progress">%1$d / %2$d ml</string>
     <string name="water_progress_fl_oz">%1$d / %2$d fl oz</string>
+    <string name="water_breakdown_hint">%1$d ml sips · %2$d ml food</string>
+    <string name="water_breakdown_hint_fl_oz">%1$d fl oz sips · %2$d fl oz food</string>
+    <string name="water_from_food_and_drinks">Food &amp; beverages</string>
+    <string name="water_manual_logs">Manual sips</string>
+    <string name="water_source_measured">Measured</string>
+    <string name="water_source_estimated">Estimated</string>
+    <string name="water_no_manual_entries">No manual water entries for this day.</string>
+    <string name="water_hydration_breakdown">Hydration sources</string>
+    <string name="water_measured_total">Measured: %1$d ml</string>
+    <string name="water_estimated_total">Estimated: %1$d ml</string>
     <string name="home_water_next">Next %1$s · %2$s</string>
     <string name="home_water_next_tomorrow">Next %1$s · tomorrow %2$s</string>
 
@@ -1710,8 +1720,8 @@
     <string name="settings_water_manual_temp_summary">%1$d °C</string>
     <string name="settings_water_manual_temp_help" formatted="false">The daily goal rises above 25 °C (+4 % per degree, capped at +60 %). No location permission. Set it manually.</string>
     <string name="settings_water_use_profile_activity">Use profile activity level</string>
-    <string name="settings_water_food_water">Subtract water from food</string>
-    <string name="settings_water_food_water_help" formatted="false">Coarse estimate: 60 % of today\'s logged food weight, capped at 1 L.</string>
+    <string name="settings_water_food_water">Track water from food &amp; drinks</string>
+    <string name="settings_water_food_water_help">Automatically adds water from logged food and beverages to daily total</string>
     <string name="settings_water_dynamic_preview">Today\'s goal</string>
     <string name="settings_water_dynamic_preview_breakdown">%1$d ml base × %2$s temp × %3$s activity − %4$d ml food</string>
     <string name="settings_water_dynamic_warning_title">Beta · a suggestion, not medical advice</string>
@@ -2060,11 +2070,11 @@
     <string name="about_request_feature">Request a Feature</string>
     <string name="about_privacy">Privacy Policy</string>
     <string name="about_donate">Buy me a yogurt</string>
+    <string name="about_telegram">Telegram</string>
+    <string name="about_fork_of_chompass">Chompass (fitguy)</string>
     <string name="about_made_by">Chompass (fork by zavorateam)</string>
     <string name="about_with_care">Fork maintained by zavorateam — based on Chompass by fitguy / Fud AI by Apoorv Darshan</string>
-    <string name="about_fork_notice">Fork created by zavorateam (compatible with Google AI Studio)</string>
-    <string name="support_fork_notice">This is an open-source fork maintained by zavorateam, compatible with Google AI Studio.</string>
-    <string name="about_share_message">I\'ve been tracking my meals with Chompass, an ad-free fork of Fud AI. Snap a photo, speak it, or type it, and the AI logs the calories. Open source, and your data stays on your device.\n\nSource: https://codeberg.org/fitguy/chompass</string>
+    <string name="about_share_message">I\'ve been tracking my meals with Chompass, an ad-free fork of Fud AI. Snap a photo, speak it, or type it, and the AI logs the calories. Open source, and your data stays on your device.\n\nSource: https://github.com/zavorateam/chompass-android-fork</string>
     <string name="about_share_chooser">Share Chompass</string>
 
     <string name="export_custom_dbs_title">Export Custom Food Databases</string>
@@ -2496,6 +2506,37 @@
     <string name="nutrition_label_folate">Folate</string>
     <string name="nutrition_label_omega3">Omega-3</string>
     <string name="nutrition_label_caffeine">Caffeine</string>
+    <string name="nutrition_label_histidine">Histidine</string>
+    <string name="nutrition_label_isoleucine">Isoleucine</string>
+    <string name="nutrition_label_leucine">Leucine</string>
+    <string name="nutrition_label_lysine">Lysine</string>
+    <string name="nutrition_label_methionine">Methionine</string>
+    <string name="nutrition_label_phenylalanine">Phenylalanine</string>
+    <string name="nutrition_label_threonine">Threonine</string>
+    <string name="nutrition_label_tryptophan">Tryptophan</string>
+    <string name="nutrition_label_valine">Valine</string>
+    <string name="nutrition_label_vitamin_b1">Vitamin B1 (Thiamine)</string>
+    <string name="nutrition_label_vitamin_b2">Vitamin B2 (Riboflavin)</string>
+    <string name="nutrition_label_vitamin_b3">Vitamin B3 (Niacin)</string>
+    <string name="nutrition_label_vitamin_b5">Vitamin B5 (Pantothenic Acid)</string>
+    <string name="nutrition_label_vitamin_b6">Vitamin B6 (Pyridoxine)</string>
+    <string name="nutrition_label_biotin">Biotin</string>
+    <string name="nutrition_label_choline">Choline</string>
+    <string name="nutrition_label_phosphorus">Phosphorus</string>
+    <string name="nutrition_label_selenium">Selenium</string>
+    <string name="nutrition_label_copper">Copper</string>
+    <string name="nutrition_label_manganese">Manganese</string>
+    <string name="nutrition_section_amino_acids">Essential Amino Acids</string>
+    <string name="nutrition_section_vitamins_minerals">Vitamins &amp; Minerals</string>
+    <string name="sheet_amino_acids">Amino Acids</string>
+    <string name="nutrient_short_b1">B1</string>
+    <string name="nutrient_short_b2">B2</string>
+    <string name="nutrient_short_b3">B3</string>
+    <string name="nutrient_short_b5">B5</string>
+    <string name="nutrient_short_b6">B6</string>
+    <string name="nutrient_short_leucine">Leu</string>
+    <string name="nutrient_short_isoleucine">Ile</string>
+    <string name="nutrient_short_valine">Val</string>
     <string name="nutrition_section_home_cards">Home Cards</string>
     <string name="home_nutrients_pick_four">Pick exactly four nutrients for the Home summary row.</string>
     <string name="error_analysis_failed">Analysis failed</string>
@@ -2835,4 +2876,30 @@
     <string name="settings_fill_missing_reminders">Missing-value reminders</string>
     <string name="settings_fill_missing_reminders_footer">Show the Home banner when logged meals or favorites have missing values</string>
     <string name="fill_gaps_never_remind">Don\'t remind me again</string>
+
+    <!-- Proxy & Network Routing Settings -->
+    <string name="settings_proxy_title">Proxy &amp; Network Routing</string>
+    <string name="settings_proxy_summary">Configure HTTP or SOCKS proxy and target routing</string>
+    <string name="proxy_enable">Enable Proxy</string>
+    <string name="proxy_type">Proxy Protocol</string>
+    <string name="proxy_type_http">HTTP</string>
+    <string name="proxy_type_socks4">SOCKS4</string>
+    <string name="proxy_type_socks5">SOCKS5</string>
+    <string name="proxy_host">Host / Server IP</string>
+    <string name="proxy_port">Port</string>
+    <string name="proxy_auth_title">Proxy Authentication (Optional)</string>
+    <string name="proxy_username">Username</string>
+    <string name="proxy_password">Password</string>
+    <string name="proxy_scopes_title">Proxy Routing Targets</string>
+    <string name="proxy_scopes_subtitle">Choose which network requests go through the proxy</string>
+    <string name="proxy_scope_ai">AI API calls (Gemini, OpenAI, Anthropic, Ollama)</string>
+    <string name="proxy_scope_food_db">Food Databases (Open Food Facts, USDA, Mealie)</string>
+    <string name="proxy_scope_sync">Database Sync &amp; Updates (WebDAV, App Updates)</string>
+    <string name="proxy_exclusion_title">Exclusion List (No Proxy for)</string>
+    <string name="proxy_exclusion_subtitle">Comma or line separated hostnames, IPs, CIDR blocks (e.g. 192.168.0.0/16, .local, localhost)</string>
+    <string name="proxy_test_connection">Test Connection</string>
+    <string name="proxy_testing">Testing proxy connectivity...</string>
+    <string name="proxy_test_success">Connection successful (%1$d ms)</string>
+    <string name="proxy_test_failed">Connection failed: %1$s</string>
+    <string name="proxy_saved">Proxy settings saved</string>
 </resources>

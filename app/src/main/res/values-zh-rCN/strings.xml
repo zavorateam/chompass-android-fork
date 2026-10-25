@@ -200,17 +200,17 @@
     <string name="onboarding_health_connect">连接</string>
 
     <string name="onboarding_provider_title">使用你自己的 AI</string>
-    <string name="onboarding_provider_subtitle">用于食物照片和教练的可选 API 密钥。\n推荐免费的 Google AI Studio。</string>
-    <string name="onboarding_provider_recommended_title">推荐：Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">用于食物照片和教练的可选 API 密钥。\n推荐免费的 Gemini API。</string>
+    <string name="onboarding_provider_recommended_title">推荐：Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">免费且高质量。最适合食物照片。</string>
-    <string name="onboarding_provider_howto_title">如何获取免费的 Google AI Studio 密钥</string>
+    <string name="onboarding_provider_howto_title">如何获取免费的 Gemini API 密钥</string>
     <string name="onboarding_provider_step_1">打开 aistudio.google.com/apikey（点按打开）</string>
     <string name="onboarding_provider_step_2">使用 Google 登录并创建 API 密钥</string>
     <string name="onboarding_provider_step_3">粘贴到下方并点按“测试密钥”</string>
     <string name="onboarding_provider_footer">支持所有提供商。密钥加密保存在\n本设备上。可稍后在设置中更改。</string>
     <string name="onboarding_skip_ai">暂时跳过</string>
     <string name="onboarding_skip_ai_title">不使用云端密钥继续？</string>
-    <string name="onboarding_skip_ai_body">端侧 AI 在手机上私密运行，但远不如 Google AI Studio 或其他云端模型准确。可能会出现卡路里错误、漏项或较弱的照片识别。你可以随时在设置中添加免费的 AI Studio 密钥。</string>
+    <string name="onboarding_skip_ai_body">端侧 AI 在手机上私密运行，但远不如 Gemini API 或其他云端模型准确。可能会出现卡路里错误、漏项或较弱的照片识别。你可以随时在设置中添加免费的 Gemini API 密钥。</string>
     <string name="onboarding_skip_ai_later_body">食物照片 AI 和教练需要 API 密钥或端侧模型。你可以随时在设置中配置任一选项。</string>
     <string name="onboarding_skip_ai_confirm">仍然继续</string>
 
@@ -846,8 +846,8 @@
     <string name="ai_error_invalid_url">API 网址无效，请检查提供商设置。</string>
     <string name="ai_error_insecure_http_blocked">不安全的 HTTP 已被阻止。请在设置 → AI 与语音中打开“允许不安全的 HTTP”，或使用 https:// 地址。</string>
     <string name="ai_error_key_rejected">API 密钥被拒绝。请打开设置 → AI 提供商，重新粘贴有效密钥。</string>
-    <string name="ai_error_location_unsupported">Gemini 在当前网络位置（国家/IP）不可用。如使用 VPN，请关闭或切换到住宅出口。数据中心/非住宅 VPN 的 IP 常被屏蔽。也可以在 Google AI Studio 项目中启用结算、换网络，或在设置 → AI 提供商中更换提供商。</string>
-    <string name="ai_error_model_unavailable">提供商找不到此模型。它可能在免费层仅限付费、在你所在地区受限，或端点有误。请在设置 → AI 提供商切换到默认 Flash 模型，或在 AI Studio 项目中启用结算。</string>
+    <string name="ai_error_location_unsupported">Gemini 在当前网络位置（国家/IP）不可用。如使用 VPN，请关闭或切换到住宅出口。数据中心/非住宅 VPN 的 IP 常被屏蔽。也可以在 Gemini API 项目中启用结算、换网络，或在设置 → AI 提供商中更换提供商。</string>
+    <string name="ai_error_model_unavailable">提供商找不到此模型。它可能在免费层仅限付费、在你所在地区受限，或端点有误。请在设置 → AI 提供商切换到默认 Flash 模型，或在 Gemini API 项目中启用结算。</string>
     <string name="ai_error_network_format">网络错误：%1$s</string>
     <string name="ai_error_no_api_key">未配置 API 密钥。请在设置 → AI 提供商中添加密钥。</string>
     <string name="ai_error_on_device_low_memory">当前空闲内存不足以进行端侧AI。请尝试更小的 E2B 模型、关闭其他应用，或在设置 → AI 提供商中更换提供商。</string>
@@ -1245,10 +1245,10 @@
     <string name="on_device_model_wifi_only">仅通过 Wi-Fi 下载</string>
     <string name="onboarding_accuracy_body">照片估算和模糊的数量描述（一把、一杯、一份）往往不准确。应用建议尤其是 AI/LLM 输出仅为估算，不是医学事实。重要数字请自行核实。</string>
     <string name="onboarding_accuracy_title">准确性声明</string>
-    <string name="onboarding_ai_free_tier_note">免费层涵盖 Flash 模型；Pro 模型需要在你 AI Studio 项目上启用结算。</string>
+    <string name="onboarding_ai_free_tier_note">免费层涵盖 Flash 模型；Pro 模型需要在你 Gemini API 项目上启用结算。</string>
     <string name="onboarding_api_key_empty">请先粘贴 API 密钥</string>
     <string name="onboarding_api_key_network">网络错误，请检查连接后重试。</string>
-    <string name="onboarding_api_key_rejected">该 API 密钥被拒绝。请在 AI Studio 创建新密钥并重新粘贴。</string>
+    <string name="onboarding_api_key_rejected">该 API 密钥被拒绝。请在 Gemini API 创建新密钥并重新粘贴。</string>
     <string name="onboarding_api_key_test">测试密钥</string>
     <string name="onboarding_api_key_testing">测试中…</string>
     <string name="onboarding_api_key_works">密钥可用</string>

@@ -298,9 +298,15 @@ class WidgetSnapshotWriter(
             // and full-credit days keep the effective goal and no active-burn
             // caption in the widget.
             val displayGoalTarget = if (gaugeBudget.useExpectedArc) effectiveGoal else null
-            val waterTodayMl = water.entries
+            val manualWaterToday = water.entries
                 .filter { it.date.atZone(ZoneId.systemDefault()).toLocalDate() == LocalDate.now() }
                 .sumOf { it.milliliters }
+            val foodWaterSummary = if (water.dynamic.foodWaterEnabled) {
+                app.chompass.models.FoodHydrationCalculator.calculate(todaysEntries)
+            } else {
+                app.chompass.models.FoodHydrationCalculator.EmptySummary
+            }
+            val waterTodayMl = manualWaterToday + foodWaterSummary.totalMl
             val waterGoalMl = if (water.dynamic.dynamicEnabled) {
                 WaterGoalCalculator.dailyNetGoalMl(
                     baseSource = water.dynamic.baseSource,
@@ -309,7 +315,7 @@ class WidgetSnapshotWriter(
                     expectedHighC = water.dynamic.tempC,
                     activityLevel = profile.activityLevel,
                     useProfileActivity = water.dynamic.useProfileActivity,
-                    foodGramsToday = WaterGoalCalculator.estimateDiaryGrams(todaysEntries),
+                    foodGramsToday = 0,
                     foodWaterEnabled = water.dynamic.foodWaterEnabled,
                 )
             } else {

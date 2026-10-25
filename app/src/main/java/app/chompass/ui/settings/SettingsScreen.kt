@@ -27,6 +27,7 @@ import androidx.compose.material.icons.outlined.LocalFireDepartment
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.Mic
 import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Restaurant
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
@@ -182,6 +183,13 @@ fun SettingsScreen(container: AppContainer, nav: NavHostController) {
                             summary = stringResource(R.string.settings_group_data_summary),
                             icon = Icons.Outlined.FolderOpen,
                             onClick = { nav.navigate(ChompassRoutes.SETTINGS_DATA) },
+                        )
+                        HorizontalDivider()
+                        SettingsHubRow(
+                            label = stringResource(R.string.settings_proxy_title),
+                            summary = stringResource(R.string.settings_proxy_summary),
+                            icon = Icons.Outlined.Public,
+                            onClick = { nav.navigate(ChompassRoutes.proxyRoute("settings")) },
                         )
                     }
                 }

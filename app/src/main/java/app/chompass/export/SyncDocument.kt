@@ -609,6 +609,7 @@ object SyncDocument {
             putNullableNumber("folate_mcg", e.folate)
             putNullableNumber("omega3_g", e.omega3)
             putNullableNumber("caffeine_mg", e.caffeine)
+            putNullableNumber("water_per_100g", e.waterPer100g)
             put(
                 "serving_unit_options",
                 buildJsonArray {
@@ -686,6 +687,7 @@ object SyncDocument {
         putNullableNumber("folate_mcg", c.folate)
         putNullableNumber("omega3_g", c.omega3)
         putNullableNumber("caffeine_mg", c.caffeine)
+        putNullableNumber("water_per_100g", c.waterPer100g)
     }
 
     private fun parseFoodWire(el: JsonElement, zone: ZoneId): FoodWire? {
@@ -736,6 +738,7 @@ object SyncDocument {
             folate = o["folate_mcg"]?.asDouble(),
             omega3 = o["omega3_g"]?.asDouble(),
             caffeine = o["caffeine_mg"]?.asDouble(),
+            waterPer100g = o["water_per_100g"]?.asDouble(),
             servingSizeGrams = o["quantity_g"]?.asDouble(),
             servingUnitOptions = parseServingUnitOptions(o["serving_unit_options"]?.asArrayOrNull()),
             selectedServingUnit = o["selected_serving_unit"]?.asString()?.takeIf { it.isNotBlank() },
@@ -798,6 +801,7 @@ object SyncDocument {
                 vitaminE = InputSanitizer.micro(row["vitamin_e_mg"]?.asDouble()), vitaminK = InputSanitizer.micro(row["vitamin_k_mcg"]?.asDouble()),
                 folate = InputSanitizer.micro(row["folate_mcg"]?.asDouble()), omega3 = InputSanitizer.micro(row["omega3_g"]?.asDouble()),
                 caffeine = InputSanitizer.micro(row["caffeine_mg"]?.asDouble()),
+                waterPer100g = InputSanitizer.micro(row["water_per_100g"]?.asDouble()),
             )
         }
     }

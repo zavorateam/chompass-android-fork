@@ -146,3 +146,5 @@ scripts/_tmp_finish_3_6_0_publish.sh
 # Crash reports dropped from the Windows host (main file + Zone.Identifier ADS)
 /Error in *
 /error.txt
+
+.env

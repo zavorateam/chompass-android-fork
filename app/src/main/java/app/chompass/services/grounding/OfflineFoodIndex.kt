@@ -26,6 +26,35 @@ abstract class OfflineFoodIndex(
     protected val db: SQLiteDatabase
     protected val datasetVersion: String
 
+    private val isFtsAvailable: Boolean by lazy {
+        checkFtsAvailable()
+    }
+
+    private fun checkFtsAvailable(): Boolean {
+        return runCatching {
+            var hasFts5Module = false
+            db.rawQuery("PRAGMA module_list", null).use { c ->
+                val nameCol = c.getColumnIndex("name").let { if (it >= 0) it else 0 }
+                while (c.moveToNext()) {
+                    if (c.getString(nameCol).equals("fts5", ignoreCase = true)) {
+                        hasFts5Module = true
+                        break
+                    }
+                }
+            }
+            if (!hasFts5Module) return false
+
+            var hasFtsTable = false
+            db.rawQuery(
+                "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'foods_fts'",
+                null,
+            ).use { c ->
+                hasFtsTable = c.moveToFirst()
+            }
+            hasFtsTable
+        }.getOrDefault(false)
+    }
+
     init {
         copyAssetIfNeeded(assetPath, manifestAssetPath)
         db = SQLiteDatabase.openDatabase(
@@ -77,18 +106,20 @@ abstract class OfflineFoodIndex(
             if (seen.add(id)) rows += rowReader(c)
         }
 
-        runCatching {
-            val ftsQ = tokens.joinToString(" ")
-            db.rawQuery(
-                """
-                SELECT foods.* FROM foods_fts
-                JOIN foods ON foods.$idColumn = foods_fts.rowid
-                WHERE foods_fts MATCH ?
-                LIMIT $maxRows
-                """.trimIndent(),
-                arrayOf(ftsQ),
-            ).use { c ->
-                while (c.moveToNext()) read(c)
+        if (isFtsAvailable) {
+            runCatching {
+                val ftsQ = tokens.joinToString(" ")
+                db.rawQuery(
+                    """
+                    SELECT foods.* FROM foods_fts
+                    JOIN foods ON foods.$idColumn = foods_fts.rowid
+                    WHERE foods_fts MATCH ?
+                    LIMIT $maxRows
+                    """.trimIndent(),
+                    arrayOf(ftsQ),
+                ).use { c ->
+                    while (c.moveToNext()) read(c)
+                }
             }
         }
 

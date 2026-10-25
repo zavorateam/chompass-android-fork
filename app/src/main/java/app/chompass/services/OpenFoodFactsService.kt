@@ -757,6 +757,11 @@ object OpenFoodFactsService {
                 ?: nutriments.flexibleDouble("carbohydrates-total_100g"),
             fatPer100g = nutriments.flexibleDouble("fat_100g"),
         )
+        val water100g = nutriments.flexibleDouble("water_100g")
+            ?: nutriments.flexibleDouble("water")
+            ?: nutriments.flexibleDouble("water_serving")?.let { servingVal ->
+                if (servingGrams > 0) (servingVal / servingGrams) * 100.0 else null
+            }
         return FoodAnalysis(
             name = name,
             calories = validation.correctedCalories ?: (calories ?: 0.0).roundToInt(),
@@ -764,6 +769,7 @@ object OpenFoodFactsService {
             carbs = carbs ?: 0.0,
             fat = fat ?: 0.0,
             servingSizeGrams = servingGrams,
+            waterPer100g = water100g,
             emoji = "🏷️",
             sugar = rounded(servingValue("sugars")),
             addedSugar = rounded(servingValue("added-sugars")),

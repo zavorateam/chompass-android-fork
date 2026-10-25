@@ -104,7 +104,8 @@ Material 3 dark theme (light theme also available). Images are in [`docs/screens
 
 ### Progress and trackers
 
-- **Progress**: weight, body fat, measurements, forecast. Keto and other diet modes. Water tracking.
+- **Progress**: weight, body fat, measurements, forecast. Keto and other diet modes.
+- **Unified Water & Hydration tracking**: automatic calculation of water intake from logged food and beverages (coffee, tea, milk, juices, cocktails, soups, high-water foods) using exact database values (`waterPer100g`) or centralized category estimation profiles. Seamlessly combined with manual sips (`totalWaterMl = manualWaterMl + foodAndBeverageWaterMl`), ingredient-level constituent breakdown, clear measured vs. estimated distinctions, and unified goal alignment without double-counting.
 - **Optional trackers**: water, nicotine, caffeine, fasting timer, and daily notes. Each is off until you turn it on. Fasting stays on the device and is never exported or synced.
 
 ### Data, export and sync

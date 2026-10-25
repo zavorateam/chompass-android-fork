@@ -697,9 +697,7 @@
     <string name="about_privacy">Политика конфиденциальности</string>
     <string name="about_made_by">Chompass (форк от zavorateam)</string>
     <string name="about_with_care">Форк поддерживается zavorateam — на основе Chompass от fitguy / Fud AI от Apoorv Darshan</string>
-    <string name="about_fork_notice">Форк создан zavorateam (совместим с Google AI Studio)</string>
-    <string name="support_fork_notice">Это форк с открытым исходным кодом, созданный zavorateam и совместимый с Google AI Studio.</string>
-    <string name="about_share_message">Я слежу за питанием с помощью Chompass, свободного форка Fud AI без рекламы. Сфотографируй блюдо, наговори его или введи текстом, и ИИ запишет калории. Открытый код, все данные остаются на твоём устройстве.\n\nИсходный код: https://codeberg.org/fitguy/chompass</string>
+    <string name="about_share_message">Я слежу за питанием с помощью Chompass, свободного форка Fud AI без рекламы. Сфотографируй блюдо, наговори его или введи текстом, и ИИ запишет калории. Открытый код, все данные остаются на твоём устройстве.\n\nИсходный код: https://github.com/zavorateam/chompass-android-fork</string>
     <string name="about_share_chooser">Поделиться Chompass</string>
 
     <string name="export_custom_dbs_title">Экспорт пользовательских баз продуктов</string>
@@ -941,6 +939,37 @@
     <string name="nutrition_label_folate">Фолат</string>
     <string name="nutrition_label_caffeine">Кофеин</string>
     <string name="nutrition_label_omega3">Омега-3</string>
+    <string name="nutrition_label_histidine">Гистидин</string>
+    <string name="nutrition_label_isoleucine">Изолейцин</string>
+    <string name="nutrition_label_leucine">Лейцин</string>
+    <string name="nutrition_label_lysine">Лизин</string>
+    <string name="nutrition_label_methionine">Метионин</string>
+    <string name="nutrition_label_phenylalanine">Фенилаланин</string>
+    <string name="nutrition_label_threonine">Треонин</string>
+    <string name="nutrition_label_tryptophan">Триптофан</string>
+    <string name="nutrition_label_valine">Валин</string>
+    <string name="nutrition_label_vitamin_b1">Витамин B1 (Тиамин)</string>
+    <string name="nutrition_label_vitamin_b2">Витамин B2 (Рибофлавин)</string>
+    <string name="nutrition_label_vitamin_b3">Витамин B3 (Ниацин)</string>
+    <string name="nutrition_label_vitamin_b5">Витамин B5 (Пантотеновая к-та)</string>
+    <string name="nutrition_label_vitamin_b6">Витамин B6 (Пиридоксин)</string>
+    <string name="nutrition_label_biotin">Биотин</string>
+    <string name="nutrition_label_choline">Холин</string>
+    <string name="nutrition_label_phosphorus">Фосфор</string>
+    <string name="nutrition_label_selenium">Селен</string>
+    <string name="nutrition_label_copper">Медь</string>
+    <string name="nutrition_label_manganese">Марганец</string>
+    <string name="nutrition_section_amino_acids">Незаменимые аминокислоты</string>
+    <string name="nutrition_section_vitamins_minerals">Витамины и минералы</string>
+    <string name="sheet_amino_acids">Аминокислоты</string>
+    <string name="nutrient_short_b1">B1</string>
+    <string name="nutrient_short_b2">B2</string>
+    <string name="nutrient_short_b3">B3</string>
+    <string name="nutrient_short_b5">B5</string>
+    <string name="nutrient_short_b6">B6</string>
+    <string name="nutrient_short_leucine">Лей</string>
+    <string name="nutrient_short_isoleucine">Изо</string>
+    <string name="nutrient_short_valine">Вал</string>
     <string name="nutrition_section_home_cards">Карточки на главной</string>
     <string name="home_nutrients_pick_four">Выбери ровно четыре нутриента для сводки на главном экране.</string>
     <string name="error_analysis_failed">Не удалось выполнить анализ</string>
@@ -1322,6 +1351,16 @@
     <string name="water_no_entries">За этот день вода ещё не записана.</string>
     <string name="water_edit_title">Изменить воду</string>
     <string name="cd_delete_water">Удалить запись воды</string>
+    <string name="water_breakdown_hint">%1$d мл вода · %2$d мл еда</string>
+    <string name="water_breakdown_hint_fl_oz">%1$d унц. вода · %2$d унц. еда</string>
+    <string name="water_from_food_and_drinks">Еда и напитки</string>
+    <string name="water_manual_logs">Записи воды</string>
+    <string name="water_source_measured">Из базы</string>
+    <string name="water_source_estimated">Оценка</string>
+    <string name="water_no_manual_entries">Нет ручных записей воды за этот день.</string>
+    <string name="water_hydration_breakdown">Состав гидратации</string>
+    <string name="water_measured_total">Из базы: %1$d мл</string>
+    <string name="water_estimated_total">Оценка: %1$d мл</string>
 
     <string name="water_custom_amount">Своё количество</string>
     <string name="water_how_much">Сколько воды?</string>
@@ -1486,6 +1525,8 @@
     <string name="custom_food_db_security_notice">Загрузка по URL проверяется на безопасность адреса сети и лимит размера файла.</string>
     <string name="error_search_food_failed">Не удалось загрузить этот продукт. Попробуй ещё раз.</string>
     <string name="about_donate">Купи мне йогурт</string>
+    <string name="about_telegram">Telegram</string>
+    <string name="about_fork_of_chompass">Chompass (fitguy)</string>
     <string name="action_close">Закрыть</string>
     <string name="action_undo">Отменить</string>
     <string name="action_save_to_favorites">Сохранить в избранное</string>
@@ -1854,8 +1895,8 @@
     <string name="settings_water_dynamic_preview_breakdown">%1$d мл база × %2$s температура × %3$s активность − %4$d мл из еды</string>
     <string name="settings_water_dynamic_warning_body">Этот ориентир лишь оценка на основе общих рекомендаций по гидратации, а не предписание. Потребности у всех разные: реальная норма зависит от почек, лекарств, состояния здоровья, потоотделения, влажности и многого другого, поэтому для тебя это число может быть неверным. При заболеваниях или приёме лекарств спроси врача, прежде чем менять объём питья. Лучше всего ориентироваться на жажду. Пей, когда нужно, даже если «ещё не время», и всегда пей достаточно в жару и при нагрузках, напоминает приложение или нет.</string>
     <string name="settings_water_dynamic_warning_title">Бета · это предложение, а не медицинский совет</string>
-    <string name="settings_water_food_water">Вычитать воду из еды</string>
-    <string name="settings_water_food_water_help">Грубая оценка: 60% веса сегодняшних записанных продуктов, максимум 1 л.</string>
+    <string name="settings_water_food_water">Учитывать воду из еды и напитков</string>
+    <string name="settings_water_food_water_help">Автоматически добавляет воду из блюд и напитков в дневной итог</string>
     <string name="settings_water_goal_summary">%1$d мл</string>
     <string name="settings_water_intro">Отслеживай, сколько ты пьёшь, задай дневную цель и позволь ей адаптироваться к весу, погоде и активности.</string>
     <string name="settings_water_manual_temp">Ожидаемый максимум сегодня</string>
@@ -2893,4 +2934,30 @@
         <item>сброс</item>
         <item>заводские</item>
     </string-array>
+
+    <!-- Proxy & Network Routing Settings (Russian) -->
+    <string name="settings_proxy_title">Прокси и маршрутизация</string>
+    <string name="settings_proxy_summary">Настройка HTTP/SOCKS прокси и маршрутизация запросов</string>
+    <string name="proxy_enable">Включить прокси</string>
+    <string name="proxy_type">Протокол прокси</string>
+    <string name="proxy_type_http">HTTP</string>
+    <string name="proxy_type_socks4">SOCKS4</string>
+    <string name="proxy_type_socks5">SOCKS5</string>
+    <string name="proxy_host">Хост / IP-сервера</string>
+    <string name="proxy_port">Порт</string>
+    <string name="proxy_auth_title">Аутентификация прокси (необязательно)</string>
+    <string name="proxy_username">Имя пользователя</string>
+    <string name="proxy_password">Пароль</string>
+    <string name="proxy_scopes_title">Маршрутизация запросов</string>
+    <string name="proxy_scopes_subtitle">Выберите, какие сетевые запросы отправлять через прокси</string>
+    <string name="proxy_scope_ai">Запросы к AI API (Gemini, OpenAI, Anthropic, Ollama)</string>
+    <string name="proxy_scope_food_db">Базы данных продуктов (Open Food Facts, USDA, Mealie)</string>
+    <string name="proxy_scope_sync">Синхронизация и обновления (WebDAV, обновления приложения)</string>
+    <string name="proxy_exclusion_title">Исключения (Без прокси для)</string>
+    <string name="proxy_exclusion_subtitle">Хосты, IP-адреса, диапазоны CIDR (например, 192.168.0.0/16, .local, localhost), разделенные запятой</string>
+    <string name="proxy_test_connection">Проверить соединение</string>
+    <string name="proxy_testing">Проверка соединения с прокси...</string>
+    <string name="proxy_test_success">Соединение успешно установлено (%1$d мс)</string>
+    <string name="proxy_test_failed">Ошибка соединения: %1$s</string>
+    <string name="proxy_saved">Настройки прокси сохранены</string>
 </resources>

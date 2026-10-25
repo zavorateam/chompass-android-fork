@@ -146,6 +146,7 @@ object DiaryImporter {
                         folate = item["folate_mcg"]?.asDouble(),
                         omega3 = item["omega3_g"]?.asDouble(),
                         caffeine = item["caffeine_mg"]?.asDouble(),
+                        waterPer100g = item["water_per_100g"]?.asDouble(),
                         servingSizeGrams = item["quantity_g"]?.asDouble(),
                         servingUnitOptions = parseServingUnitOptions(item["serving_unit_options"]?.asArrayOrNull()),
                         selectedServingUnit = item["selected_serving_unit"]?.asString()?.takeIf { it.isNotBlank() },
@@ -265,6 +266,7 @@ object DiaryImporter {
                 vitaminE = InputSanitizer.micro(o["vitamin_e_mg"]?.asDouble()), vitaminK = InputSanitizer.micro(o["vitamin_k_mcg"]?.asDouble()),
                 folate = InputSanitizer.micro(o["folate_mcg"]?.asDouble()), omega3 = InputSanitizer.micro(o["omega3_g"]?.asDouble()),
                 caffeine = InputSanitizer.micro(o["caffeine_mg"]?.asDouble()),
+                waterPer100g = InputSanitizer.micro(o["water_per_100g"]?.asDouble()),
             )
         }
     }

@@ -199,17 +199,17 @@
     <string name="onboarding_health_connect">연결</string>
 
     <string name="onboarding_provider_title">자신의 AI 사용</string>
-    <string name="onboarding_provider_subtitle">음식 사진과 코치를 위한 선택적 API 키.\nGoogle AI Studio는 무료이며 권장돼요.</string>
-    <string name="onboarding_provider_recommended_title">추천: Google AI Studio</string>
+    <string name="onboarding_provider_subtitle">음식 사진과 코치를 위한 선택적 API 키.\nGemini API는 무료이며 권장돼요.</string>
+    <string name="onboarding_provider_recommended_title">추천: Gemini API</string>
     <string name="onboarding_provider_recommended_subtitle">무료이고 고품질. 음식 사진에 최적.</string>
-    <string name="onboarding_provider_howto_title">무료 Google AI Studio 키 받는 방법</string>
+    <string name="onboarding_provider_howto_title">무료 Gemini API 키 받는 방법</string>
     <string name="onboarding_provider_step_1">aistudio.google.com/apikey 열기 (탭하여 열기)</string>
     <string name="onboarding_provider_step_2">Google로 로그인하고 API 키 만들기</string>
     <string name="onboarding_provider_step_3">아래에 붙여넣고 키 테스트 탭</string>
     <string name="onboarding_provider_footer">모든 제공자를 지원해요. 키는 이 기기에\n암호화되어 저장돼요. 설정에서 나중에 변경할 수 있어요.</string>
     <string name="onboarding_skip_ai">지금은 건너뛰기</string>
     <string name="onboarding_skip_ai_title">클라우드 키 없이 계속할까요?</string>
-    <string name="onboarding_skip_ai_body">온디바이스 AI는 휴대전화에서 비공개로 실행되지만 Google AI Studio나 다른 클라우드 모델보다 정확도가 훨씬 낮아요. 잘못된 칼로리, 누락된 항목, 약한 사진 인식이 있을 수 있어요. 무료 AI Studio 키는 설정에서 언제든 추가할 수 있어요.</string>
+    <string name="onboarding_skip_ai_body">온디바이스 AI는 휴대전화에서 비공개로 실행되지만 Gemini API나 다른 클라우드 모델보다 정확도가 훨씬 낮아요. 잘못된 칼로리, 누락된 항목, 약한 사진 인식이 있을 수 있어요. 무료 Gemini API 키는 설정에서 언제든 추가할 수 있어요.</string>
     <string name="onboarding_skip_ai_later_body">음식 사진 AI와 코치에는 API 키 또는 온디바이스 모델이 필요해요. 둘 다 설정에서 언제든 설정할 수 있어요.</string>
     <string name="onboarding_skip_ai_confirm">그래도 계속</string>
 
@@ -844,8 +844,8 @@
     <string name="ai_error_invalid_url">API URL이 잘못되었어요. 제공자 설정을 확인하세요.</string>
     <string name="ai_error_insecure_http_blocked">안전하지 않은 HTTP가 차단되었어요. 설정 → AI 및 음성에서 ‘안전하지 않은 HTTP 허용’을 켜거나 https:// URL을 사용하세요.</string>
     <string name="ai_error_key_rejected">API 키가 거부되었어요. 설정 → AI 제공자를 열어 유효한 키를 다시 붙여넣으세요.</string>
-    <string name="ai_error_location_unsupported">Gemini는 현재 네트워크 위치(국가/IP)에서 사용할 수 없어요. VPN을 사용 중이면 끄거나 주거용 출구로 전환하세요. 데이터센터/비주거용 VPN IP는 자주 차단돼요. Google AI Studio 프로젝트에서 결제를 활성화하거나, 다른 네트워크를 시도하거나, 설정 → AI 제공자에서 제공자를 변경하세요.</string>
-    <string name="ai_error_model_unavailable">제공자가 이 모델을 찾지 못했어요. 무료 티어에서 유료 전용이거나, 지역 제한이 있거나, 엔드포인트가 잘못되었을 수 있어요. 설정 → AI 제공자에서 기본 Flash 모델로 전환하거나 AI Studio 프로젝트에서 결제를 활성화하세요.</string>
+    <string name="ai_error_location_unsupported">Gemini는 현재 네트워크 위치(국가/IP)에서 사용할 수 없어요. VPN을 사용 중이면 끄거나 주거용 출구로 전환하세요. 데이터센터/비주거용 VPN IP는 자주 차단돼요. Gemini API 프로젝트에서 결제를 활성화하거나, 다른 네트워크를 시도하거나, 설정 → AI 제공자에서 제공자를 변경하세요.</string>
+    <string name="ai_error_model_unavailable">제공자가 이 모델을 찾지 못했어요. 무료 티어에서 유료 전용이거나, 지역 제한이 있거나, 엔드포인트가 잘못되었을 수 있어요. 설정 → AI 제공자에서 기본 Flash 모델로 전환하거나 Gemini API 프로젝트에서 결제를 활성화하세요.</string>
     <string name="ai_error_network_format">네트워크 오류: %1$s</string>
     <string name="ai_error_no_api_key">API 키가 설정되지 않았어요. 설정 → AI 제공자에서 키를 추가하세요.</string>
     <string name="ai_error_on_device_low_memory">지금은 온디바이스 AI를 위한 여유 메모리가 부족해요. 더 작은 E2B 모델을 시도하거나, 다른 앱을 닫거나, 설정 → AI 제공자에서 제공자를 변경하세요.</string>
@@ -1243,10 +1243,10 @@
     <string name="on_device_model_wifi_only">Wi-Fi에서만 다운로드</string>
     <string name="onboarding_accuracy_body">사진 추정과 모호한 양 표기(한 줌, 컵, 1인분)는 종종 부정확해요. 앱 제안, 특히 AI/LLM 출력은 추정일 뿐 의학적 사실이 아니에요. 중요한 숫자는 직접 확인하세요.</string>
     <string name="onboarding_accuracy_title">정확도 고지</string>
-    <string name="onboarding_ai_free_tier_note">무료 티어는 Flash 모델을 포함해요. Pro 모델은 AI Studio 프로젝트에서 결제가 필요해요.</string>
+    <string name="onboarding_ai_free_tier_note">무료 티어는 Flash 모델을 포함해요. Pro 모델은 Gemini API 프로젝트에서 결제가 필요해요.</string>
     <string name="onboarding_api_key_empty">먼저 API 키를 붙여넣으세요</string>
     <string name="onboarding_api_key_network">네트워크 오류. 연결을 확인하고 다시 시도하세요.</string>
-    <string name="onboarding_api_key_rejected">해당 API 키가 거부되었어요. AI Studio에서 새 키를 만들어 다시 붙여넣으세요.</string>
+    <string name="onboarding_api_key_rejected">해당 API 키가 거부되었어요. Gemini API에서 새 키를 만들어 다시 붙여넣으세요.</string>
     <string name="onboarding_api_key_test">키 테스트</string>
     <string name="onboarding_api_key_testing">테스트 중…</string>
     <string name="onboarding_api_key_works">키가 작동해요</string>

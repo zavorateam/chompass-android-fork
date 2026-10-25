@@ -58,6 +58,7 @@ import app.chompass.ui.settings.HomeDisplaySettingsScreen
 import app.chompass.ui.settings.NutritionTargetsSettingsScreen
 import app.chompass.ui.settings.NotificationsSettingsScreen
 import app.chompass.ui.settings.OptionalNutrientGoalsScreen
+import app.chompass.ui.settings.ProxySettingsScreen
 import app.chompass.ui.settings.PersonalSettingsScreen
 import app.chompass.ui.settings.SettingsScreen
 import app.chompass.ui.settings.SpeechSettingsScreen
@@ -516,6 +517,19 @@ fun ChompassNavHost(
                         nav = nav,
                         onBack = { nav.popBackStack() },
                         from = entry.arguments?.getString("from") ?: "data",
+                    )
+                }
+                composable(
+                    route = ChompassRoutes.SETTINGS_PROXY,
+                    arguments = listOf(navArgument("from") {
+                        type = NavType.StringType
+                        defaultValue = "settings"
+                    }),
+                ) { entry ->
+                    ProxySettingsScreen(
+                        container = container,
+                        onBack = { nav.popBackStack() },
+                        from = entry.arguments?.getString("from") ?: "settings",
                     )
                 }
                 composable(ChompassRoutes.OPTIONAL_NUTRIENT_GOALS) {

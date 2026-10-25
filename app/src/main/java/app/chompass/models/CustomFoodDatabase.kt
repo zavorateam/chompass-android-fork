@@ -222,6 +222,16 @@ object CustomFoodParser {
             val fiber = findJsonDouble(itemObj, listOf("fiber", "клетчатка"))
             val sugar = findJsonDouble(itemObj, listOf("sugar", "сахар"))
             val sodium = findJsonDouble(itemObj, listOf("sodium", "натрий", "salt", "соль"))
+            val water = findJsonDouble(itemObj, listOf("water", "water_g", "water_ml", "water_per_100g", "вода", "жидкость"))
+            val waterPer100g = water?.let { w ->
+                if (itemObj.containsKey("water_per_100g")) {
+                    FoodDatabaseSecurity.sanitizeNumber(w, 0.0, 100.0)
+                } else if (servingSizeGrams > 0) {
+                    FoodDatabaseSecurity.sanitizeNumber((w / servingSizeGrams) * 100.0, 0.0, 100.0)
+                } else {
+                    FoodDatabaseSecurity.sanitizeNumber(w, 0.0, 100.0)
+                }
+            }
 
             val entry = FoodEntry(
                 id = UUID.randomUUID(),
@@ -236,6 +246,7 @@ object CustomFoodParser {
                 fiber = fiber?.let { FoodDatabaseSecurity.sanitizeNumber(it, 0.0, 1_000.0) },
                 sugar = sugar?.let { FoodDatabaseSecurity.sanitizeNumber(it, 0.0, 1_000.0) },
                 sodium = sodium?.let { FoodDatabaseSecurity.sanitizeNumber(it, 0.0, 50_000.0) },
+                waterPer100g = waterPer100g,
                 customNote = brand?.let { FoodDatabaseSecurity.sanitizeText(it) }?.takeIf { it.isNotBlank() },
                 source = FoodSource.SEARCH,
                 grounding = FoodGroundingProvenance(
@@ -281,6 +292,7 @@ object CustomFoodParser {
         val fiberIdx = findHeaderIndex(headers, listOf("fiber", "dietaryfiber", "клетчатка", "волокна"))
         val sugarIdx = findHeaderIndex(headers, listOf("sugar", "sugars", "сахар"))
         val sodiumIdx = findHeaderIndex(headers, listOf("sodium", "salt", "натрий", "соль"))
+        val waterIdx = findHeaderIndex(headers, listOf("water", "water_g", "water_ml", "water_per_100g", "вода", "жидкость"))
 
         val db = CustomFoodDatabase(
             name = defaultName,
@@ -307,6 +319,15 @@ object CustomFoodParser {
             val fiber = fiberIdx.takeIf { it != -1 && it < cols.size }?.let { parseNumeric(cols[it]) }
             val sugar = sugarIdx.takeIf { it != -1 && it < cols.size }?.let { parseNumeric(cols[it]) }
             val sodium = sodiumIdx.takeIf { it != -1 && it < cols.size }?.let { parseNumeric(cols[it]) }
+            val waterRaw = waterIdx.takeIf { it != -1 && it < cols.size }?.let { parseNumeric(cols[it]) }
+            val waterPer100g = waterRaw?.let { w ->
+                val isExplicitPer100g = headers.getOrNull(waterIdx)?.contains("100") == true
+                if (isExplicitPer100g || servingSizeGrams <= 0) {
+                    FoodDatabaseSecurity.sanitizeNumber(w, 0.0, 100.0)
+                } else {
+                    FoodDatabaseSecurity.sanitizeNumber((w / servingSizeGrams) * 100.0, 0.0, 100.0)
+                }
+            }
 
             val entry = FoodEntry(
                 id = UUID.randomUUID(),
@@ -321,6 +342,7 @@ object CustomFoodParser {
                 fiber = fiber?.let { FoodDatabaseSecurity.sanitizeNumber(it, 0.0, 1_000.0) },
                 sugar = sugar?.let { FoodDatabaseSecurity.sanitizeNumber(it, 0.0, 1_000.0) },
                 sodium = sodium?.let { FoodDatabaseSecurity.sanitizeNumber(it, 0.0, 50_000.0) },
+                waterPer100g = waterPer100g,
                 customNote = brand,
                 source = FoodSource.SEARCH,
                 grounding = FoodGroundingProvenance(
@@ -553,6 +575,7 @@ fun FoodEntry.toFoodAnalysis(targetGrams: Double, dbName: String): FoodAnalysis 
         carbs = carbs * scale,
         fat = fat * scale,
         servingSizeGrams = targetGrams,
+        waterPer100g = waterPer100g,
         emoji = emoji ?: "🍽",
         sugar = sugar?.let { it * scale },
         addedSugar = addedSugar?.let { it * scale },

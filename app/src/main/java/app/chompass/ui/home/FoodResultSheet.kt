@@ -333,6 +333,7 @@ fun FoodResultSheet(
         logTime = reviewLogTimeAfterOverride(logTime, logTimeOverride, logTimeTouched)
     }
     var moreNutritionExpanded by remember { mutableStateOf(false) }
+    var aminoAcidsExpanded by remember { mutableStateOf(false) }
     var editableCalories by remember(effectiveAnalysis) { mutableStateOf(effectiveAnalysis.calories) }
     var editableProtein by remember(effectiveAnalysis) { mutableStateOf(effectiveAnalysis.protein) }
     var editableCarbs by remember(effectiveAnalysis) { mutableStateOf(effectiveAnalysis.carbs) }
@@ -1094,6 +1095,43 @@ fun FoodResultSheet(
                         }
                         MicronutrientField.MoreNutrition.forEachIndexed { idx, field ->
                             if (idx > 0 || stale) SheetHairline()
+                            val value = math.scaledD(editableMicros[field])
+                            ReviewNutritionValueRow(
+                                label = stringResource(field.labelRes),
+                                displayValue = math.displayD(value),
+                                editValue = math.editD(value),
+                                unit = stringResource(field.unitRes),
+                                unlocked = nutritionUnlocked && analysisReady,
+                                dim = true,
+                                onEdit = {
+                                    editableMicros = editableMicros.with(field, math.baseOptionalFromText(it))
+                                    microsTouched = true
+                                }
+                            )
+                        }
+                    }
+                }
+            }
+
+            // "Amino Acids" — dedicated collapsible section for the 9 essential amino acids
+            if (analysisReady) {
+                item {
+                    SheetPillRow(onClick = { aminoAcidsExpanded = !aminoAcidsExpanded }) {
+                        Text(stringResource(R.string.sheet_amino_acids), fontSize = 17.sp, modifier = Modifier.weight(1f))
+                        Icon(
+                            if (aminoAcidsExpanded) Icons.Filled.KeyboardArrowDown
+                            else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Muted)
+                        )
+                    }
+                }
+            }
+            if (aminoAcidsExpanded && analysisReady) {
+                item {
+                    SheetPillCard {
+                        MicronutrientField.AminoAcids.forEachIndexed { idx, field ->
+                            if (idx > 0) SheetHairline()
                             val value = math.scaledD(editableMicros[field])
                             ReviewNutritionValueRow(
                                 label = stringResource(field.labelRes),

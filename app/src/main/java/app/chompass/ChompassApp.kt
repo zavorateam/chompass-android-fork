@@ -15,6 +15,7 @@ import app.chompass.data.CaffeineRepository
 import app.chompass.data.NicotineRepository
 import app.chompass.data.NotesRepository
 import app.chompass.data.PreferencesStore
+import app.chompass.data.proxyConfig
 import app.chompass.data.ProfileRepository
 import app.chompass.data.CustomFoodDatabaseRepository
 import app.chompass.data.RecipeRepository
@@ -113,6 +114,10 @@ class ChompassApp : Application() {
         appScope.launch { container.prefs.migrateHomeDisplayLayoutIfNeeded() }
         appScope.launch { container.prefs.migrateCaffeineDailyLimitIfNeeded() }
         appScope.launch { container.prefs.ensureAiProfilesMigrated(container.keyStore, this@ChompassApp) }
+        app.chompass.network.ProxyManager.initGlobalProxySelector()
+        container.prefs.proxyConfig
+            .onEach { app.chompass.network.ProxyManager.updateConfig(it) }
+            .launchIn(appScope)
         container.prefs.mealCatalog
             .onEach {
                 CurrentMealCatalog.value = it

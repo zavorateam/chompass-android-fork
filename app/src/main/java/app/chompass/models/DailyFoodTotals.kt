@@ -50,6 +50,26 @@ data class DailyFoodTotals(
     val folate: Double = 0.0,
     val omega3: Double = 0.0,
     val caffeine: Double = 0.0,
+    val histidine: Double = 0.0,
+    val isoleucine: Double = 0.0,
+    val leucine: Double = 0.0,
+    val lysine: Double = 0.0,
+    val methionine: Double = 0.0,
+    val phenylalanine: Double = 0.0,
+    val threonine: Double = 0.0,
+    val tryptophan: Double = 0.0,
+    val valine: Double = 0.0,
+    val vitaminB1: Double = 0.0,
+    val vitaminB2: Double = 0.0,
+    val vitaminB3: Double = 0.0,
+    val vitaminB5: Double = 0.0,
+    val vitaminB6: Double = 0.0,
+    val biotin: Double = 0.0,
+    val choline: Double = 0.0,
+    val phosphorus: Double = 0.0,
+    val selenium: Double = 0.0,
+    val copper: Double = 0.0,
+    val manganese: Double = 0.0,
 ) {
     /**
      * The day's summed amount of [nutrient] (HomeTopNutrient.current
@@ -83,6 +103,26 @@ data class DailyFoodTotals(
         HomeTopNutrient.FOLATE -> folate
         HomeTopNutrient.OMEGA3 -> omega3
         HomeTopNutrient.CAFFEINE -> caffeine
+        HomeTopNutrient.HISTIDINE -> histidine
+        HomeTopNutrient.ISOLEUCINE -> isoleucine
+        HomeTopNutrient.LEUCINE -> leucine
+        HomeTopNutrient.LYSINE -> lysine
+        HomeTopNutrient.METHIONINE -> methionine
+        HomeTopNutrient.PHENYLALANINE -> phenylalanine
+        HomeTopNutrient.THREONINE -> threonine
+        HomeTopNutrient.TRYPTOPHAN -> tryptophan
+        HomeTopNutrient.VALINE -> valine
+        HomeTopNutrient.VITAMIN_B1 -> vitaminB1
+        HomeTopNutrient.VITAMIN_B2 -> vitaminB2
+        HomeTopNutrient.VITAMIN_B3 -> vitaminB3
+        HomeTopNutrient.VITAMIN_B5 -> vitaminB5
+        HomeTopNutrient.VITAMIN_B6 -> vitaminB6
+        HomeTopNutrient.BIOTIN -> biotin
+        HomeTopNutrient.CHOLINE -> choline
+        HomeTopNutrient.PHOSPHORUS -> phosphorus
+        HomeTopNutrient.SELENIUM -> selenium
+        HomeTopNutrient.COPPER -> copper
+        HomeTopNutrient.MANGANESE -> manganese
     }
 
     /** Deterministic per-day id for [app.chompass.data.JsonBucketStore] upserts. */

@@ -12,7 +12,7 @@ import app.chompass.R
  */
 sealed class AiError(
     message: String,
-    @StringRes val messageRes: Int = 0,
+    @get:StringRes val messageRes: Int = 0,
     val formatArgs: Array<out Any> = emptyArray(),
 ) : Exception(message) {
     object NoApiKey : AiError("No API key configured. Add your key in Settings → AI Provider.", messageRes = R.string.ai_error_no_api_key)
@@ -91,9 +91,9 @@ internal fun errorDetail(e: Throwable): String? {
 internal fun friendlyMessage(status: Int, raw: String): String {
     val keyRejected = "Your API key was rejected. Open Settings → AI Provider and re-paste a valid key."
     val locationUnsupported =
-        "Gemini isn't available from this network location (country/IP). If you use a VPN, turn it off or switch to a residential exit. Datacenter/non-residential VPN IPs are often blocked. Or enable billing on the Google AI Studio project, try another network, or switch provider in Settings → AI Provider."
+        "Gemini isn't available from this network location (country/IP). If you use a VPN, turn it off or switch to a residential exit. Datacenter/non-residential VPN IPs are often blocked. Or enable billing on the Google Cloud project, try another network, or switch provider in Settings → AI Provider."
     val modelUnavailable =
-        "Your provider couldn't find this model. It may be paid-only on the free tier, restricted in your region, or the endpoint may be wrong. Switch to the default Flash model in Settings → AI Provider, or enable billing on your AI Studio project."
+        "Your provider couldn't find this model. It may be paid-only on the free tier, restricted in your region, or the endpoint may be wrong. Switch to the default Flash model in Settings → AI Provider, or enable billing on your Google Cloud project."
     val hasKeyInvalidMarker =
         raw.contains("api key not valid", ignoreCase = true) ||
             raw.contains("api_key_invalid", ignoreCase = true) ||

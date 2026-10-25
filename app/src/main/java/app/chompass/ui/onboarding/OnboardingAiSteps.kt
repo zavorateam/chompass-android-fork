@@ -138,7 +138,7 @@ internal fun ProviderStep(
             textAlign = androidx.compose.ui.text.style.TextAlign.Center
         )
         Spacer(Modifier.height(18.dp))
-        // Recommended provider card — tap selects Google AI Studio (Gemini).
+        // Recommended provider card — tap selects Gemini API.
         Card(
             shape = RoundedCornerShape(AppRadii.Card),
             colors = CardDefaults.cardColors(

@@ -595,13 +595,13 @@
 
     <string name="onboarding_provider_title">Bring deine eigene KI mit</string>
 
-    <string name="onboarding_provider_subtitle">Optionaler API-Schlüssel für Lebensmittel-Fotos und Coach.\nGoogle AI Studio ist kostenlos und wird empfohlen.</string>
+    <string name="onboarding_provider_subtitle">Optionaler API-Schlüssel für Lebensmittel-Fotos und Coach.\nGemini API ist kostenlos und wird empfohlen.</string>
 
-    <string name="onboarding_provider_recommended_title">Empfohlen: Google AI Studio</string>
+    <string name="onboarding_provider_recommended_title">Empfohlen: Gemini API</string>
 
     <string name="onboarding_provider_recommended_subtitle">Kostenlos und hochwertig. Am besten geeignet für Fotos von Lebensmitteln.</string>
 
-    <string name="onboarding_provider_howto_title">So erhältst du einen kostenlosen Google AI Studio-Schlüssel</string>
+    <string name="onboarding_provider_howto_title">So erhältst du einen kostenlosen Gemini API-Schlüssel</string>
 
     <string name="onboarding_provider_step_1">Öffne aistudio.google.com/apikey (zum Öffnen antippen)</string>
 
@@ -617,7 +617,7 @@
 
     <string name="onboarding_skip_ai_title">Ohne Cloud-Schlüssel fortfahren?</string>
 
-    <string name="onboarding_skip_ai_body">Die geräteinterne KI läuft privat auf deinem Smartphone, ist jedoch weitaus ungenauer als Google AI Studio oder andere Cloud-Modelle. Rechne mit falschen Kalorienangaben, fehlenden Lebensmitteln oder ungenauen Fotoerkennungen. Du kannst jederzeit in den Einstellungen einen kostenlosen AI Studio-Schlüssel hinzufügen.</string>
+    <string name="onboarding_skip_ai_body">Die geräteinterne KI läuft privat auf deinem Smartphone, ist jedoch weitaus ungenauer als Gemini API oder andere Cloud-Modelle. Rechne mit falschen Kalorienangaben, fehlenden Lebensmitteln oder ungenauen Fotoerkennungen. Du kannst jederzeit in den Einstellungen einen kostenlosen Gemini API-Schlüssel hinzufügen.</string>
 
     <string name="onboarding_skip_ai_later_body">Die KI zur Erkennung von Lebensmittelfotos und der Coach benötigen einen API-Schlüssel oder ein gerätebasiertes Modell. Beides kannst du jederzeit in den Einstellungen einrichten.</string>
 
@@ -633,7 +633,7 @@
 
     <string name="onboarding_api_key_network">Netzwerkfehler. Überprüfe deine Verbindung und versuche es erneut.</string>
 
-    <string name="onboarding_api_key_rejected">Dieser API-Schlüssel wurde abgelehnt. Erstelle einen neuen Schlüssel in AI Studio und füge ihn erneut ein.</string>
+    <string name="onboarding_api_key_rejected">Dieser API-Schlüssel wurde abgelehnt. Erstelle einen neuen Schlüssel in Gemini API und füge ihn erneut ein.</string>
 
     <string name="onboarding_api_key_non_gemini_ok">Bereit. Der Schnelltest ist nur für Gemini verfügbar</string>
 
@@ -2479,7 +2479,7 @@ für dich ein</string>
 
     <string name="ai_error_key_rejected">Dein API-Schlüssel wurde abgelehnt. Öffne „Einstellungen“ → „KI-Anbieter“ und füge einen gültigen Schlüssel erneut ein.</string>
 
-    <string name="ai_error_location_unsupported">Gemini ist von diesem Netzwerkstandort (Land/IP) aus nicht verfügbar. Wenn du ein VPN verwendest, deaktiviere es oder wechsle zu einem privaten Ausgangspunkt. IP-Adressen von Rechenzentren oder nicht-privaten VPNs werden häufig blockiert. Oder aktiviere die Abrechnung für das Google AI Studio-Projekt, probiere ein anderes Netzwerk aus oder wechsle unter „Einstellungen“ → „KI-Anbieter“ den Anbieter.</string>
+    <string name="ai_error_location_unsupported">Gemini ist von diesem Netzwerkstandort (Land/IP) aus nicht verfügbar. Wenn du ein VPN verwendest, deaktiviere es oder wechsle zu einem privaten Ausgangspunkt. IP-Adressen von Rechenzentren oder nicht-privaten VPNs werden häufig blockiert. Oder aktiviere die Abrechnung für das Gemini API-Projekt, probiere ein anderes Netzwerk aus oder wechsle unter „Einstellungen“ → „KI-Anbieter“ den Anbieter.</string>
 
     <string name="ai_error_provider_overloaded">Der KI-Anbieter ist derzeit überlastet. Wir haben es mehrmals erneut versucht. Bitte versuche es in einer Minute erneut oder wechsle unter „Einstellungen“ → „KI-Anbieter“ zu einem anderen Anbieter/Modell.</string>
 

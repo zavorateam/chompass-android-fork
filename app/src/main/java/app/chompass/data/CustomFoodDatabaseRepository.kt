@@ -220,7 +220,7 @@ class CustomFoodDatabaseRepository(
         val request = Request.Builder()
             .url(validUrl)
             .header("User-Agent", "Chompass/Android-FoodDatabaseImporter")
-            .header("Accept", "text/csv, application/json, text/plain, */*")
+            .header("Accept", "application/json, text/csv, text/plain, */*")
             .build()
 
         val response = okHttpClient.newCall(request).execute()
@@ -238,10 +238,36 @@ class CustomFoodDatabaseRepository(
         val inputStream = body.byteStream()
         val text = readBoundedString(inputStream, FoodDatabaseSecurity.MAX_CONTENT_BYTES)
 
-        val inferredName = validUrl.substringAfterLast("/").substringBefore("?").takeIf { it.isNotBlank() }
+        if (text.isBlank()) {
+            throw IllegalArgumentException("Downloaded file content is empty")
+        }
+
+        val inferredName = validUrl.substringAfterLast("/")
+            .substringBefore("?")
+            .removeSuffix(".json")
+            .removeSuffix(".csv")
+            .takeIf { it.isNotBlank() && it.length > 2 }
             ?: fallbackName
 
-        CustomFoodParser.parseContent(text, inferredName, sourceUrl = validUrl)
+        val parsedList = CustomFoodParser.parseMultiOrSingle(text, inferredName)
+        if (parsedList.isEmpty()) {
+            throw IllegalArgumentException("No valid food database or food items found in downloaded content")
+        }
+
+        val updatedList = parsedList.map { (db, foods) ->
+            db.copy(
+                sourceUrl = validUrl,
+                lastSyncEpochMs = System.currentTimeMillis(),
+                updatedAtEpochMs = System.currentTimeMillis(),
+                itemCount = foods.size,
+            ) to foods
+        }
+
+        for ((db, foods) in updatedList) {
+            saveDatabase(db, foods)
+        }
+
+        updatedList.first()
     }
 
     /**
@@ -258,8 +284,10 @@ class CustomFoodDatabaseRepository(
             throw IllegalArgumentException("Database does not have a source URL configured")
         }
 
-        val (_, foods) = downloadFromUrl(url, okHttpClient, db.name)
+        val (downloadedDb, foods) = downloadFromUrl(url, okHttpClient, db.name)
         val updated = db.copy(
+            name = downloadedDb.name.ifBlank { db.name },
+            description = downloadedDb.description.ifBlank { db.description },
             itemCount = foods.size,
             lastSyncEpochMs = System.currentTimeMillis(),
             updatedAtEpochMs = System.currentTimeMillis(),
@@ -291,8 +319,11 @@ class CustomFoodDatabaseRepository(
      * Scores hits using token overlap and prefix matching, capped at [limit].
      */
     suspend fun searchActiveDatabases(query: String, limit: Int = 8): List<DatabaseSearchResult> = withContext(Dispatchers.Default) {
-        val tokens = QueryNormalizer.tokenize(query).map { it.lowercase(Locale.ROOT) }
-        if (tokens.isEmpty()) return@withContext emptyList()
+        val qClean = query.trim().lowercase(Locale.ROOT)
+        if (qClean.isEmpty()) return@withContext emptyList()
+
+        val tokens = QueryNormalizer.tokenize(qClean).map { it.lowercase(Locale.ROOT) }
+            .ifEmpty { listOf(qClean) }
 
         val enabledDbs = _databases.value.filter { it.enabled }
         if (enabledDbs.isEmpty()) return@withContext emptyList()
@@ -301,7 +332,7 @@ class CustomFoodDatabaseRepository(
         for (db in enabledDbs) {
             val foods = getFoods(db.id)
             for (food in foods) {
-                val score = calculateMatchScore(food, tokens, query)
+                val score = calculateMatchScore(food, tokens, qClean)
                 if (score > 0.0) {
                     results.add(food.toCustomDatabaseHit(db, score))
                 }
@@ -314,7 +345,11 @@ class CustomFoodDatabaseRepository(
     private fun calculateMatchScore(food: FoodEntry, queryTokens: List<String>, rawQuery: String): Double {
         val nameLower = food.name.lowercase(Locale.ROOT)
         val brandLower = food.customNote?.lowercase(Locale.ROOT).orEmpty()
-        val foodTokens = QueryNormalizer.tokenize(nameLower)
+        val foodTokens = QueryNormalizer.tokenize(nameLower).map { it.lowercase(Locale.ROOT) }
+
+        val qClean = rawQuery.trim().lowercase(Locale.ROOT)
+        val nameCompact = nameLower.replace(Regex("[\\s\\p{Punct}—–-]+"), "")
+        val queryCompact = qClean.replace(Regex("[\\s\\p{Punct}—–-]+"), "")
 
         var matchedTokens = 0
         var score = 0.0
@@ -325,32 +360,44 @@ class CustomFoodDatabaseRepository(
                     matchedTokens++
                     score += 6.0
                 }
-                foodTokens.any { it.startsWith(qToken) } -> {
+                foodTokens.any { it.startsWith(qToken) || qToken.startsWith(it) } -> {
                     matchedTokens++
-                    score += 3.5
+                    score += 4.0
+                }
+                nameLower.contains(qToken) || (nameCompact.isNotEmpty() && nameCompact.contains(qToken)) -> {
+                    matchedTokens++
+                    score += 3.0
                 }
                 brandLower.contains(qToken) -> {
                     matchedTokens++
-                    score += 2.0
+                    score += 2.5
                 }
-                nameLower.contains(qToken) -> {
-                    matchedTokens++
-                    score += 2.0
-                }
+            }
+        }
+
+        // Substring & prefix bonus on full raw query
+        if (qClean.isNotEmpty()) {
+            if (nameLower.startsWith(qClean)) {
+                matchedTokens = maxOf(matchedTokens, 1)
+                score += 8.0
+            } else if (nameLower.contains(qClean)) {
+                matchedTokens = maxOf(matchedTokens, 1)
+                score += 5.0
+            } else if (queryCompact.isNotEmpty() && nameCompact.contains(queryCompact)) {
+                matchedTokens = maxOf(matchedTokens, 1)
+                score += 4.0
+            } else if (brandLower.contains(qClean)) {
+                matchedTokens = maxOf(matchedTokens, 1)
+                score += 3.0
             }
         }
 
         if (matchedTokens == 0) return 0.0
 
-        // Exact substring bonus
-        if (nameLower.startsWith(rawQuery.trim().lowercase(Locale.ROOT))) {
-            score += 5.0
-        } else if (nameLower.contains(rawQuery.trim().lowercase(Locale.ROOT))) {
-            score += 3.0
-        }
-
         // Token coverage bonus
-        val coverage = matchedTokens.toDouble() / queryTokens.size.toDouble()
+        val coverage = if (queryTokens.isNotEmpty()) {
+            (matchedTokens.toDouble() / queryTokens.size.toDouble()).coerceAtMost(1.0)
+        } else 1.0
         score *= (0.5 + 0.5 * coverage)
 
         return score

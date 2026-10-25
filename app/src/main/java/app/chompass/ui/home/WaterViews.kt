@@ -16,9 +16,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.WaterDrop
+import app.chompass.models.FoodHydrationCalculator
+import kotlin.math.roundToInt
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -74,6 +77,8 @@ fun WaterProgressRow(
     nextDrinkLabel: String? = null,
     /** When set, the whole row becomes tappable (opens the day's water history). */
     onClick: (() -> Unit)? = null,
+    foodMl: Int = 0,
+    manualMl: Int = current - foodMl,
     modifier: Modifier = Modifier,
 ) {
     val progress = if (goal > 0) (current.toFloat() / goal).coerceIn(0f, 1f) else 0f
@@ -139,13 +144,39 @@ fun WaterProgressRow(
             color = MaterialTheme.colorScheme.water,
             trackColor = MaterialTheme.colorScheme.water.copy(alpha = 0.16f),
         )
-        if (nextDrinkLabel != null) {
-            Text(
-                nextDrinkLabel,
-                color = MaterialTheme.colorScheme.water,
-                fontSize = 12.sp,
-                fontWeight = FontWeight.Medium,
-            )
+        if (foodMl > 0 || nextDrinkLabel != null) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                if (foodMl > 0) {
+                    val foodText = if (useMetric) {
+                        stringResource(R.string.water_breakdown_hint, manualMl.coerceAtLeast(0), foodMl)
+                    } else {
+                        stringResource(
+                            R.string.water_breakdown_hint_fl_oz,
+                            WaterAmountFormat.flOzFromMl(manualMl.coerceAtLeast(0)),
+                            WaterAmountFormat.flOzFromMl(foodMl),
+                        )
+                    }
+                    Text(
+                        foodText,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Subtle),
+                        fontSize = 11.sp,
+                    )
+                } else {
+                    Spacer(Modifier.width(1.dp))
+                }
+                if (nextDrinkLabel != null) {
+                    Text(
+                        nextDrinkLabel,
+                        color = MaterialTheme.colorScheme.water,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Medium,
+                    )
+                }
+            }
         }
     }
 }
@@ -231,6 +262,9 @@ fun WaterHistorySheet(
     onDismiss: () -> Unit,
     onEdit: (WaterEntry) -> Unit,
     onDelete: (WaterEntry) -> Unit,
+    manualMl: Int = entries.sumOf { it.milliliters },
+    foodMl: Int = 0,
+    foodSummary: FoodHydrationCalculator.FoodWaterSummary = FoodHydrationCalculator.EmptySummary,
 ) {
     val sheetState = rememberChompassSheetState()
     val ctx = LocalContext.current
@@ -239,7 +273,7 @@ fun WaterHistorySheet(
             .withZone(ZoneId.systemDefault())
     }
     val sorted = remember(entries) { entries.sortedByDescending { it.date } }
-    val total = entries.sumOf { it.milliliters }
+    val total = manualMl + foodMl
 
     ChompassBottomSheet(
         onDismiss = onDismiss,
@@ -261,7 +295,7 @@ fun WaterHistorySheet(
                     .withLocale(Locale.getDefault())
                     .format(day)
             }
-            if (sorted.isNotEmpty()) {
+            if (total > 0 || sorted.isNotEmpty() || foodSummary.items.isNotEmpty()) {
                 Text(
                     stringResource(
                         R.string.water_history_total,
@@ -273,7 +307,50 @@ fun WaterHistorySheet(
                 )
             }
 
-            if (sorted.isEmpty()) {
+            if (foodMl > 0) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(AppRadii.Field))
+                        .background(MaterialTheme.colorScheme.surfaceContainerHigh.copy(alpha = 0.5f))
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                        Text(
+                            stringResource(R.string.water_hydration_breakdown),
+                            style = MaterialTheme.typography.bodySmall,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            if (foodSummary.measuredMl > 0) {
+                                Text(
+                                    stringResource(R.string.water_measured_total, foodSummary.measuredMl),
+                                    fontSize = 11.sp,
+                                    color = MaterialTheme.colorScheme.primary,
+                                )
+                            }
+                            if (foodSummary.estimatedMl > 0) {
+                                Text(
+                                    stringResource(R.string.water_estimated_total, foodSummary.estimatedMl),
+                                    fontSize = 11.sp,
+                                    color = MaterialTheme.colorScheme.tertiary,
+                                )
+                            }
+                        }
+                    }
+                    Text(
+                        waterHistoryAmountLabel(foodMl, useMetric),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.water,
+                    )
+                }
+            }
+
+            if (sorted.isEmpty() && foodSummary.items.isEmpty()) {
                 Text(
                     stringResource(R.string.water_no_entries),
                     style = MaterialTheme.typography.bodyLarge,
@@ -283,20 +360,161 @@ fun WaterHistorySheet(
             } else {
                 Column(
                     Modifier.verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(14.dp),
                 ) {
-                    sorted.forEach { entry ->
-                        WaterHistoryRow(
-                            entry = entry,
-                            useMetric = useMetric,
-                            timeFmt = timeFmt,
-                            onEdit = { onEdit(entry) },
-                            onDelete = { onDelete(entry) },
-                        )
+                    if (foodSummary.items.isNotEmpty()) {
+                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth().padding(horizontal = 2.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    stringResource(R.string.water_from_food_and_drinks),
+                                    style = MaterialTheme.typography.titleSmall,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                )
+                                Text(
+                                    waterHistoryAmountLabel(foodMl, useMetric),
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    color = MaterialTheme.colorScheme.water,
+                                )
+                            }
+                            foodSummary.items.forEach { item ->
+                                FoodHydrationRow(item = item, useMetric = useMetric)
+                            }
+                        }
+                    }
+
+                    if (sorted.isNotEmpty()) {
+                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth().padding(horizontal = 2.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    stringResource(R.string.water_manual_logs),
+                                    style = MaterialTheme.typography.titleSmall,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                )
+                                Text(
+                                    waterHistoryAmountLabel(manualMl, useMetric),
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    color = MaterialTheme.colorScheme.water,
+                                )
+                            }
+                            sorted.forEach { entry ->
+                                WaterHistoryRow(
+                                    entry = entry,
+                                    useMetric = useMetric,
+                                    timeFmt = timeFmt,
+                                    onEdit = { onEdit(entry) },
+                                    onDelete = { onDelete(entry) },
+                                )
+                            }
+                        }
                     }
                 }
             }
             Spacer(Modifier.height(16.dp))
+        }
+    }
+}
+
+@Composable
+private fun FoodHydrationRow(
+    item: FoodHydrationCalculator.ItemHydration,
+    useMetric: Boolean,
+) {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .clip(MaterialTheme.shapes.medium)
+            .background(MaterialTheme.colorScheme.surfaceContainerHigh.copy(alpha = 0.55f))
+            .padding(start = 14.dp, end = 14.dp, top = 8.dp, bottom = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        Row(
+            Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(Modifier.weight(1f)) {
+                Text(
+                    item.foodName,
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.Medium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        "${item.portionGrams.roundToInt()} g",
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Subtle),
+                    )
+                    Text(
+                        "·",
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Muted),
+                    )
+                    Text(
+                        if (item.isExact) "${item.waterPercentage.roundToInt()}%" else "~${item.waterPercentage.roundToInt()}%",
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Subtle),
+                    )
+                    Text(
+                        if (item.isExact) stringResource(R.string.water_source_measured) else stringResource(R.string.water_source_estimated),
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = if (item.isExact) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.tertiary,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(4.dp))
+                            .background(
+                                (if (item.isExact) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.tertiary)
+                                    .copy(alpha = 0.12f)
+                            )
+                            .padding(horizontal = 4.dp, vertical = 1.dp),
+                    )
+                }
+            }
+            Text(
+                waterHistoryAmountLabel(item.waterMl.roundToInt(), useMetric),
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 14.sp,
+                color = MaterialTheme.colorScheme.water,
+            )
+        }
+        if (item.constituents.isNotEmpty()) {
+            Column(
+                Modifier.padding(start = 8.dp, top = 2.dp),
+                verticalArrangement = Arrangement.spacedBy(2.dp),
+            ) {
+                item.constituents.forEach { c ->
+                    Row(
+                        Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(
+                            "${c.name} (${c.portionGrams.roundToInt()} g)",
+                            fontSize = 11.sp,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = AppTextOpacity.Subtle),
+                        )
+                        Text(
+                            waterHistoryAmountLabel(c.waterMl.roundToInt(), useMetric),
+                            fontSize = 11.sp,
+                            color = MaterialTheme.colorScheme.water.copy(alpha = AppTextOpacity.Strong),
+                        )
+                    }
+                }
+            }
         }
     }
 }

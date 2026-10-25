@@ -87,7 +87,14 @@ object FoodSuggestionRanker {
 
         val databaseHits = database.mapNotNull { result ->
             val normalized = QueryNormalizer.normalizeQuery(result.name)
-            val lex = lexNorm(q, tokens, normalized, QueryNormalizer.normalizeTokens(result.name).toSet())
+            val nameTokens = QueryNormalizer.normalizeTokens(result.name).toSet()
+            val lexName = lexNorm(q, tokens, normalized, nameTokens)
+            val lexBrand = if (!result.brand.isNullOrBlank()) {
+                val brandName = "${result.brand} ${result.name}"
+                val brandNorm = QueryNormalizer.normalizeQuery(brandName)
+                lexNorm(q, tokens, brandNorm, QueryNormalizer.normalizeTokens(brandName).toSet())
+            } else 0.0
+            val lex = maxOf(lexName, lexBrand)
             // No lexical floor on this leg: the rows already passed the
             // provider's own relevance gate, and re-filtering them here
             // double-filters morphology the providers tolerate — "cooked

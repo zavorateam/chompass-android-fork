@@ -63,7 +63,7 @@ internal suspend fun PreferencesStore.setWaterUseProfileActivityImpl(v: Boolean)
     setBoolPref(Keys.WATER_USE_PROFILE_ACTIVITY, v)
 
 internal val PreferencesStore.waterFoodWaterEnabledImpl: Flow<Boolean>
-    get() = boolPref(Keys.WATER_FOOD_WATER_ENABLED, false)
+    get() = boolPref(Keys.WATER_FOOD_WATER_ENABLED, true)
 internal suspend fun PreferencesStore.setWaterFoodWaterEnabledImpl(v: Boolean) =
     setBoolPref(Keys.WATER_FOOD_WATER_ENABLED, v)
 
