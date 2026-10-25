@@ -1,6 +1,0 @@
-{
-  "name": "Chompass",
-  "description": "Private calorie tracking for Android with food logging, progress tracking, and AI Coach",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

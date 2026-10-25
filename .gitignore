@@ -91,7 +91,7 @@ ios/Local.xcconfig
 opencode.json
 ios/build-sim/
 .vercel
-# Xcode per-user state (scheme order, workspace UI) òÀÔ meaningless off this machine
+# Xcode per-user state (scheme order, workspace UI) ï¿½ï¿½ï¿½ meaningless off this machine
 ios/**/xcuserdata/
 AGENTS.md
 CLAUDE.md
