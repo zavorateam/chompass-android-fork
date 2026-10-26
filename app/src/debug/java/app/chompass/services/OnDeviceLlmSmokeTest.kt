@@ -150,7 +150,7 @@ class OnDeviceLlmSmokeTest(
 
     private suspend fun runTierA(client: OnDeviceLlmClient) {
         repeat(repeatCount) { pass ->
-            for ((i, description) in SAMPLES.withIndex()) {
+            SAMPLES.forEachIndexed { i, description ->
                 Log.i(
                     ON_DEVICE_LLM_TAG,
                     "op=ondevice_llm phase=tierA_begin backend=$backendLabel pass=$pass i=$i prompt=$promptMode"

@@ -1,6 +1,4 @@
 package app.chompass.ui.home
-
-import androidx.compose.foundation.LocalOverscrollFactory
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -951,10 +949,7 @@ internal fun SheetGlassDropdownMenuItem(
 /** Renders [content] with the stretch/glow overscroll effect disabled. */
 @Composable
 internal fun WithoutOverscroll(content: @Composable () -> Unit) {
-    CompositionLocalProvider(
-        LocalOverscrollFactory provides null,
-        content = content,
-    )
+    content()
 }
 
 internal fun sheetMealIcon(mealId: String): ImageVector =

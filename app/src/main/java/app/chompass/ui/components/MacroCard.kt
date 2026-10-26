@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -197,9 +196,7 @@ private fun ClassicMacroCard(input: MacroCardInput) {
                     MaterialTheme.colorScheme.onSurfaceVariant
                 },
                 maxLines = 1,
-                // Shrink to fit the card at max font scale: long values + long
-                // suffixes (ru "91,5g übrig") clipped at 1.3× without this.
-                autoSize = TextAutoSize.StepBased(minFontSize = 8.sp, maxFontSize = 11.sp, stepSize = 0.5.sp),
+                overflow = TextOverflow.Ellipsis,
             )
         }
     }
@@ -340,7 +337,7 @@ private fun CompactBarsMacroCard(input: MacroCardInput) {
                     fontWeight = FontWeight.SemiBold,
                     color = accentColor,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(minFontSize = 9.sp, maxFontSize = 12.sp, stepSize = 0.5.sp),
+                    overflow = TextOverflow.Ellipsis,
                     modifier = Modifier
                         .weight(1f, fill = false)
                         .alignByBaseline(),
@@ -350,7 +347,7 @@ private fun CompactBarsMacroCard(input: MacroCardInput) {
                         status.text,
                         fontSize = 11.sp,
                         maxLines = 1,
-                        autoSize = TextAutoSize.StepBased(minFontSize = 8.sp, maxFontSize = 11.sp, stepSize = 0.5.sp),
+                        overflow = TextOverflow.Ellipsis,
                         color = when {
                             status.over -> accentColor
                             status.met -> accentColor
@@ -413,7 +410,7 @@ private fun SlimLineMacroCard(input: MacroCardInput) {
                         fontWeight = FontWeight.Bold,
                         color = accentColor,
                         maxLines = 1,
-                        autoSize = TextAutoSize.StepBased(minFontSize = 9.sp, maxFontSize = 12.sp, stepSize = 0.5.sp),
+                        overflow = TextOverflow.Ellipsis,
                     )
                     Text(
                         displayUnit,
@@ -428,7 +425,7 @@ private fun SlimLineMacroCard(input: MacroCardInput) {
                         status.text,
                         fontSize = 10.sp,
                         maxLines = 1,
-                        autoSize = TextAutoSize.StepBased(minFontSize = 8.sp, maxFontSize = 10.sp, stepSize = 0.5.sp),
+                        overflow = TextOverflow.Ellipsis,
                         color = when {
                             status.over -> accentColor
                             status.met -> accentColor

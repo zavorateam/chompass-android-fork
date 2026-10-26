@@ -122,8 +122,8 @@ fun GroundedCandidateSheet(
                 onClick = {
                     if (busy) return@ChompassPrimaryButton
                     submitted = true
-                    val grams = gramTexts.mapNotNull { (idx, text) ->
-                        text.toDoubleOrNull()?.takeIf { it > 0 }?.let { idx to it }
+                    val grams = gramTexts.entries.mapNotNull { entry ->
+                        entry.value.toDoubleOrNull()?.takeIf { it > 0 }?.let { entry.key to it }
                     }.toMap()
                     onConfirm(selectedIds.toMap(), grams)
                 },

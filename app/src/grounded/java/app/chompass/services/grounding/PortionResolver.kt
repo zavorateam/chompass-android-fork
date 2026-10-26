@@ -146,7 +146,9 @@ object PortionResolver {
         }
 
         // Unit-only heuristics: "1 large egg" style via portion_hint quantity parse.
-        parseHintQuantity(component.portionHint)?.let { (hintQty, hintUnitRaw) ->
+        parseHintQuantity(component.portionHint)?.let { pair ->
+            val hintQty = pair.first
+            val hintUnitRaw = pair.second
             val hintUnit = canonicalUnit(hintUnitRaw)
             val gramsPer = unitGramsFromCandidate(hintUnit, candidateServingUnit, candidateServingGrams)
                 ?: HOUSEHOLD_GRAMS[hintUnit]

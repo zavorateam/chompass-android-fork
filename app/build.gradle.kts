@@ -93,11 +93,16 @@ android {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
         optIn.addAll(
-            "androidx.health.connect.client.ExperimentalHealthConnectApi",
+            "androidx.health.connect.client.feature.ExperimentalFeatureAvailabilityApi",
+            "androidx.health.connect.client.ExperimentalDeduplicationApi",
             "androidx.compose.material3.ExperimentalMaterial3Api",
             "androidx.compose.foundation.ExperimentalFoundationApi",
             "androidx.compose.foundation.layout.ExperimentalLayoutApi",
             "androidx.compose.ui.ExperimentalComposeUiApi",
+        )
+        freeCompilerArgs.addAll(
+            "-Xskip-metadata-version-check",
+            "-Xallow-unstable-dependencies"
         )
     }
 }

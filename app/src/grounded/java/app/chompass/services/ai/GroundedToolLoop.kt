@@ -78,7 +78,7 @@ object GroundedToolLoop {
             AIProvider.ApiFormat.GEMINI -> runGemini(
                 client, baseUrl, model, apiKey!!, system, userMessage, images, tools, onProgress,
             )
-            AIProvider.ApiFormat.ON_DEVICE -> error("unreachable")
+            AIProvider.ApiFormat.ON_DEVICE -> throw IllegalStateException("unreachable")
         }
         onProgress(FoodAnalysisProgress.Phase(EntryAnalysisPhase.Resolving))
         return LoopResult(finalize = finalize, roundsUsed = MAX_TOOL_ROUNDS, tools = tools)
@@ -120,7 +120,7 @@ object GroundedToolLoop {
             JSONObject().put("role", "user").put("content", openAIUserContent(userMessage, images)),
         )
 
-        repeat(MAX_TOOL_ROUNDS) { round ->
+        for (round in 0 until MAX_TOOL_ROUNDS) {
             suspend fun request(compactRetry: Boolean): JSONObject {
                 val body = JSONObject().apply {
                     put("model", model)
@@ -186,17 +186,14 @@ object GroundedToolLoop {
                     )
                     tools.lastFinalize?.let { return it }
                 }
-                return@repeat
-            }
-            // Plain text without finalize — nudge once if rounds remain.
-            if (round < MAX_TOOL_ROUNDS - 1 && tools.lastFinalize == null) {
+            } else if (round < MAX_TOOL_ROUNDS - 1 && tools.lastFinalize == null) {
+                // Plain text without finalize — nudge once if rounds remain.
                 messages.put(message)
                 messages.put(
                     JSONObject()
                         .put("role", "user")
                         .put("content", "Call finalize_grounding now with your best source picks."),
                 )
-                return@repeat
             }
         }
         return tools.lastFinalize

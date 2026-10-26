@@ -85,6 +85,7 @@ enum class HomeTopNutrient(
         FOLATE -> R.string.nutrient_short_folate
         OMEGA3 -> R.string.nutrient_short_omega
         CAFFEINE -> R.string.nutrient_short_caffeine
+        else -> displayNameRes
     }
 
     fun current(entries: List<FoodEntry>): Double = when (this) {

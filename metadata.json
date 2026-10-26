@@ -1,0 +1,6 @@
+{
+  "name": "Chompass",
+  "description": "Nutrition, calorie, and hydration tracker app with expanded nutrients",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

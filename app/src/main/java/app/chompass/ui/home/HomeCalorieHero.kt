@@ -23,7 +23,6 @@ import androidx.compose.material3.minimumInteractiveComponentSize
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Info
@@ -500,13 +499,7 @@ private fun BudgetGoalLine(
             fontWeight = FontWeight.Medium,
             color = color,
             maxLines = 1,
-            // Captions shrink rather than ellipsize: translations run long and
-            // the bowl/column width is fixed at 1.3x font scale.
-            autoSize = TextAutoSize.StepBased(
-                minFontSize = 8.sp,
-                maxFontSize = 12.sp,
-                stepSize = 0.5.sp,
-            ),
+            overflow = TextOverflow.Ellipsis,
             modifier = if (maxTextWidth == Dp.Unspecified) {
                 Modifier
             } else {
@@ -656,11 +649,7 @@ private fun DefaultCalorieHero(input: CalorieHeroInput, modifier: Modifier = Mod
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 30.sp,
-                        maxFontSize = 45.sp,
-                        stepSize = 1.sp,
-                    ),
+                    overflow = TextOverflow.Ellipsis,
                 )
                 // Goal caption directly under the eaten number; the burn caption
                 // follows it (see CalorieBurnCaption below).
@@ -693,11 +682,7 @@ private fun DefaultCalorieHero(input: CalorieHeroInput, modifier: Modifier = Mod
                             fontWeight = FontWeight.Medium,
                             color = muted,
                             maxLines = 1,
-                            autoSize = TextAutoSize.StepBased(
-                                minFontSize = 8.sp,
-                                maxFontSize = 12.sp,
-                                stepSize = 0.5.sp,
-                            ),
+                            overflow = TextOverflow.Ellipsis,
                         )
                     }
                 }
@@ -731,11 +716,7 @@ private fun DefaultCalorieHero(input: CalorieHeroInput, modifier: Modifier = Mod
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.primary,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 8.sp,
-                        maxFontSize = 12.sp,
-                        stepSize = 0.5.sp,
-                    ),
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
         }
@@ -824,11 +805,7 @@ private fun SideGaugeCalorieHero(input: CalorieHeroInput, modifier: Modifier = M
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 20.sp,
-                        maxFontSize = 28.sp,
-                        stepSize = 1.sp,
-                    ),
+                    overflow = TextOverflow.Ellipsis,
                 )
                 // Goal directly under the number, as in the centered hero.
                 if (displayMode == HomeCalorieDisplayMode.ADD_ACTIVE) {
@@ -855,11 +832,7 @@ private fun SideGaugeCalorieHero(input: CalorieHeroInput, modifier: Modifier = M
                         fontSize = 12.sp,
                         color = muted,
                         maxLines = 1,
-                        autoSize = TextAutoSize.StepBased(
-                            minFontSize = 8.sp,
-                            maxFontSize = 12.sp,
-                            stepSize = 0.5.sp,
-                        ),
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
                 // FlowRow: the capture row keeps its chips beside the caption at 1x
@@ -867,7 +840,6 @@ private fun SideGaugeCalorieHero(input: CalorieHeroInput, modifier: Modifier = M
                 FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(5.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp),
-                    itemVerticalAlignment = Alignment.CenterVertically,
                 ) {
                     Icon(
                         Icons.Filled.LocalFireDepartment,
@@ -885,11 +857,6 @@ private fun SideGaugeCalorieHero(input: CalorieHeroInput, modifier: Modifier = M
                         fontWeight = FontWeight.SemiBold,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
-                        autoSize = TextAutoSize.StepBased(
-                            minFontSize = 9.sp,
-                            maxFontSize = 13.sp,
-                            stepSize = 0.5.sp,
-                        ),
                         color = MaterialTheme.colorScheme.primary,
                     )
                     if (dayTypeLabel != null && onDayTypeClick != null) {
@@ -1009,11 +976,7 @@ private fun CompactArcCalorieHero(input: CalorieHeroInput, modifier: Modifier = 
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 20.sp,
-                        maxFontSize = 28.sp,
-                        stepSize = 1.sp,
-                    ),
+                    overflow = TextOverflow.Ellipsis,
                 )
                 Box(
                     modifier = Modifier.height(24.dp),
@@ -1044,11 +1007,7 @@ private fun CompactArcCalorieHero(input: CalorieHeroInput, modifier: Modifier = 
                             fontWeight = FontWeight.Medium,
                             color = muted,
                             maxLines = 1,
-                            autoSize = TextAutoSize.StepBased(
-                                minFontSize = 8.sp,
-                                maxFontSize = 12.sp,
-                                stepSize = 0.5.sp,
-                            ),
+                            overflow = TextOverflow.Ellipsis,
                         )
                     }
                 }
@@ -1081,11 +1040,7 @@ private fun CompactArcCalorieHero(input: CalorieHeroInput, modifier: Modifier = 
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.primary,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 8.sp,
-                        maxFontSize = 12.sp,
-                        stepSize = 0.5.sp,
-                    ),
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
         }
@@ -1214,7 +1169,6 @@ private fun CompactHorizontalCalorieHero(input: CalorieHeroInput, modifier: Modi
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
-                itemVerticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
                     text = LocaleFormat.integer(EnergyFormat.quantity(current, unit)),
@@ -1225,11 +1179,7 @@ private fun CompactHorizontalCalorieHero(input: CalorieHeroInput, modifier: Modi
                     fontWeight = FontWeight.Bold,
                     color = progressColor,
                     maxLines = 1,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 14.sp,
-                        maxFontSize = 22.sp,
-                        stepSize = 1.sp,
-                    ),
+                    overflow = TextOverflow.Ellipsis,
                 )
                 // One tap target for the budget sheet: the goal line itself.
                 if (budgetDescription != null) {
@@ -1256,11 +1206,7 @@ private fun CompactHorizontalCalorieHero(input: CalorieHeroInput, modifier: Modi
                         fontSize = 13.sp,
                         color = muted,
                         maxLines = 1,
-                        autoSize = TextAutoSize.StepBased(
-                            minFontSize = 8.sp,
-                            maxFontSize = 13.sp,
-                            stepSize = 0.5.sp,
-                        ),
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
                 Icon(
@@ -1280,11 +1226,6 @@ private fun CompactHorizontalCalorieHero(input: CalorieHeroInput, modifier: Modi
                     color = progressColor,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    autoSize = TextAutoSize.StepBased(
-                        minFontSize = 9.sp,
-                        maxFontSize = 13.sp,
-                        stepSize = 0.5.sp,
-                    ),
                 )
                 // Chips are capped so their labels shrink instead of pushing the
                 // row past the width on narrow screens at 1.3x.
@@ -1349,13 +1290,6 @@ private fun UntrackedChip(untracked: Boolean, onClick: () -> Unit) {
                 else MaterialTheme.colorScheme.onSurfaceVariant,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-            // Wedge-capped in the arc layouts: shrink the label instead of
-            // ellipsizing it at 1.3x.
-            autoSize = TextAutoSize.StepBased(
-                minFontSize = 8.sp,
-                maxFontSize = 11.sp,
-                stepSize = 0.5.sp,
-            ),
             modifier = Modifier.padding(horizontal = 10.dp, vertical = 3.dp),
         )
     }
@@ -1394,13 +1328,6 @@ private fun DayTypeChip(label: String, color: Color? = null, onClick: () -> Unit
                 color = content,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                // Wedge-capped in the arc layouts: shrink the label instead of
-                // ellipsizing it at 1.3x.
-                autoSize = TextAutoSize.StepBased(
-                    minFontSize = 8.sp,
-                    maxFontSize = 11.sp,
-                    stepSize = 0.5.sp,
-                ),
                 modifier = Modifier.weight(1f, fill = false),
             )
             Icon(

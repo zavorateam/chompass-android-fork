@@ -222,8 +222,7 @@ fun rememberChompassSheetState(
         // constructor takes the thresholds as px lambdas (dp converted here).
         SheetState(
             skipPartiallyExpanded = skipPartiallyExpanded,
-            positionalThreshold = { with(density) { positionalThreshold.toPx() } },
-            velocityThreshold = { with(density) { velocityThreshold.toPx() } },
+            density = density,
             initialValue = SheetValue.Hidden,
             confirmValueChange = { target -> allowsSheetHide(target, busyState.value) },
             skipHiddenState = false,

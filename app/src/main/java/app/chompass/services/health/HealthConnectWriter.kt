@@ -29,7 +29,7 @@ internal class HealthConnectWriter(
             time = entry.date,
             zoneOffset = null,
             weight = Mass.kilograms(entry.weightKg),
-            metadata = Metadata.manualEntry(clientRecordId = tag(entry.id))
+            metadata = manualEntry(clientRecordId = tag(entry.id))
         )
         return runCatching { c.insertRecords(listOf(record)) }.isSuccess
     }
@@ -52,7 +52,7 @@ internal class HealthConnectWriter(
             zoneOffset = null,
             // BodyFatRecord wants 0–100 percent, not a fraction.
             percentage = Percentage(entry.bodyFatFraction * 100),
-            metadata = Metadata.manualEntry(clientRecordId = tag(entry.id))
+            metadata = manualEntry(clientRecordId = tag(entry.id))
         )
         return runCatching { c.insertRecords(listOf(record)) }.isSuccess
     }
@@ -87,7 +87,7 @@ internal class HealthConnectWriter(
             time = Instant.now(),
             zoneOffset = null,
             height = Length.meters(heightCm / 100.0),
-            metadata = Metadata.manualEntry(clientRecordId = clientId)
+            metadata = manualEntry(clientRecordId = clientId)
         )
         return runCatching { c.insertRecords(listOf(record)) }.isSuccess
     }
@@ -109,7 +109,7 @@ internal class HealthConnectWriter(
             endTime = end,
             endZoneOffset = null,
             volume = Volume.liters(entry.milliliters / 1000.0),
-            metadata = Metadata.manualEntry(clientRecordId = tag(entry.id))
+            metadata = manualEntry(clientRecordId = tag(entry.id))
         )
         return runCatching { c.insertRecords(listOf(record)) }.isSuccess
     }
@@ -164,7 +164,7 @@ internal class HealthConnectWriter(
                 vitaminK = entry.vitaminK?.let { Mass.micrograms(it) },
                 folate = entry.folate?.let { Mass.micrograms(it) },
                 caffeine = entry.caffeine?.let { Mass.milligrams(it) },
-                metadata = Metadata.manualEntry(clientRecordId = tag(entry.id))
+                metadata = manualEntry(clientRecordId = tag(entry.id))
             )
             c.insertRecords(listOf(record))
         }.isSuccess
@@ -187,6 +187,12 @@ internal class HealthConnectWriter(
             )
         }.isSuccess
     }
+
+    private fun manualEntry(clientRecordId: String): Metadata =
+        Metadata(
+            clientRecordId = clientRecordId,
+            recordingMethod = Metadata.RECORDING_METHOD_MANUAL_ENTRY
+        )
 
     private fun tag(id: UUID): String = "${HealthConnectManager.CLIENT_PREFIX}${id}"
 
